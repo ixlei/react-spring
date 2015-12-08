@@ -1,0 +1,325 @@
+@charset "utf-8";
+
+/* CSS Document */
+
+#main {
+    margin: 0;
+    padding: 0;
+}
+
+#content,
+#invest-center,
+#news {
+    width: 820px;
+    margin: 0 auto;
+}
+
+#content {
+    padding-bottom: 50px;
+}
+
+#first-glance {
+    height: 320px;
+}
+
+#second-glance {
+    height: 320px;
+}
+
+#first-glance ul {
+    margin: 10px -40px;
+}
+
+#first-glance ul,
+#first-glance ul li,
+#main {
+    width: 100%;
+    height: 100%;
+}
+
+#first-glance {
+    position: relative;
+    overflow: hidden;
+}
+
+#first-glance li {
+    overflow: hidden;
+    list-style: none;
+}
+
+#first-glance a {
+    z-index: 100;
+    position: absolute;
+    top: 40%;
+}
+
+#first-glance a:nth-child(2) {
+    left: 760px;
+}
+
+#first-glance a:nth-child(1) {
+    left: 30px;
+}
+
+ul {
+    list-style: none;
+}
+
+#first-glance ul li {
+    background: no-repeat;
+    background-size: 820px 320px;
+    float: left;
+}
+
+#first-glance a img {
+    width: 20px;
+}
+
+.list {
+    width: 50%;
+    height: 240px;
+}
+
+.list:nth-child(1) {
+    margin-left: -20px;
+}
+
+#zixun {
+    text-align: center;
+    height: 25px;
+    line-height: 25px;
+    color: #717794;
+    font-size: 1.5em;
+}
+
+#news-area {
+    width: 100%;
+    margin-top: -15px;
+}
+
+#news-area span,
+.title-nav a {
+    color: #323140;
+}
+
+.title-nav {
+    width: 100%;
+    border-bottom: 1px solid #E5E5E5;
+}
+
+.title-nav span {
+    display: inline-block;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.title-nav span:nth-child(1) {
+    width: 30%;
+    margin-left: 35%;
+}
+
+.more a {
+    color: #767B91;
+}
+
+.title-nav span:nth-child(2) {
+    width: 20%;
+    height: 15px;
+    text-align: right;
+    line-height: 40px;
+    font-size: 0.8em;
+    margin-left: 10%;
+}
+
+#news-area ul {
+    top: -12px;
+    height: 240px;
+    position: relative;
+}
+
+#news-area ul li {
+    z-index: 100;
+    position: absolute;
+    width: 48%;
+}
+
+#news-area ul li:nth-child(1) {
+    left: 1%;
+}
+
+#news-area ul li:nth-child(2) {
+    left: 51%;
+}
+
+.list-item {
+    overflow: hidden;
+    list-style: none;
+}
+
+.list-item li {
+    margin-left: -20px;
+    height: 30px;
+}
+
+.list-item li span {
+    color: #717794;
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+}
+
+#policy-item {
+    height: 200px;
+}
+
+.zixun-item a {
+    display: inline-block;
+    color: #767576;
+    word-wrap: normal;
+    width: 20em;
+    height: 1em;
+    white-space: nowrap;
+    line-height: 1em;
+    font-size: 1em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#ls p:nth-child(1),
+#lf p:nth-child(1),
+#rf p:nth-child(1),
+#rs p:nth-child(1) {
+    padding-top: 10px;
+}
+
+.list {
+    position: relative;
+    overflow: hidden;
+    height: 240px;
+}
+
+.zixun-item p {
+    font-size: 0.8em;
+}
+
+#invest-center {
+    margin-top: 20px;
+}
+
+#inv-title {
+    margin: 0 auto;
+}
+
+#inv-title {
+    width: 100%;
+    height: 40px;
+}
+
+#inv-title p {
+    color: #767B91;
+    font-size: 1.3em;
+    text-align: center;
+    line-height: 40px;
+    width: 120px;
+    height: 100%;
+}
+
+#invest-list {
+    width: 100%;
+    height: 320px;
+    position: relative;
+    margin: 0 auto;
+}
+
+#left-banner,
+#right-banner {
+    position: absolute;
+    float: left;
+}
+
+#left-banner {
+    left: 2%
+}
+
+#left-banner,
+#right-banner {
+    width: 45%;
+}
+
+#right-banner {
+    left: 53%;
+}
+
+#left-banner p,
+#right-banner p {
+    width: 80px;
+    margin: 0 auto;
+    height: 45px;
+    color: #767B91;
+    line-height: 45px;
+    text-align: center;
+}
+
+#site-banner-l,
+#site-banner-r {
+    position: relative;
+    overflow: hidden;
+}
+
+#site-banner-l li,
+#site-banner-r li {
+    overflow: hidden;
+    list-style: none;
+}
+
+#site-banner-l ul li,
+#site-banner-r ul li {
+    background: no-repeat;
+    background-size: 480px 240px;
+    float: left;
+}
+
+#site-banner-r ul,
+#site-banner-r ul li {
+    width: 100%;
+    height: 100%;
+}
+
+#site-banner-r ul li:nth-child(1),
+#site-banner-l ul li:nth-child(1) {
+    margin-left: -40px;
+}
+
+#site-banner-l ul,
+#site-banner-r ul {
+    margin-top: -10px;
+}
+
+#site-banner-l ul,
+#site-banner-l ul li {
+    width: 100%;
+    height: 100%;
+}
+
+.invest-more {
+    width: 100%;
+    height: 20px;
+    padding-top: 0;
+    margin: -10px auto;
+}
+
+.invest-more span {
+    display: inline-block;
+    height: 20px;
+    width: 120px;
+    margin: 0 36%;
+    line-height: 20px;
+    text-align: center;
+}
+
+.invest-more span a {
+    color: #767B91;
+    font-size: 0.8em;
+}

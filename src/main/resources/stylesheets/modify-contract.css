@@ -1,0 +1,46 @@
+.wrap{
+	width: 820px;
+	margin: auto;
+	margin-bottom:220px;
+}
+.return{
+	height: 40px;
+	border-bottom:1px solid #767B91;
+}
+.return a{
+	font-size:0.9em;
+	color:#767B91;
+	float: right;
+	width: 140px;
+	line-height: 40px;
+	background:url(../images/back.png) no-repeat ;
+	background-position:70%;
+}
+#sure{
+	float: right;
+	margin-right: 20px;
+	margin-top: 20px;
+	width: 60px;
+	height: 30px;
+	border:1px solid #767B91;
+	border-radius: 5px;
+	background: white;
+	color: #767B91;
+	cursor: pointer;
+
+
+}
+.contract{
+	border:2px solid #767B91;
+	width: 820px;
+	white-space: pre;
+	overflow: scroll;
+	height: 600px;
+	padding: 20px;
+	margin-top: 70px;
+}
+.contract p{
+	font-weight: bold;
+	text-align: center;
+	font-size: 1.3em;
+}

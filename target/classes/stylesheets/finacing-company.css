@@ -1,0 +1,272 @@
+#main,
+#side-nav {
+    width: 100%;
+}
+
+#main,
+#content {
+    margin: 0 auto;
+}
+
+#content {
+    width: 820px;
+    padding: 0;
+}
+
+#side-nav {
+    position: relative;
+    margin-top: 15px;
+    height: 45px;
+}
+
+#search-nav,
+#filter-nav {
+    position: relative;
+    float: left;
+}
+
+#search-nav {
+    margin-top: 10px;
+    height: 45px;
+    width: 50%;
+}
+
+#search-area,
+#search-text {
+    display: inline-block;
+    overflow: hidden;
+}
+
+#search-nav form {
+    height: 30px;
+}
+
+#search-text {
+    width: 100px;
+    height: 25px;
+    line-height: 25px;
+    text-align: right;
+}
+
+#search-in {
+	position: relative;
+    margin: 0;
+    width: 220px;
+    height: 25px;
+}
+
+#search-area input {
+    float: left;
+    position: relative;
+}
+
+#search-btn {
+    margin: 0;
+    left: -1px;
+    height: 30px;
+}
+
+ul {
+    list-style: none;
+}
+
+#filter-nav ul {
+    position: relative;
+    height: 45px;
+    margin: 0;
+}
+
+.filter-item-list:nth-child(1) {
+    margin-left: -40px;
+}
+
+#filter-nav ul li {
+    float: left;
+}
+
+#industry-layer,
+#area-layer,
+#number-in {
+    position: absolute;
+    display: none;
+}
+
+#filter-nav a {
+    color: #11192E;
+}
+
+#filter-nav {
+    width: 50%;
+}
+
+.filter-item-list {
+    width: 36%;
+}
+
+.filter-item {
+    position: relative;
+    display: inline-block;
+    height: 25px;
+    vertical-align: middle;
+    margin-top: 10px;
+    line-height: 25px;
+    text-align: center;
+}
+
+.filter-item img {
+    width: 15px;
+}
+
+.filter-item a {
+    padding-left: 20px;
+}
+
+.filter-item img {
+    padding-left: 5px;
+}
+
+.filter-item-list:hover #industry-layer,
+.filter-item-list:hover #area-layer {
+    display: block;
+    z-index: 1000;
+    width: 100%;
+    left: 0;
+    border: 1px solid #2A314B;
+    background-color: #FFFFFF;
+}
+
+.filter-item-list:hover #number-in {
+    display: block;
+    z-index: 2;
+    border: 1px solid #2A314B;
+    background-color: #FFFFFF;
+}
+
+#industry-search,
+#area-search {
+    margin-top: 10px;
+    width: 100%;
+}
+
+#industry-search form,
+#area-search form {
+    width: 360px;
+    /*margin-left: 20px;*/
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#industry-search input[type="text"],
+#area-search input[type="text"] {
+    width: 200px;
+    height: 25px;
+}
+
+#industry-search input[type="button"],
+#area-search input[type="button"] {
+    height: 32px;
+    margin-left: -10px;
+}
+
+#industry-search input,
+#area-search input {
+    position: relative;
+    z-index: 3;
+}
+
+.hot-push {
+    display: inline-block;
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+#industry-list ul li,
+#area-list ul li {
+    height: 30px;
+    width: 100%;
+}
+
+#industry-list ul li span,
+#area-list ul li span {
+    display: inline-block;
+    width: 60px;
+    float: left;
+    text-align: center;
+    height: 30px;
+    line-height: 30px;
+}
+
+#number-in {
+    width: 310px;
+    left: 100px;
+}
+
+#number-in input[type="text"] {
+    width: 60px;
+}
+
+#number {
+    width: 300px;
+    margin-left: 80px;
+}
+
+#number input[type="button"] {
+    margin-top: 10px;
+    margin-left: 160px;
+}
+
+#fanicing-list-title {
+    background-color: #CAD4F7;
+    margin-top: 30px;
+    width: 100%;
+    height: 30px;
+    overflow: hidden;
+}
+
+#fanicing-list-title span {
+    float: left;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    display: inline-block;
+    width: 130px;
+}
+
+#fanicing-list-title span:nth-child(5) {
+    width: 250px;
+    position: relative;
+    left: 50px;
+}
+
+#fanicing-list ul li {
+    overflow: hidden;
+    margin-left: -40px;
+}
+
+.other,
+.introduction {
+	height: 120px;
+    float: left;
+}
+
+.other span {
+	display: inline-block;
+	float: left;
+	height: 120px;
+	width: 130px;
+	text-align:center;
+	line-height: 120px;
+}
+
+.other span img {
+	height: 120px;
+}
+
+.introduction {
+	width: 300px;
+}
+
+.introduction p {
+	height: 120px;
+	padding-top: 10px;
+}

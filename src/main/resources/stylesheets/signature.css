@@ -1,0 +1,173 @@
+.wrapper {
+    width: 820px;
+    margin: auto;
+    margin-bottom: 220px;
+}
+
+.return {
+    height: 40px;
+    border-bottom: 1px solid #767B91;
+}
+
+.return a {
+    font-size: 0.9em;
+    color: #767B91;
+    float: right;
+    width: 140px;
+    line-height: 40px;
+    background: url(../images/back.png) no-repeat;
+    background-position: 70%;
+}
+
+.title {
+    height: 86px;
+}
+
+.title p {
+    padding-top: 40px;
+    padding-bottom: 20px;
+    text-align: center;
+    font-size: 1.6em;
+    color: #767B91;
+    ;
+}
+
+.introduce {
+    height: 55px;
+    width: 100%;
+    background-color: #E1E5ED;
+    padding-top: 16px;
+}
+
+.introduce p {
+    color: #767B91;
+    font-size: 0.8em;
+    text-indent: 30px;
+    line-height: 22px;
+    margin-left: 10px;
+}
+
+.detail {
+    height: 250px;
+    border-bottom: solid 1px #767B91;
+}
+
+.gross,
+.amount {
+    width: 30%;
+}
+
+.situation {
+    width: 39%;
+}
+
+.total {
+    padding-top: 50px;
+    text-align: center;
+    font-size: 1em;
+    color: #767B91;
+    padding-bottom: 20px;
+}
+
+.num {
+    font-size: 4.5em;
+    color: #FF8000;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.amount p,
+.gross p {
+    text-align: center;
+    margin-top: 5px;
+}
+
+.info {
+    float: left;
+    text-align: right;
+    margin-left: 10px;
+    width: 30%;
+}
+
+.info img {
+    width: 83%;
+    margin-top: 5px;
+}
+
+.info span {
+    color: #767B91;
+    font-size: 0.8em;
+
+}
+
+.tit {
+    font-size: 1.6em;
+    color: #767B91;
+    text-align: center;
+    margin: 40px auto;
+}
+
+.progress ul {
+    position: relative;
+    margin-left: 5px;
+    margin-right: 50px;
+    margin-top: 50px;
+}
+
+.progress ul li {
+    float: right;
+    width: 14%;
+}
+
+.progress ul li img {
+    height: 80px;
+    width: 145px;
+}
+
+.progress ul a {
+    color: white;
+    font-size: 0.9em;
+}
+
+.DC {
+    position: absolute;
+    top: 33px;
+    left: 67px;
+}
+
+.issue {
+    position: absolute;
+    top: 33px;
+    left: 197px;
+}
+
+.check {
+    position: absolute;
+    top: 33px;
+    left: 300px;
+}
+
+.sign {
+    position: absolute;
+    top: 33px;
+    left: 400px;
+}
+
+.number {
+    position: absolute;
+    top: 33px;
+    left: 502px;
+}
+
+.time {
+    position: absolute;
+    top: 33px;
+    left: 597px;
+}
+
+.loan {
+    position: absolute;
+    top: 33px;
+    left: 705px;
+    width: 60px;
+}

@@ -1,0 +1,115 @@
+@charset "utf-8";
+/* CSS Document */
+#main {
+    padding: 0;
+    margin: 0;
+    color: #767B91;
+}
+
+#content {
+    width: 820px;
+    margin: 0 auto;
+}
+
+#sitenav {
+    height: 30px;
+    margin-top: 30px;
+    width: 100%;
+}
+
+#sitenav {
+    border-bottom: 1px solid #E5E5E5;
+}
+
+#sitenav ul {
+    height: 100%;
+    margin-top: -2px;
+    list-style: none;
+}
+
+#sitenav ul li {
+    width: 33.3%;
+    float: left;
+    position: relative;
+    height: 30px;
+}
+
+#sitenav ul li:nth-child(1) {
+    margin-left: -20px;
+}
+
+#sitenav li span {
+    display: inline-block;
+    position: absolute;
+    height: 30px;
+    line-height: 30px;
+    margin-left: 32%;
+    color: #767B91;
+    font-size: 1em;
+}
+
+.sitnav-active {
+    border-bottom: 2px solid #2A324B;
+}
+
+#sitenav li span img {
+    width: 1.5em;
+    vertical-align: middle;
+}
+
+#glance {
+	margin: 10px auto;
+	width: 100%;
+	overflow: hidden;
+}
+
+#finsh-tips {
+	margin-top: 10px;
+	width: 20%;
+	margin: 0 auto;
+}
+
+#finsh-tips img {
+	width: 100%;
+}
+
+#tips {
+	margin: 0 auto;
+	width: 60%;
+}
+
+#tips p {
+	text-align: center;
+	height: 40px;
+	line-height: 40px;
+	font-size: 3.5em;
+}
+
+#go {
+	padding-top: 10px;
+	margin: 0 auto;
+	width: 30%;
+}
+
+#go ul {
+	list-style: none;
+}
+
+.go-item {
+	margin: 0 auto;
+	text-align: center;
+	display: inline-block;
+	width: 140px;
+}
+
+#item1 {
+
+	width: 130px;
+	border:1px solid #2A324B;
+	border-radius: 3px;
+}
+
+#item2 {
+	padding-top: 10px;
+	font-size: 0.8em;
+}

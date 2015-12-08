@@ -1,0 +1,61 @@
+@font-face {
+    font-family: 'icomoon';
+    src: url('/fonts/icomoon.eot?-yg3fhm');
+    src: url('/fonts/icomoon.eot?#iefix-yg3fhm') format('embedded-opentype'), url('/fonts/icomoon.ttf?-yg3fhm') format('truetype'), url('/fonts/icomoon.woff?-yg3fhm') format('woff'), url('/fonts/icomoon.svg?-yg3fhm#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+    font-family: 'icomoon';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-iconfont-zhengque:before {
+    content: "\e601";
+}
+
+.icon-iconfont-clear:before {
+    content: "\e602";
+}
+
+.icon-iconfont-shuaxin2:before {
+    content: "\e603";
+}
+
+.icon-iconfont-tishi:before {
+    content: "\e604";
+}
+
+.icon-iconfont-shuaxin:before {
+    content: "\e600";
+}
+
+.icon-tips:before {
+    content: "\e604";
+    color: #01A8DA;
+}
+
+.icon-error:before {
+    content: "\e602";
+    color: red;
+}
+
+.icon-success:before {
+    content: "\e601";
+    color: #7AC23C;
+}
+
+.icon-refresh:before {
+    content: "\e600";
+    color:red;
+}

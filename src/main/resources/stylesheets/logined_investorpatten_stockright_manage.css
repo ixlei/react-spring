@@ -1,0 +1,173 @@
+#main * {
+	text-decoration: none;
+}
+
+#main {
+	width: 820px;
+	height: 700px;
+	margin: 30px auto;
+	color: #4B4B4B;
+	font-size: 1em;
+}
+
+#main a {
+	color: #4B4B4B;
+}
+
+#nav-boder {
+	position: relative;
+	width: 100%;
+	height: 74px;
+}
+
+#nav {
+	position: absolute;
+	width: 100%;
+	height: 48px;
+	top: 13px;
+	background-image: url("/images/nav.png");
+}
+
+#selected1 {
+	position: absolute;
+	left: 15px;
+	height: 74px;
+	width: 140px;
+	background-image: url("/images/checked.png");
+	color: white;
+	line-height: 74px;
+	text-align: center;
+}
+
+#selected2 {
+	position: absolute;
+	left: 155px;
+	height: 74px;
+	width: 140px;
+	background-image: url("/images/selected.png");
+	color: white;
+	line-height: 74px;
+	text-align: center;
+}
+
+#selected3 {
+	position: absolute;
+	left: 295px;
+	height: 74px;
+	width: 140px;
+	background-image: url("/images/selected.png");
+	color: white;
+	line-height: 74px;
+	text-align: center;
+}
+
+#tab1 {
+	margin-left: 15px;
+	display: inline-block;
+	height: 43px;
+	width: 140px;
+	line-height: 48px;
+	text-align: center;
+}
+
+#tab2 {
+	display: inline-block;
+	height: 43px;
+	width: 140px;
+	line-height: 48px;
+	text-align: center;
+}
+
+#tab3 {
+	display: inline-block;
+	height: 43px;
+	width: 140px;
+	line-height: 48px;
+	text-align: center;
+}
+
+#search {
+	position: absolute;
+	right: 0;
+	top: 15px;
+	height: 18px;
+	width: 240px;
+}
+
+#search label {
+	font-size: 0.8em;
+	vertical-align: top;
+}
+
+#search-content {
+	display: inline-block;
+	padding: 0;
+	height: 16px;
+	width: 158px;
+	vertical-align: top;
+}
+
+#search-button {
+	display: inline-block;
+	height: 18px;
+	width: 30px;
+}
+
+#filter {
+	height: 81px;
+	width: 90%;
+	margin: 20px auto 10px;
+	border: 1px solid lightgray;
+}
+
+#filter {
+	font-size: 0.9em;
+}
+
+#filter>div {
+	margin-left: 10px;
+	line-height: 40px;
+}
+
+#filter span {
+	margin-right: 50px;
+}
+
+#content {
+	font-size: 0.9em;
+	width: 90%;
+	margin: auto;
+	border: 1px solid lightgray;
+	height: auto;
+}
+
+#subtitle {
+	margin-left: 10px;
+	height: 40px;
+	line-height: 40px;
+}
+
+.list-text {
+	width: 100%;
+	height: 78px;
+	border-style: solid none none none;
+	border-color: lightgray;
+	border-width: 1px;
+}
+
+.list-text:hover {
+	background-color: #EEEEEE;
+}
+
+.list-text div {
+	width: 100%;
+	height: 50%;
+	padding-left: 30px;
+	line-height: 39px;
+}
+
+.list-text div span {
+	display: inline-block;
+	width: 20%;
+	height: 100%;
+}

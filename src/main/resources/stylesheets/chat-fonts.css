@@ -1,0 +1,68 @@
+@font-face {
+    font-family: 'icomoon';
+    src: url('../chat-fonts/icomoon.eot?fon1uu');
+    src: url('../chat-fonts/icomoon.eot?#iefixfon1uu') format('embedded-opentype'), url('../chat-fonts/icomoon.ttf?fon1uu') format('truetype'), url('../chat-fonts/icomoon.woff?fon1uu') format('woff'), url('../chat-fonts/icomoon.svg?fon1uu#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+    font-family: 'icomoon';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-send:before {
+    content: "\e600";
+}
+
+.icon-iconfont-clear:before {
+    content: "\e601";
+}
+
+.icon-iconfont-yuan:before {
+    content: "\e602";
+}
+
+.icon-iconfont-xiao11:before {
+    content: "\e603";
+}
+
+.icon-news-tips:before {
+    content: "\e602";
+    color: #FB4A4A;
+    line-height: 30px;
+    font-size: 0.7em;
+}
+
+.icon-close:before {
+    content: "\e601";
+    line-height: 35px;
+    font-size: 0.8em;
+}
+
+.icon-send-btn:before {
+    content: "\e600";
+    font-size: 1.5em;
+    color: #2A324B;
+    line-height: 30px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.icon-fj:before {
+	content: "\e603";
+	line-height: 30px;
+	font-size: 1.5em;
+	 color: #2A324B;
+	text-align: center;
+	vertical-align: middle;
+}

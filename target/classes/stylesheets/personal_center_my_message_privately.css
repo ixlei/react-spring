@@ -1,0 +1,183 @@
+ul
+{
+    list-style-type: none;
+}
+
+ul#sidebar
+{
+    padding-top: 20px;
+    padding-left: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    text-align: center;
+    font-size: 1em;
+}
+
+ul#sidebarTitle
+{
+    padding-left: 0px;
+    text-align: center;
+    font-size: 1.2em;
+    color: #2A324B;
+}
+
+.sidebarItem
+{
+    padding-top: 21px;
+    padding-left: 0px;
+    color: #43495D;
+}
+
+#mainContainer
+{
+    margin: 36px auto;
+    width: 820px;
+    height: 931px;
+
+}
+
+#main
+{
+    width: 820px;
+    height: 928px;
+    border:1px solid #cccccc;
+    background:#DDE5E8;
+    position: absolute;
+    -moz-box-shadow: 1px 1px 5px #888888; /* old Firefox */
+    box-shadow: 1px 1px 5px #888888;
+}
+
+#listContent
+{
+    background-image: url("../images/sidebarbg.png");
+    background-repeat: no-repeat;
+    height: 158px;
+    width: 175px;
+    margin: 0px;
+}
+
+#listTitle
+{
+    background-image: url("../images/sidebarTitlebg.png");
+    background-repeat: no-repeat;
+    height: 70px;
+    width: 175px;
+    margin: 0px;
+}
+
+#sidebarContainer
+{
+    width: 175px;
+    margin: 0px;
+    float: left;
+}
+
+#mainContent
+{
+    margin-left: 180px;
+    margin-right: 0px;
+    width: 639px;
+    background:#FFF;
+    height:926px;
+}
+
+#searchForm
+{
+    padding-top: 30px;
+    padding-left: 9px;
+}
+
+#searchForm p
+{
+    font-size: 1.2em;
+    display: inline;
+}
+
+.searchButton
+{
+    text-align: center;
+    vertical-align: 10%;
+    display: inline-block;
+    width: 57px;
+    height: 22px;
+    background-color: #2A324B;
+    border: 1px solid #A4B3E4;
+    border-radius: 5px;
+}
+
+#searchText
+{
+    overflow: hidden;
+    resize: none;
+    width: 161px;
+    height: 22px;
+    border: 1px solid #A4B3E4;
+    border-radius: 5px;
+    font-size: 1em;
+    margin-top: 0px;
+    margin-left: 30px;
+    outline: none;
+}
+
+#searchInput
+{
+    display: inline;
+    margin: 0px;
+    vertical-align: 10%;
+}
+
+#textClear
+{
+    width: 13px;
+    height: 14px;
+    position: absolute;
+    left: 705px;
+    top: 40px;
+}
+
+#mainContent_list{
+    margin: auto 20px;
+    height: 20%;
+}
+.table_item{
+    background-image: url("../images/private_message.png");
+    background-size: 530px,33px;
+    width: 530px;
+    position: relative;
+    height: 30px;
+    line-height: 33px;
+    margin-top: 10px;
+}
+
+.table_item_text{
+    background-image: url("../images/private_message_down.png");
+    background-size: 530px 273px;
+    width: 530px;
+    height: 273px;
+}
+.table_item>.img_down{
+    margin-left: 440px;
+    position: absolute;
+    top: 12px;
+    right: 20px;
+}
+.pick_up_first{
+    background-image: url("../images/pick_up_second.png");
+    background-size: 530px 110px;
+    padding: 15px 25px;
+    width: 480px;
+    height: 80px;
+}
+.pick_up_second{
+    background-image: url("../images/pick_up_second.png");
+    background-size: 530px 130px;
+    padding: 15px 25px;
+    line-height: 30px;
+    width: 480px;
+    height: 100px;
+}
+
+.inputButton{
+    margin-left: 84%;
+    margin-top: 5px;
+}

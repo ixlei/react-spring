@@ -1,0 +1,118 @@
+#container *{
+    margin: 0;
+    text-decoration: none;
+}
+#container a{
+    color: #43495D
+}
+#container{
+    width: 820px;
+    height: 1000px;
+    margin: 10px auto;
+    color: #43495D;
+    font-size: 1em;
+}
+#head{
+    width: 100%;
+    position: relative;
+    height: 80px;
+}
+#guanzhu{
+    width: 74px;
+    height: 26px;
+    position: absolute;
+    background-image: url("../../public/images/ok.png");
+    top: 5px;
+    right: 10px;
+    line-height: 26px;
+    text-align: center;
+}
+#guanzhu a{
+    color: white;
+}
+#button{
+    height: 33px;
+    position: absolute;
+    top: 5px;
+    right: 10px;
+}
+#button p{
+    color: #2A324B;
+}
+#title{
+    width: 100%;
+    height: 35px;
+    position: absolute;
+    background-image: url("../../public/images/title-background.png");
+    background-size: 850px 35px;
+    margin: auto;
+    bottom: 0;
+    text-align: center;
+    line-height: 35px;
+}
+#main{
+    margin: 40px auto;
+    width: 100%;
+    height: auto;
+    font-size: 0.9em;
+}
+#left{
+    width: 80%;
+    height: 800px;
+    float: left;
+}
+#right{
+    width: 20%;
+    height: 800px;
+    background-color: #EEF0F4;
+    float: left;
+}
+.column{
+    width: 100%;
+    height: auto;
+}
+#column1{
+    width: 100%;
+    height: auto;
+}
+#column2{
+    width: 100%;
+    height: auto;
+}
+.subtitle{
+    color: aliceblue;
+    background-image: url("../../public/images/subtitle.png");
+    background-size: auto 35px;
+    width: 90%;
+    height:35px;
+    line-height: 35px;
+    padding-left: 20px;
+}
+.text{
+    padding: 13px 20px 13px;
+    width: 90%;
+}
+.text p{
+    line-height: 30px;
+}
+.sidebartitle{
+    width: 100%;
+    height: 35px;
+    background-image: url("../../public/images/title-background.png");
+    background-size: auto 35px;
+    line-height: 35px;
+    text-align: center;
+}
+#right .box{
+    margin: 8px auto;
+    width: 90%;
+    background-color: white;
+    font-size: 0.8em;
+    line-height: 20px;
+    padding: 10px 5px;
+}
+.border{
+    border-left: 1px solid #43495D;
+    border-right: 1px solid #43495D;
+    padding: 0 3px;
+}
