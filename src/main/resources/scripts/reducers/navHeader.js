@@ -1,5 +1,5 @@
 'use strict';
-import { ACTIVE_INDEX } from '../constants/customerActionTypes';
+import { ACTIVE_INDEX } from '../constants/customerActionType';
 
 const initState = {
 	index: 0

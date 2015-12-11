@@ -11,6 +11,6 @@ const createStoreWithMiddleware = applyMiddleware(
 	loggerMiddleware
 )(createStore);
 
-export default configStore(initState) {
-	return createStoreWithMiddleware(rootReducer, ininState);
+export default function configStore(initState) {
+	return createStoreWithMiddleware(rootReducer, initState);
 }

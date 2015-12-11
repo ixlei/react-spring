@@ -14,7 +14,7 @@ class Nav extends Component {
  			<div>
  				<div id="nav-logo">
                     <span>
-                        <img src={this.props.logoUrl} alt="" id="logo"> 
+                        <img src={this.props.logoUrl} alt="" id="logo" /> 
                     </span>
      	        </div>
  			</div>

@@ -1,12 +1,12 @@
 'use strict';
 
-import {Component, PropTypes} 'react';
+import {Component, PropTypes} from 'react';
 import {connect} from 'react-redux';
 import Nav from '../components/customerNavHeader';
 
 class NavContainer extends Component {
 	render() {
-		return (<Nav {...this.props} />);
+		return (<Nav {...this.props} />)
 	}
 }
 

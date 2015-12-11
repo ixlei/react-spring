@@ -4,6 +4,7 @@ var config = require('./webpack.config.js');
 new webpackDevServer(webpack(config), {
     publicPath: config.output.publicPath,
     hot: true,
+    headers: { 'Access-Control-Request-Headers': '*' },
     noInfo: true,
     historyApiFallback: true
 }).listen(8080, 'localhost', function(err, result) {

@@ -3,10 +3,6 @@
 import React, {Component, PropTypes} from 'react';
 
 export default class ListItem extends Component {
-	construct(props) {
-		super(props);
-	}
-
 	render() {
 		return (
 			<ul>
@@ -17,8 +13,8 @@ export default class ListItem extends Component {
 					<span>{list.text}</span>
 					</Link>
 				</li>
-				 });
-			 }
+				 })
+			}
 			</ul>
 		);
 	}
