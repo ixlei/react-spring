@@ -1,6 +1,5 @@
 @charset "utf-8";
 
-/* CSS Document */
 
 body {
     font-size: 1em;
@@ -35,7 +34,6 @@ body,
 
 #header-nav div {
     float: left;
-    /*  height: 35px;*/
     zoom: 1;
 }
 
@@ -57,7 +55,6 @@ body,
 }
 
 #nav-logo span {
-    /*border:1px solid red;*/
     display: inline-block;
     width: 160px;
     margin-left: 0;
@@ -150,12 +147,7 @@ a {
     width: 980px;
     left: 50%;
     right: 50%;
-    -webkit-transform: translate(-50%, 0);
-    -moz-transform: translate(-50%, 0);
-    -ms- transform: translate(-50%, 0);
-    -o-transform: translate(-50%, 0);
-    -o-transform: translate(-50%, 0);
-    transform: translate(-50%, 0);
+    transform: translate(-50%, 0); 
     top: 0;
     bottom: 0;
 }
