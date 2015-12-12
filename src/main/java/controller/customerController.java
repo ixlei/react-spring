@@ -45,7 +45,7 @@ public class customerController {
 	public Object showIndex(Map<String, Integer> model) {
 		model.put("flag", 0);
 		
-		return "customer/customer-index";
+		return "customer/index";
 	}
 
 	@RequestMapping("/finance")
