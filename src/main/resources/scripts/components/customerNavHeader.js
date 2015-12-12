@@ -4,20 +4,18 @@ import React, {Component, PropTypes} from 'react';
 import {Link} from 'react-router';
 import ListItem from './ListItem';
 
-class Nav extends Component {
+export default class Nav extends Component {
  	constructor(props) {
  		super(props);
  	}
 
  	renderLogo() {
  		return (
- 			<div>
- 				<div id="nav-logo">
-                    <span>
-                        <img src={this.props.logoUrl} alt="" id="logo" /> 
-                    </span>
-     	        </div>
- 			</div>
+			<div id="nav-logo">
+		        <span>
+		            <img src={this.props.logoUrl} alt="" id="logo" /> 
+		        </span>
+	        </div>
  		);
  	}
 
@@ -25,21 +23,25 @@ class Nav extends Component {
  		return (
  			<div id="nav-list">
 		      <ul>
-		      	{this.props.goList.map((list, index) =>{
+		      	{this.props.goList.map((list, index) =>(
 	      		<li key={list.addr}>
-	      			<Link to={'/rs/' + this.props.userType + '/' + list.addr}>
+	      			<Link to={list.addr}>
 	      				<span className=
-	      				{Object.is(this.props.activeIndex, index) 
+	      				{Object.is(this.props.activeIndex.index, index) 
 	      					? 'nav-item active' : 'nav-item'}>
 	      				{list.text}</span>
-	      				if(Object.is(3, index)) {
-	      					<div id="service-subnav">
-								<ListItem list = {this.props.subNav} />
-							</div>
-	      				}
 	      			</Link>
+	      			{(() =>{
+	      				if(Object.is(3, index)) {
+	  					return (<div id="service-subnav">
+							<ListItem list = {this.props.subNav} />
+						</div>)
+	      				}
+	      			})()
+	      		}
 	      		</li>
-		      	})}
+		      	))
+		    }
 	        </ul>
 		</div>
  		);
@@ -55,7 +57,7 @@ class Nav extends Component {
 
  	render() {
  		return (
- 			<div id="header-nav">
+ 			<div id="header">
  				<div id="header-nav">
  					{this.renderLogo()}
  					{this.renderGoList()}
@@ -75,4 +77,3 @@ Nav.PropTypes = {
 	userType: PropTypes.oneOf(['customer', 'investor', 'company'])
 }
 
-export {Nav as default}
