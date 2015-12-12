@@ -1,6 +1,6 @@
 'use strict';
 
-import {Component, PropTypes} from 'react';
+import React, {Component, PropTypes} from 'react';
 import {connect} from 'react-redux';
 import Nav from '../components/customerNavHeader';
 
@@ -11,7 +11,9 @@ class NavContainer extends Component {
 }
 
 function mapStateToProps(state) {
+
 	const {activeIndex} = state;
+
 	const logoUrl = '/images/logo-last.png';
 	const goList = [{
 		addr: 'index',
@@ -44,7 +46,6 @@ function mapStateToProps(state) {
 		addr:'reg',
 		text: '注册'
 	}];
-
 	return {
 		userType: 'customer',
 		logoUrl,

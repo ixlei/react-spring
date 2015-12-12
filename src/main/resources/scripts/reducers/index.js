@@ -1,11 +1,11 @@
 'use strict';
 
 import {combineReducers} from 'redux';
-import setActiveIndex from './navHeader';
+import activeIndex from '../reducers/navHeader';
 
 const rootReducer = combineReducers({
-	setActiveIndex
+	activeIndex
 });
 
-export {rootReducer as default}
+export default rootReducer;
 

@@ -1,8 +1,8 @@
 'use strict';
-
-import React from 'react';
+import React, {Component} from 'react';
 import {render} from 'react-dom';
-import customerIndex from '../index/customerIndex';
-/*
-require('resources/styles/customerHeader.scss');*/
-render(<customerIndex />, document.querySelector('#main'));
+import CustomerIndex from '../index/customerIndex';
+
+require('../../styles/customerHeader.scss');
+
+render(<CustomerIndex />, document.body);

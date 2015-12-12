@@ -7,7 +7,7 @@ new webpackDevServer(webpack(config), {
     headers: { 'Access-Control-Request-Headers': '*' },
     noInfo: true,
     historyApiFallback: true
-}).listen(8080, 'localhost', function(err, result) {
+}).listen(3000, 'localhost', function(err, result) {
     if (err) {
         console.log('error');
         return;

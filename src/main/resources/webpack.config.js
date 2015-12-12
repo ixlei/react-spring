@@ -8,15 +8,15 @@ new webpack.HotModuleReplacementPlugin('common.js');
 module.exports = {
 	entry: {
 		customerEntry: [
-            'webpack-dev-server/client?http://127.0.0.1:8080',
+            'webpack-dev-server/client?http://127.0.0.1:3000',
             'webpack/hot/dev-server',
             './scripts/entry/customerEntry.js',
         ]
 	},
 	output: {
 		filename: '[name].js',
-		path: __dirname + '/server/public/js',
-		publicPath: 'http://127.0.0.1:8080/server/public/js'
+        publicPath: 'http://127.0.0.1:3000/server/public/js',
+		path: path.join(__dirname, '/server/public/js')
 	},
 	resolve: {
         extensions: ['', '.js', '.jsx']
@@ -29,8 +29,11 @@ module.exports = {
     	},{
     		test: /\.scss$/,
     		exclude: /node_modules/,
-    		loader:'style!css!scss'
+    		loaders: ["style", "css", "sass"]
     	}]
+    },
+    sassLoader: {
+        includePaths: path.join(__dirname, 'styles')
     },
     plugins: [commonsPlugin]
 };

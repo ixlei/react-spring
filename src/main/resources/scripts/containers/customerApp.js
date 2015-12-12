@@ -1,9 +1,9 @@
 'use strict';
 
-import {Component, PropTypes} from 'react';
+import React, {Component} from 'react';
 import NavContainer from '../containers/customerNavContainers';
 
-export default class customerApp extends Component {
+export default class CustomerApp extends Component {
 	render() {
 		return (
 			<NavContainer />

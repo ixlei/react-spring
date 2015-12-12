@@ -1,14 +1,14 @@
 'use strict';
 
+import React, {Component} from 'react';
 import {Router, Route} from 'react-router';
-import {Component} from 'react';
-import customerApp from '../containers/customerApp';
+import CustomerApp from '../containers/customerApp';
 
-export default class customerRoute extends Component {
+export default class CustomerRoute extends Component {
 	render() {
 		return (
 			<Router>
-				<Route path="/" component={customerApp}>
+				<Route path="/" component={CustomerApp}>
 				</Route>
 			</Router>
 		);
