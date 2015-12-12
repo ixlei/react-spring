@@ -5,7 +5,7 @@ const initState = {
 	index: 0
 };
 
-function setActiveIndex(state = initState, action) {
+export default function activeIndex(state = initState, action) {
 	if(Object.is(ACTIVE_INDEX, action.type)) {
 		return Object.assign({}, state, {
 			index:action.index
@@ -14,5 +14,4 @@ function setActiveIndex(state = initState, action) {
 	return state;
 }
 
-export  { setActiveIndex as default };
 
