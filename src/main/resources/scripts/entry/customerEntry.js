@@ -5,4 +5,4 @@ import CustomerIndex from '../index/customerIndex';
 
 require('../../styles/customerHeader.scss');
 
-render(<CustomerIndex />, document.body);
+render(<CustomerIndex />, document.querySelector('#main'));

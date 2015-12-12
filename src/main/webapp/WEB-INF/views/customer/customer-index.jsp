@@ -24,10 +24,11 @@
 	<div id="main">
 		<div id="content">
 			<div id="first-glance" class="banner">
-				<a href="#" class="unslider-arrow next"> <img
-					src="/images/btn-pre.png" alt="" />
-				</a> <a href="#" class="unslider-arrow next"> <img
-					src="/images/btn-next.png" alt="" />
+				<a href="#" class="unslider-arrow next">
+				<img src="/images/btn-pre.png" alt="" />
+				</a>
+				<a href="#" class="unslider-arrow next">
+				<img src="/images/btn-next.png" alt="" />
 				</a>
 				<ul>
 					<li style="background-image: url(/images/banner1.jpg)"></li>

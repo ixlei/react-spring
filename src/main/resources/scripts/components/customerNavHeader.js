@@ -13,7 +13,7 @@ export default class Nav extends Component {
  		return (
 			<div id="nav-logo">
 		        <span>
-		            <img src={this.props.logoUrl} alt="" id="logo" /> 
+		            <img src={this.props.logoUrl} id="logo" /> 
 		        </span>
 	        </div>
  		);
