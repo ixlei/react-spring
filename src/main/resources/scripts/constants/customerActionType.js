@@ -1,3 +1,6 @@
-"use strict";
+'use strict';
 
 export const ACTIVE_INDEX = 'ACTIVE_INDEX';
+export const REQUEST_COMPANY = 'REQUEST_COMPANY';
+export const RECEIVE_COMPANY = 'RECEIVE_COMPANY';
+export const FAILURE_COMPANY = 'FAILURE_COMPANY';
