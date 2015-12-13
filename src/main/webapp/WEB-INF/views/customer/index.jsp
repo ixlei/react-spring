@@ -8,7 +8,7 @@
 
 </head>
 <body>
-<div id="main"></div>
+<div id="mainPage"></div>
 <script type="text/javascript" src="http://127.0.0.1:3000/server/public/js/customerEntry.js"></script>
 </body>
 </html>

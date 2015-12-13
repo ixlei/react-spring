@@ -12,8 +12,8 @@ export default class Unslider extends Component {
 		return (
 			<ul>
 			  {list.map((data, index) => (
-					<li key= {'slider' + index} style=
-					{{backgroundImage: 'url(' + '/images/' + data + ')' }}></li>
+				<li key= {'slider' + index} style=
+				{{backgroundImage: 'url(' + '/images/' + data + ')' }}></li>
 				))
 			}
 			</ul>
@@ -22,9 +22,9 @@ export default class Unslider extends Component {
 
 	renderArrow(arrowData) {
 		return (
-			arrowData.map((data) => (
-				<Link to="javascript:;" className="unslider-arrow next">
-					<img src="" />
+			arrowData.map((data, index) => (
+				<Link key={'arrow' + index} to="javascript:;" className="unslider-arrow next">
+					<img src={'/images/' + data } />
 				</Link>
 			))
 		)
@@ -33,7 +33,7 @@ export default class Unslider extends Component {
 	render() {
 		let {arrowImgUrl, list} = this.props;
 		return (
-			<div  className="banner">
+			<div  className="first-glance banner">
 				{this.renderArrow(arrowImgUrl)}
 				{this.renderList(list)}
 			</div>

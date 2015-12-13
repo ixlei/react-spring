@@ -6,7 +6,12 @@ import NavContainer from '../containers/customerNavContainers';
 export default class CustomerApp extends Component {
 	render() {
 		return (
-			<NavContainer />
+			<div>
+				<NavContainer />
+				<div id="main">
+					{this.props.children}
+				</div>
+			</div>
 		);
 	}
 }

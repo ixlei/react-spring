@@ -15,10 +15,8 @@ export default class CustomerRoute extends Component {
 		return (
 			<Router history={history}>
 				<Route path="/" component={CustomerApp}>
-					<Route path="index" 
+					<Route path="index"
 						component={CustomerIndex} />
-					<Route path="finance" 
-					  component={CustomerIndex} />
 				</Route>
 			</Router>
 		)
