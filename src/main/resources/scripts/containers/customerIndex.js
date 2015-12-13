@@ -4,6 +4,7 @@ import React, {Component, PropTypes} from 'react';
 import UnsliderContainer from './unsliderContainer';
 import CountScrollContainer from './countScrollContainer';
 import IncreateRateContainer from './increaseRateContainer';
+import InvestorTitle from '../components/investorTitle';
 
 require('../../styles/customerIndex.scss');
 
@@ -31,6 +32,10 @@ export default class CustomerIndex extends Component {
 				    <div id="circle-data"></div>
 				    <div id="circle-image"></div>
 				  </div>
+				</div>
+				<div id="invest-center">
+				  <p id="inv-title">投资中心</p>
+				  <InvestorTitle />
 				</div>
 			</div>
 		)

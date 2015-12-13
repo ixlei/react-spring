@@ -9,7 +9,7 @@ export default class ListItem extends Component {
 			<ul>
 			    {this.props.list.map((list, index) => (
 				<li key={list.addr}>
-					<Link to={list.addr }><span>{list.text}</span>
+					<Link to={list.addr}><span>{list.text}</span>
 					</Link>
 				</li>
 				))
