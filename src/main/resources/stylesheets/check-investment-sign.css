@@ -1,0 +1,158 @@
+.wrap{
+	width: 820px;
+	
+	margin:0 auto;
+	
+}
+img{border:none;}
+li{list-style:none;}
+.clearfix:after{
+	content:"";
+	display:block;
+	clear:both;
+}
+.clearfix{
+	zoom:1;
+}
+
+body{
+	background: #F5F5F5;
+}
+.main{
+	float: left;
+	width: 600px;		
+	border: 1px solid #fff;
+	background-color: white;
+	margin-left: 10px;
+	margin-top: 20px;
+	padding: 25px;
+	padding-top: 5px;
+	height: 600px;
+
+}
+.name{
+	font-weight: bold;
+}
+.stage{
+	margin-bottom: 30px;
+}
+.stage span{
+	color: #F4A76D;
+	
+}
+.left_line{
+	float: left;
+	width: 200px;
+	border: 1px solid #767B91;
+}
+.right_line{
+	float: right;
+	width: 200px;
+	border: 1px solid #767B91;
+}
+.tit{	
+	
+	float: left;
+	font-size: 1.3em;
+	color: #2A324B;
+	margin: 0 32px;
+	margin-top: -11px;
+}
+.progress{
+	
+	margin-top: 90px;
+	position: relative;
+}
+.progress img{
+	width: 110px;
+	height: 50px;
+
+}
+.progress .connection{
+	height: 10px;
+}
+
+.DC_apply{
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.c1{
+	
+	position: absolute;
+	left: 110px;
+	top: 20px;
+}
+.DC_authentication{
+	position: absolute;
+	left: 220px;
+	top: 0px;
+}
+.progress .c2{
+	width: 180px;
+	position: absolute;
+	left: 330px;
+	top: 20px;
+}
+.progress .check_contract{
+	height: 59px;
+	position: absolute;
+	left: 456px;
+	top: 0px;
+	z-index: 2;
+	
+}
+.progress .cs1{
+	
+	height: 110px;
+	width: 208px;
+	position: absolute;
+	left: 333px;
+	top: 47px;
+	z-index: 1;
+	
+}
+.sign_contract{
+	position: absolute;
+	top: 126px;
+	left: 228px;
+	z-index: 2;
+	
+}
+.progress .cs2{
+	width: 240px;
+	height: 120px;
+	position: absolute;
+	top: 134px;
+	left: 45px;
+	z-index: 1;
+}
+.progress .number_authentication{
+	position: absolute;
+	top: 239px;
+	left: 22px;
+	z-index: 2;
+	height: 59px;
+}
+.progress .c3{
+	position: absolute;
+	top: 270px;
+	left: 127px;
+}
+.progress .time_authentication{
+	position: absolute;
+	top: 249px;
+	left: 230px;
+	z-index: 2;
+}
+.progress .c4{
+	position: absolute;
+	top: 270px;
+	left: 339px;
+	z-index: 1;
+}
+.progress .sign_finished{
+	position: absolute;
+	top: 249px;
+	left: 449px;
+}

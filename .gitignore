@@ -1,0 +1,4 @@
+/src/main/resources/node_modules/*
+/src/main/resources/server/*
+/target/*
+/target/

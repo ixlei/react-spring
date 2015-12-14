@@ -1,0 +1,134 @@
+@charset "utf-8";
+/* CSS Document */
+#main {
+	margin: 0;
+	padding: 0;
+}
+
+#content, #service-item {
+	width: 820px;
+	margin: 0 auto;
+}
+
+#first-glance {
+	height: 320px;
+}
+
+#first-glance ul {
+	margin: 10px -40px;
+}
+
+#first-glance ul, #first-glance ul li, #main, #service-item {
+	width: 100%;
+	height: 100%;
+}
+
+.banner {
+	position: relative;
+	overflow: hidden;
+}
+
+.banner li {
+	list-style: none;
+}
+
+.banner a {
+	z-index: 100;
+	position: absolute;
+	top: 40%;
+}
+
+.banner a:nth-child(2) {
+	left: 760px;
+}
+
+.banner a:nth-child(1) {
+	left: 30px;
+}
+
+.banner ul li {
+	background: no-repeat;
+	background-size: 820px 320px;
+	float: left;
+}
+
+.banner a img {
+	width: 20px;
+}
+
+#service-item {
+	overflow: hidden;
+	height: 340px;
+	margin-top: 10px;
+}
+
+#service-item div {
+	float: left;
+	width: 48%;
+	overflow: hidden;
+}
+
+#item-esignature {
+	margin-left: 1%
+}
+
+#item-management {
+	margin-left: 2%;
+}
+
+.title {
+	font-family: "微软雅黑";
+	height: 40px;
+	letter-spacing: 5px;
+	line-height: 40px;
+	text-align: center;
+	color: #767B91;
+	font-size: 1.2em;
+	border-bottom: 1px solid #E5E5E5;
+}
+
+.item-describe {
+	/*height: 90px;*/
+	font-family: "微软雅黑";
+	line-height: 25px;
+	letter-spacing: 3px;
+	text-align: center;
+	color: #767B91;
+}
+
+.other {
+	left: 30%;
+	width: 200px;
+	padding-left: 100px;
+}
+
+.other>.content_more {
+	text-align: center;
+	display: inline-block;
+	padding: 6px 10px;
+	width: auto;
+	height: auto;
+	border: 2px solid rgba(21, 19, 19, 0.6);
+	border-radius: 6px;
+}
+
+.other>.content_more_text {
+	line-height: 35px;
+	font-size: smaller;
+	width: 120px;
+	left: 630px;
+	height: 35px;
+}
+
+.other>.content_more_text_1 {
+	line-height: 35px;
+	font-size: smaller;
+	width: 120px;
+	left: 1030px;
+	height: 35px;
+}
+
+#footer {
+	position: absolute;
+	bottom: 0;
+}
