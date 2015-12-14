@@ -1,4 +1,8 @@
 /src/main/resources/node_modules/*
 /src/main/resources/server/*
+<<<<<<< HEAD
 /target/*
 /target/
+=======
+/target/*
+>>>>>>> ec93e24da254d8d5fe0d0eebfa330995bc840a0b

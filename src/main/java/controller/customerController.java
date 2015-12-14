@@ -1,7 +1,10 @@
 package controller;
 
 import java.io.File;
+<<<<<<< HEAD
 import java.util.ArrayList;
+=======
+>>>>>>> ec93e24da254d8d5fe0d0eebfa330995bc840a0b
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
@@ -54,6 +57,7 @@ public class customerController {
 		model.put("flag", 1);
 		return "customer/finacing-company";
 	}
+<<<<<<< HEAD
 	
 	@ResponseBody
 	@RequestMapping("/compNews")
@@ -69,6 +73,8 @@ public class customerController {
 		
 		return map;
 	}
+=======
+>>>>>>> ec93e24da254d8d5fe0d0eebfa330995bc840a0b
 
 	@RequestMapping("/invest")
 	public String showInvest(Map<String, Integer> model) {

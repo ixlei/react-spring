@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
+<<<<<<< HEAD
 	<name>react-spring</name>
+=======
+	<name>rs</name>
+>>>>>>> ec93e24da254d8d5fe0d0eebfa330995bc840a0b
 	<comment></comment>
 	<projects>
 	</projects>
