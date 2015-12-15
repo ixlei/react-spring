@@ -14,7 +14,7 @@ public class debtBuyDao {
 	private SimpleJdbcTemplate jdbcTemplate;
 
 	public debtBuyDao() {
-
+       
 	}
 
 	public void setJdbcTemplate(SimpleJdbcTemplate jdbcTemplate) {

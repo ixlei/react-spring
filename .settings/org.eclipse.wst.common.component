@@ -1,20 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
-<<<<<<< HEAD
     <wb-module deploy-name="react-spring">
-=======
-    <wb-module deploy-name="rs">
->>>>>>> ec93e24da254d8d5fe0d0eebfa330995bc840a0b
-        <wb-resource deploy-path="/" source-path="/target/m2e-wtp/web-resources"/>
         <wb-resource deploy-path="/" source-path="/src/main/webapp" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/resources"/>
-        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/test/java"/>
-<<<<<<< HEAD
         <property name="context-root" value="react-spring"/>
         <property name="java-output-path" value="/react-spring/target/classes"/>
-=======
-        <property name="context-root" value="rs"/>
-        <property name="java-output-path" value="/rs/target/classes"/>
->>>>>>> ec93e24da254d8d5fe0d0eebfa330995bc840a0b
     </wb-module>
 </project-modules>
