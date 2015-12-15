@@ -1,10 +1,7 @@
 package controller;
 
 import java.io.File;
-<<<<<<< HEAD
 import java.util.ArrayList;
-=======
->>>>>>> ec93e24da254d8d5fe0d0eebfa330995bc840a0b
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
@@ -33,6 +30,8 @@ import org.springframework.web.multipart.MultipartFile;
 
 import dao.companyuserDao;
 import dao.investorDao;
+import dao.compNewsDao;
+import model.compNews;
 
 @Controller
 @RequestMapping("/customer")
@@ -43,7 +42,8 @@ public class customerController {
 	private investorDao newuser = (investorDao) context.getBean("investor");
 	private companyuserDao newCompanyUser = (companyuserDao) context
 			.getBean("companyuser");
-
+    private compNewsDao compNews = (compNewsDao) context.getBean("compNews");
+    
 	@RequestMapping({ "/", "/index" })
 	
 	public Object showIndex(Map<String, Integer> model) {
@@ -57,7 +57,6 @@ public class customerController {
 		model.put("flag", 1);
 		return "customer/finacing-company";
 	}
-<<<<<<< HEAD
 	
 	@ResponseBody
 	@RequestMapping("/compNews")
@@ -68,14 +67,32 @@ public class customerController {
 		rate.add(Double.parseDouble("12"));
 		rate.add(Double.parseDouble("18"));
 		rate.add(Double.parseDouble("15"));
-		map.put("rate", rate);
+		map.put("increaseRate", rate);
 		map.put("number", 6276);
 		
 		return map;
 	}
-=======
->>>>>>> ec93e24da254d8d5fe0d0eebfa330995bc840a0b
-
+	
+	@ResponseBody
+	@RequestMapping("/getCompNews") 
+	public Object getNews() {
+		ArrayList<compNews> list = compNews.getAllNews();
+		ArrayList<compNews> policy = new ArrayList<compNews>();
+		ArrayList<compNews> market = new ArrayList<compNews>();
+		for(int i = 0, j = list.size(); i < j; i++) {
+			if(list.get(i).getType().equals("policy")) {
+				policy.add(list.get(i));
+			} else {
+				market.add(list.get(i));
+			}
+		}
+		Map<String, Object> map = new HashMap<String, Object>();
+		
+		map.put("policy", policy);
+		map.put("market", market);
+		return map;
+	}
+	
 	@RequestMapping("/invest")
 	public String showInvest(Map<String, Integer> model) {
 		model.put("flag", 2);

@@ -41,21 +41,24 @@ class CompNewsContainer extends Component {
 
 
 function mapStateToProps(state) {
+  let {compNews} = state;
+  let {number, increaseRate: rate} = compNews;
+
   return {
      rate: [{
 			time: '近一周',
 			iconUrl: 'arrow1.png',
-			rate: 13
+			rate: rate[0]
 		}, {
 			time: '近一月',
 			iconUrl: 'arrow2.png',
-			rate: 13
+			rate: rate[1]
 		}, {
 			time: '近一季',
 			iconUrl: 'arrow3.png',
-			rate: 13
+			rate: rate[2]
 		}],
-	count: 6276
+	count: number
   }
 }
 

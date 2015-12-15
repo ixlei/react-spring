@@ -17,8 +17,10 @@ export function compNews(state = initState, action) {
 	      invalidate: true
 	    })
 	  case types.RECEIVE_COMPANY:
+	    let {number, increaseRate} = action.entities;
 	    return Object.assign({}, state, {
-	    	entities: action.entities,
+	    	number,
+	    	increaseRate,
 	    	invalidate: false,
 	    	isFetching:false
 	    })

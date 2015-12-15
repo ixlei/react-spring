@@ -53,4 +53,7 @@
 		<property name="jdbcTemplate" ref="jdbcTemplate" />
 	</bean>
 	
+	<bean id="compNews" class="dao.compNewsDao">
+		<property name="jdbcTemplate" ref="jdbcTemplate" />
+	</bean>
 </beans>

@@ -22,11 +22,6 @@
         http://www.springframework.org/schema/websocket/spring-websocket.xsd">
 	
     <mvc:annotation-driven />
-<<<<<<< HEAD
-   
-    
-=======
->>>>>>> ec93e24da254d8d5fe0d0eebfa330995bc840a0b
 	<context:component-scan base-package="controller" />
 	
 	<context:component-scan base-package="config" />
@@ -48,7 +43,6 @@
 	</bean>
 
 	<mvc:resources mapping="/resources/**" location="/resources/" />
-<<<<<<< HEAD
 	
 	<bean id="mappingJacksonHttpMessageConverter"
           class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter">
@@ -66,7 +60,4 @@
         </property>
     </bean>
     
-=======
-
->>>>>>> ec93e24da254d8d5fe0d0eebfa330995bc840a0b
 </beans>

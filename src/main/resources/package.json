@@ -19,11 +19,7 @@
   "dependencies": {
     "babel-polyfill": "^6.3.14",
     "es6-promise": "^3.0.2",
-<<<<<<< HEAD
     "history": "^1.13.1",
-=======
-    "history": "^1.16.0",
->>>>>>> ec93e24da254d8d5fe0d0eebfa330995bc840a0b
     "isomorphic-fetch": "^2.2.0",
     "jsx-loader": "^0.13.2",
     "normalizr": "^1.4.0",

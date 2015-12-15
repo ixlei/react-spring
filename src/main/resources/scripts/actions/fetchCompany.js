@@ -6,12 +6,8 @@ import * as types from '../constants/customerActionType';
 
 export function fetchCompanyNews() {
 	return dispatch => {
-<<<<<<< HEAD
 	  dispatch(requestCompany('compNews'));
 	  return fetch('/react-spring/customer/compNews')
-=======
-	  return fetch('/companyNews')
->>>>>>> ec93e24da254d8d5fe0d0eebfa330995bc840a0b
 	    .then(checkSatus)
 	    .then(response => response.json())
 	    .then(json => dispatch(receiveCompanyNews(json)))
@@ -31,6 +27,7 @@ function receiveCompanyNews(entities) {
 		type: types.RECEIVE_COMPANY,
 		entities
 	}
+
 }
 
 function failureRequestCompanyNews(entities) {

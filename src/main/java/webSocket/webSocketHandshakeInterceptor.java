@@ -23,19 +23,16 @@ public class webSocketHandshakeInterceptor implements HandshakeInterceptor {
 			ServerHttpResponse response, WebSocketHandler wsHandler,
 			Map<String, Object> map) throws Exception {
 
-<<<<<<< HEAD
 	/*	if (request instanceof ServletServerHttpRequest) {
 			ServletServerHttpRequest servletReq = (ServletServerHttpRequest) request;
 			map.put("citiuser", ((ServletServerHttpRequest) request)
 					.getServletRequest().getParameter("session"));
 		}*/
-=======
 		if (request instanceof ServletServerHttpRequest) {
 			ServletServerHttpRequest servletReq = (ServletServerHttpRequest) request;
 			map.put("citiuser", ((ServletServerHttpRequest) request)
 					.getServletRequest().getParameter("session"));
 		}
->>>>>>> ec93e24da254d8d5fe0d0eebfa330995bc840a0b
 		return true;
 	}
 
