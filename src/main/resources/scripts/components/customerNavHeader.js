@@ -20,14 +20,16 @@ export default class Nav extends Component {
  	}
 
  	renderGoList() {
+ 		console.log(this.props.activeIndex.index);
+ 		let activeIndex = 0;
  		return (
  			<div id="nav-list">
 		      <ul>
 		      	{this.props.goList.map((list, index) =>(
 	      		<li key={list.addr}>
-	      			<Link to={list.addr}>
+	      			<Link to={list.addr + '/' + index}>
 	      				<span className=
-	      				{Object.is(this.props.activeIndex.index, index) 
+	      				{parseInt(this.props.activeIndex.index) === index 
 	      					? 'nav-item active' : 'nav-item'}>
 	      				{list.text}</span>
 	      			</Link>
