@@ -1,5 +1,6 @@
-"use strict";
-import * as types from '../constants/customerActionTypes';
+'use strict';
+
+import * as types from '../constants/customerActionType';
 
 export function activeIndex(index) {
   return {

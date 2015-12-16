@@ -13,7 +13,7 @@ class NavContainer extends Component {
 function mapStateToProps(state) {
 
 	const {activeIndex} = state;
-
+	
 	const logoUrl = '/images/logo-last.png';
 	const goList = [{
 		addr: 'index',
