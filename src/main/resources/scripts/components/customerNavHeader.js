@@ -20,7 +20,6 @@ export default class Nav extends Component {
  	}
 
  	renderGoList() {
- 		console.log(this.props.activeIndex.index);
  		let activeIndex = 0;
  		return (
  			<div id="nav-list">
