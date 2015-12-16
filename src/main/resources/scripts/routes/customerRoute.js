@@ -5,6 +5,7 @@ import {Router, Route, Link, IndexRoute} from 'react-router';
 import { createHistory, useBasename } from 'history';
 import CustomerApp from '../containers/customerApp';
 import CustomerIndex from '../containers/customerIndex';
+import InvestmentHall from '../components/investmentHall';
 
 const history = useBasename(createHistory)({
   basename: '/react-spring/customer'
@@ -15,8 +16,10 @@ export default class CustomerRoute extends Component {
 		return (
 			<Router history={history}>
 				<Route path="/" component={CustomerApp}>
-					<Route path="index"
+					<Route path="/index/:index"
 						component={CustomerIndex} />
+                    <Route path="/invest/:index"
+                      component={InvestmentHall} />
 				</Route>
 			</Router>
 		)
