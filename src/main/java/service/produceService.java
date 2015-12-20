@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 package service;/*package service;
+=======
+/*package service;
+>>>>>>> 3e93adb2ae05c6db12b5606074503f489a43b1aa
 
 import javax.jms.JMSException;
 import javax.jms.Session;
