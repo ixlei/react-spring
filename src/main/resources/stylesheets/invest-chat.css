@@ -1,0 +1,371 @@
+@charset "utf-8";
+
+/* CSS Document */
+#main {
+	margin: 0;
+}
+
+#main a {
+	color: #575C6D;
+}
+
+#main, #first-galance, #chat-title, #to-list, #chat-area {
+	width: 100%;
+	padding: 0;
+}
+
+#content, #first-galance, #chat-title, #to-list, #chat-area {
+	margin: 0 auto;
+}
+
+#content {
+	width: 820px;
+}
+
+#first-galance, #chat-title {
+	position: relative;
+}
+
+#chat-title {
+	overflow: hidden;
+}
+
+#chat-title div {
+	float: left;
+}
+
+#title {
+	width: 50%;
+	height: 45px;
+}
+
+#title span {
+	height: 45px;
+	line-height: 45px;
+}
+
+#show-hidden span {
+	width: 120px;
+	text-align: right;
+	padding-top: 20px;
+	height: 20px;
+}
+
+#title span, #show-hidden span {
+	display: inline-block;
+	text-align: center;
+}
+
+#show-hidden span a {
+	font-size: 0.9em;
+}
+
+#title span a {
+	text-align: center;
+	font-size: 2.2em;
+}
+
+#show-hidden {
+	width: 25%;
+	left: 50%;
+}
+
+#show-hidden {
+	width: 120px;
+}
+
+ul {
+	list-style: none;
+}
+
+#first-galance {
+	margin-top: 20px;
+}
+
+#to-list {
+	margin-top: 10px;
+	border: 2px solid #2A324B;
+	border-radius: 4px;
+}
+
+.name, .to-one, .connect-btn {
+	display: inline-block;
+}
+
+ .to-one {
+	margin-left:15px;
+	
+}
+ 
+.name {
+	color: #43495D;
+	font-size: 1.1em;
+	/* width: 180px; */
+}
+
+.connect-btn {
+	text-align: center;
+	width: 40px;
+	font-size: 0.8em;
+	border-radius: 5px;
+	border: #2A324B 1px solid;
+}
+
+#to-list li {
+	height: 40px;
+}
+
+#chat-area {
+	overflow: hidden;
+	position: relative;
+	margin-top: 10px;
+	margin-bottom: 20px;
+	border: 2px solid #2A324B;
+	border-radius: 6px;
+}
+
+#left-nav, #right-nav {
+	float: left;
+}
+
+#right-nav {
+	height: 480px;
+}
+
+#left-nav {
+	border-right: 2px solid #2A324B;
+	height: 480px;
+}
+
+#current-list {
+	position: relative;
+	width: 176px;
+}
+
+#to, #historty {
+	width: 100%;
+}
+
+#current-to {
+	position: relative;
+	height: 40px;
+	width: 176px;
+	border-bottom: 2px solid #2A324B;
+	border-bottom-right-radius: 6px;
+	border-bottom-left-radius: 6px;
+}
+
+#current-to span {
+	display: inline-block;
+	width: 100%;
+	height: 40px;
+	color: #2A324B;
+	font-size: 1.2em;
+	text-align: center;
+	line-height: 40px;
+}
+
+#to, .msg-window {
+	margin: 0;
+	padding: 0;
+	height: 380px;
+}
+
+#to ul li {
+	position: relative;
+	height: 30px;
+	margin-left: -40px;
+}
+
+#to ul li span {
+	position: absolute;
+	display: inline-block;
+}
+
+#historty {
+	height: 40px;
+}
+
+#historty span {
+	display: inline-block;
+	height: 40px;
+	width: 100%;
+	line-height: 40px;
+	text-align: center;
+	border-top: 2px solid #2A324B;
+	border-top-right-radius: 6px;
+	border-top-left-radius: 6px;
+}
+
+#right-nav, #sub-nav {
+	width: 642px;
+}
+
+#sub-nav {
+	padding: 0;
+	overflow: hidden;
+	width: 100%;
+	height: 40px;
+	border-bottom-right-radius: 6px;
+	border-bottom-left-radius: 6px;
+	border-bottom: 2px solid #2A324B;
+}
+
+#sub-nav ul {
+	height: 100%;
+	position: relative;
+	margin-top: 0;
+	overflow: hidden;
+}
+
+#sub-nav ul li:nth-child(1) {
+	margin-left: -40px;
+}
+
+#sub-nav ul li {
+	float: left;
+	width: 33%;
+}
+
+#sub-nav ul li span {
+	display: inline-block;
+	height: 40px;
+	width: 100%;
+	line-height: 40px;
+	text-align: center;
+}
+
+#upload {
+	position:releative;
+}
+
+#upload a {
+	position:absolute;
+	left:480px;
+}
+
+#upload input {
+	position:absolute;
+	height:80px;
+	left:420px;
+	z-index:10;
+	border:none;
+	width:260px;
+	opacity:0;
+}
+
+
+
+#sub-nav ul li:nth-child(1), #sub-nav ul li:nth-child(2) {
+	border-right: 2px solid #2A324B
+}
+
+#ichat {
+	
+}
+
+.msg-window {
+	height: 380px;
+}
+
+#send-msg {
+	overflow: hidden;
+	border-top: 2px solid #2A324B;
+	border-top-right-radius: 6px;
+	border-top-left-radius: 6px;
+	height: 40px;
+}
+
+#input, #send {
+	float: left;
+}
+
+#input {
+	width: 70%;
+	height: 100%;
+	width: 540px;
+}
+
+#input input {
+	left: 20px;
+	position: relative;
+	height: 20px;
+	top: 10px;
+	line-height: 20px;
+	border: 1px solid #2A324B;
+	border-radius: 6px;
+	width: 500px;
+}
+
+.tips {
+	text-align: right;
+	width: 120px;
+	height: 30px;
+	line-height: 30px;
+	vertical-align: middle;
+}
+
+.close {
+	left: 140px;
+	line-height: 30px;
+	height: 30px;
+	width: 20px;
+}
+
+#send {
+	width: 100px;
+	height: 40px;
+}
+
+#send span {
+	margin-top: 5px;
+	display: inline-block;
+	height: 30px;
+	line-height: 30px;
+}
+
+#fj {
+	height: 30px;
+	line-height: 30px;
+	width: 40px;
+}
+
+.msg-window span {
+	display: inline-block;
+	color: #2A324B;
+}
+
+.uesrname {
+	height: 30px;
+	line-height: 30px;
+	width: 80px;
+}
+
+.time {
+	height: 30px;
+	line-height: 30px;
+	font-size: 0.9em;
+}
+
+.newcoming {
+	background-color: #E0E0E0;
+}
+
+#msg-list {
+	height: 340px;
+	overflow-y: auto;
+}
+
+body {
+	display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+#main {
+	flex:1;
+}
+/*#list-show {
+    width: 135px;
+    overflow: auto;
+}*/

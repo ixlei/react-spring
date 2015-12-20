@@ -1,0 +1,122 @@
+body{
+	background-color: #F5F5F5;
+}
+.wrap{
+	width: 820px;
+	margin:0 auto;
+
+}
+.fl{
+	float: left;
+}
+.fr{
+	float: right;
+}
+.main{
+	width: 75%;
+	float: left;
+	margin-left: 10px;
+	margin-top: 15px;
+	background-color: white;
+
+}
+.tit{
+	font-size: 1.5em;
+	margin:20px 10px;
+	padding-left: 20px;
+	padding-bottom: 10px;
+	border-bottom: solid 5px #C7CCDB
+}
+.left{
+	margin-left: 32px;
+	
+}
+.right{
+	margin-right: 50px;
+	
+}
+.left,.right{
+	font-size: 0.9em;
+	margin-top: -13px;
+}
+.right1{
+ 	margin-left: 50px;
+}
+.buttom{
+	clear: both;
+	margin-left: 32px;
+	font-size: 0.9em;
+	position: relative;
+	
+	
+}
+.buttom p input{
+	width: 80px;
+	height: 20px;
+	border-radius: 5px;
+	border: solid 1px #C7CCDB
+}
+
+#textarea{
+	margin-left: 7px;
+	 border-radius:5px;
+	 border: solid 1px #C7CCDB;
+}
+.more_info input{
+	width: 60px;
+	height: 20px;
+	border-radius: 5px;
+	border: solid 1px #C7CCDB;
+}
+.more_info .por{
+	border-radius: 5px;
+	border: solid 1px #C7CCDB;
+	width: 40px;
+	height: 18px;
+}
+.more_info .exit,.more_info .stage,.more_info .short,.more_info .ensure{
+	border-radius: 5px;
+	border: solid 1px #C7CCDB;
+	width: 130px;
+	height: 18px;
+}
+.more_info .exit
+{
+	margin-left: 13px;
+}
+.more_info .stage{
+	margin-left: 20px;
+}
+.more_info .short{
+	margin-left: 20px;
+}
+.more_info .ensure{
+	margin-left: 62px;
+}
+.right .trunover{
+	margin-left: 21px;
+}
+.right .profits{
+	margin-left: 21px;
+}
+.right .threshold{
+	margin-left: 35px;
+}
+.right .add{
+	margin-left: 14px;
+}
+ .submit{
+	
+	clear: both;
+	float: right;
+	width: 110px;
+	height: 40px;
+	background-color: #2A324B;
+	border-radius: 5px;
+	color: white;
+	font-size: 1.2em;
+	margin-bottom: 100px;
+	margin-right: 90px;
+	margin-top: 30px;
+
+}

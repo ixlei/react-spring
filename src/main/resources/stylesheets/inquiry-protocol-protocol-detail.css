@@ -1,0 +1,110 @@
+ul
+{
+	list-style-type: none;
+}
+
+ul#sidebar
+{
+	padding-top: 20px;
+	padding-left: 0px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	text-align: center;
+	font-size: 1em;
+}
+
+ul#sidebarTitle
+{
+	padding-left: 0px;
+	text-align: center;
+	font-size: 1.2em;
+	color: #2A324B;
+}
+
+.sidebarItem
+{
+	padding-top: 21px;
+	padding-left: 0px;
+	color: #43495D;
+}
+
+#mainContainer
+{
+	margin: 36px auto;
+	width: 820px;
+	
+}
+
+#main
+{
+	width: 820px;
+    	border:1px solid #cccccc;
+    	background:#DDE5E8;
+	-moz-box-shadow: 1px 1px 5px #888888; /* 老的 Firefox */
+	box-shadow: 1px 1px 5px #888888;
+}
+
+#listContent
+{
+	background-image: url("../images/sidebarbg.png");
+	background-repeat: no-repeat;
+	height: 358px;
+	width: 175px;
+	height:957px;
+	margin: 0px;
+}
+
+#listTitle
+{
+	background-image: url("../images/sidebarTitlebg.png");
+	background-repeat: no-repeat;
+	height: 70px;
+	width: 175px;
+	margin: 0px;
+}
+
+#sidebarContainer
+{
+	width: 175px;
+	margin: 0px;
+	float: left;
+}
+
+#mainContent
+{
+	margin-left: 180px;
+	margin-right: 0px;
+	width: 639px;
+	background:#FFF;
+	height: 1340px;
+}
+
+article
+{
+	margin-left:15px;
+}
+
+.title
+{
+	font-size: 1.2em;
+	margin-top: 8px;
+	margin-bottom: 24px;
+}
+.p1,.p2,.p3,.p4{
+	font-size:0.8em;
+	margin-top:15px;
+	margin-bottom:15px;
+	}
+.A_name,.B_name,.A_num,.B_num,.project_name,.company_name,.com_name,.A_money,.B_money,.money_proportion,.File_num,.A_Signname,.B_Signname,.A_Year,.A_Month,.A_Day,.B_Year,.B_Month,.B_Day,.A_address,.B_address{
+	text-decoration:underline;
+	font-size:0.8em;
+	}
+
+
+
+#page
+{
+	text-align: center;
+	bottom: 100%;
+}
+p{margin-top:0px;margin-bottom:0;}

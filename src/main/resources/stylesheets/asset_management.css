@@ -1,0 +1,150 @@
+.wrapper {
+    width: 820px;
+    margin: auto;
+    margin-bottom: 220px;
+}
+
+.return {
+    height: 40px;
+    border-bottom: 1px solid #767B91;
+}
+
+.return a {
+    font-size: 0.9em;
+    color: #767B91;
+    float: right;
+    width: 140px;
+    line-height: 40px;
+    background: url(../images/back.png) no-repeat;
+    background-position: 70%;
+}
+
+.title {
+    height: 86px;
+}
+
+.title p {
+    padding-top: 40px;
+    padding-bottom: 20px;
+    text-align: center;
+    font-size: 1.6em;
+    color: #767B91;
+    ;
+}
+
+.introduce {
+    height: 78px;
+    width: 100%;
+    background-color: #E1E5ED;
+    padding-top: 16px;
+}
+
+.introduce p {
+    color: #767B91;
+    font-size: 0.8em;
+    text-indent: 30px;
+    line-height: 22px;
+    margin-left: 10px;
+}
+
+.detail {
+    height: 250px;
+    border-bottom: solid 1px #767B91;
+}
+
+.gross,
+.amount {
+    width: 30%;
+}
+
+.situation {
+    width: 39%;
+}
+
+.total {
+    padding-top: 50px;
+    text-align: center;
+    font-size: 1em;
+    color: #767B91;
+    padding-bottom: 20px;
+}
+
+.num {
+    font-size: 4.5em;
+    color: #FF8000;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.amount p,
+.gross p {
+    text-align: center;
+    margin-top: 5px;
+}
+
+.info {
+    float: left;
+    text-align: right;
+    margin-left: 10px;
+    width: 30%;
+}
+
+.info img {
+    width: 80%;
+    margin-top: 5px;
+}
+
+.info span {
+    color: #767B91;
+    font-size: 0.8em;
+}
+
+.tit {
+    font-size: 1.6em;
+    color: #767B91;
+    text-align: center;
+    margin: 40px auto;
+}
+
+.progresss {
+    margin-top: 50px;
+    width: 100%;
+}
+
+.progress ul li {
+    float: left;
+    text-align: center;
+    line-height: 90px;
+    font-size: 16px;
+    display: block;
+}
+
+.progress ul li a {
+    width: 164px;
+    height: 164px;
+    display: block;
+    color: white;
+    font-size: 1em;
+    margin-left: -14px;
+    margin-top: 44px;
+}
+
+.stock {
+    background: url(../images/stock.png) no-repeat;
+}
+
+.debt {
+    background: url(../images/debt.png) no-repeat
+}
+
+.product {
+    background: url(../images/product.png) no-repeat;
+}
+
+.income {
+    background: url(../images/income.png) no-repeat
+}
+
+.sum {
+    background: url(../images/sum.png) no-repeat;
+}

@@ -1,0 +1,165 @@
+ul
+{
+	list-style-type: none;
+}
+
+ul#sidebar
+{
+	padding-top: 20px;
+	padding-left: 0px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	text-align: center;
+	font-size: 1em;
+}
+
+ul#sidebarTitle
+{
+	padding-left: 0px;
+	text-align: center;
+	font-size: 1.2em;
+	color: #2A324B;
+}
+
+.sidebarItem
+{
+	padding-top: 15px;
+	padding-left: 0px;
+	color: #43495D;
+}
+
+#mainContainer
+{
+	margin: auto;
+	width: 820px;
+	height: 520px;
+	margin-top: 30px;
+	margin-bottom: 48px;
+}
+
+#main
+{
+	width: 820px;
+	height: 520px;
+	position: absolute;
+	border: 1px solid #C9D2F0;
+	-moz-box-shadow: 1px 1px 5px #888888; /* 老的 Firefox */
+	box-shadow: 1px 1px 5px #888888;
+}
+
+
+
+#listTitle
+{
+	background-image: url(../images/sidebarTitlebg.png);
+	background-repeat: no-repeat;
+	height: 70px;
+	width: 175px;
+	margin: 0px;
+}
+
+#sidebarContainer
+{
+	width: 175px;
+	height: 520px;
+	margin: 0px;
+	float: left;
+	background-color: #DDE5E8
+}
+
+#mainContent
+{
+	margin-left: 200px;
+	margin-right: 0px;
+	width: 582px;
+}
+
+.title
+{
+	font-size: 1.2em;
+	margin-top: 40px;
+	margin-bottom: 40px;
+}
+
+#searchForm
+{
+	float: right;
+	margin-top: -5px;
+}
+
+#searchText
+{
+	overflow: hidden;
+	resize: none;
+	width: 261px;
+	height: 22px;
+	border: 1px solid #A4B3E4;
+	border-radius: 5px;
+	font-size: 1em;
+	margin-top: 0px;
+}
+
+
+
+#searchTitle
+{
+	position:absolute;
+	top:21px;
+	left:747px;
+	color: white;
+	font-size: 1em;
+}
+
+#input
+{
+	display: inline;
+	margin: 0px;
+}
+
+#textClear
+{
+	width: 13px;
+	height: 14px;
+	position: absolute;
+	left: 705px;
+	top: 40px;
+}
+
+th
+{
+	border-right: 1px solid #FFFFFF;
+	padding: 0px;
+	background-color: #A4B3E4;
+	height: 30px;
+}
+
+th.rightListHead
+{
+	border-right: 1px solid #A4B3E4;
+}
+
+td.listItem
+{
+	border: 1px solid #A4B3E4;
+	height: 20px;
+	text-align: center;
+}
+
+table
+{
+	border-collapse: collapse;
+	border: 1px solid #A4B3E4;
+	width: 100%;
+	margin-left: 0px;
+}
+
+#page
+{
+	text-align: center;
+	bottom: 100%;
+}
+
+.list ul li a {
+	 color: #767B91;;
+    text-decoration: none;
+}

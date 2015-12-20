@@ -1,0 +1,264 @@
+ul
+{
+	list-style-type: none;
+}
+
+ul#sidebar
+{
+	padding-top: 20px;
+	padding-left: 0px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	text-align: center;
+	font-size: 1em;
+}
+
+ul#sidebarTitle
+{
+	padding-left: 0px;
+	text-align: center;
+	font-size: 1.2em;
+	color: #2A324B;
+}
+
+.sidebarItem
+{
+	padding-top: 21px;
+	padding-left: 0px;
+	color: #43495D;
+}
+
+#mainContainer
+{
+	margin: 36px auto;
+	width: 820px;
+	height: 931px;
+	
+}
+
+#main
+{
+	width: 820px;
+	height: 928px;
+    	border:1px solid #cccccc;
+    	background:#DDE5E8;
+	position: absolute;
+	-moz-box-shadow: 1px 1px 5px #888888; /* 老的 Firefox */
+	box-shadow: 1px 1px 5px #888888;
+}
+
+#listContent
+{
+	background-image: url("../images/sidebarbg.png");
+	background-repeat: no-repeat;
+	height: 358px;
+	width: 175px;
+	height:957px;
+	margin: 0px;
+}
+
+#listTitle
+{
+	background-image: url("../images/sidebarTitlebg.png");
+	background-repeat: no-repeat;
+	height: 70px;
+	width: 175px;
+	margin: 0px;
+}
+
+#sidebarContainer
+{
+	width: 175px;
+	margin: 0px;
+	float: left;
+}
+
+#mainContent
+{
+	margin-left: 180px;
+	margin-right: 0px;
+	width: 639px;
+	background:#FFF;
+	height:926px;
+}
+.A_finished{
+	background-image: url("../images/finished.png");
+}
+
+#searchForm
+{
+	float: right;
+	padding-top: 30px;
+}
+
+#searchForm p
+{
+	font-size: 1.2em;
+	display: inline;
+	vertical-align: -6%;
+}
+
+#searchButton
+{
+	text-align: center;
+	vertical-align: -6%;
+	display: inline-block;
+	width: 57px;
+	height: 22px;
+	background-color: #A4B3E4;
+	border: 1px solid #A4B3E4;
+	border-radius: 5px;
+}
+
+#searchText
+{
+	overflow: hidden;
+	resize: none;
+	width: 161px;
+	height: 22px;
+	border: 1px solid #A4B3E4;
+	border-radius: 5px;
+	font-size: 1em;
+	margin-top: 0px;
+	outline: none;
+}
+
+#searchTitle
+{
+	position:absolute;
+	top:21px;
+	left:747px;
+	color: white;
+	font-size: 1em;
+}
+
+#searchInput
+{
+	display: inline;
+	margin: 0px;
+}
+
+#selectForm p
+{
+	font-size: 1.2em;
+	display: inline;
+	vertical-align: -6%;
+}
+
+#selectForm
+{
+	padding-top: 30px;
+	padding-left: 10px;
+}
+
+select 
+{
+	height: 28px;
+	width: 222px;
+	display: inline-block;
+	border: 1px solid #A4B3E4;
+	border-radius: 5px;
+	outline: none;
+}
+
+/***************************************************************************table********************/
+#TableList{
+	float:left;
+	width:639px;
+	height:500px;
+	background:#FFF;
+	padding-top:15px;
+	}
+table.hovertable {
+	font-family: verdana,arial,sans-serif;
+	font-size:15px;
+	color:#333333;
+	border-width: 1px;
+	border-color: #999999;
+	border-collapse: collapse;
+	margin-left:47px;
+	margin-top:12px;
+}
+table.hovertable th {
+	background-color: #FFFFFF;
+	border-width: 1px;
+	padding: 8px;
+	border-color:#FFF;
+	
+	/*border-left: #FFF;
+	border-right:#FFF;
+    border-bottom: 1px solid #C7CCDB;*/
+}
+table.hovertable tr {
+	background-color:#d4e3e5;
+	border-color: #FCFCFC;
+    border-left: #FFF;
+	border-right:#FFF;
+    border-bottom: 10px #C7CCDB;
+}
+table.hovertable td {
+	border-width: 1px;
+	padding: 8px;
+	border-style: solid;
+	border-color: #D6DBDB;
+    background-color: white;
+	border-left: #FFF;
+	border-right:#FFF;
+    border-bottom: 10px #C7CCDB;
+}
+.com_detail{
+	color:#000;
+	}
+.hr1{
+	height: 1px;
+    border: none;
+    border-top: 2px solid #F5F5F5;
+	}
+
+/*li和list*/
+/*#listcontain{
+	height:500px;
+	padding-top:15px;
+	backgroud:#FFF;
+	}
+#Ul_listcontainer{
+	margin-top:15px;
+	margin-left:-40px;
+	}
+.h1{
+	
+	}
+.line1{
+	height:1px;border:none;border-top:1px solid #555555;
+	}
+.com_detail{
+	color: black;
+	}*/
+
+/*article{
+	margin-left:15px;
+	}
+.title
+{
+	font-size: 1.2em;
+	margin-top: 8px;
+	margin-bottom: 24px;
+}
+.p1,.p2,.p3,.p4{
+	font-size:0.8em;
+	margin-top:15px;
+	margin-bottom:15px;
+	}
+.A_name,.B_name,.A_num,.B_num,.project_name,.company_name,.com_name,.A_money,.B_money,.money_proportion,.File_num,.A_Signname,.B_Signname,.A_Year,.A_Month,.A_Day,.B_Year,.B_Month,.B_Day,.A_address,.B_address{
+	text-decoration:underline;
+	font-size:0.8em;
+	}*/
+
+
+
+#page
+{
+	text-align: center;
+	bottom: 100%;
+}
+p{margin-top:0px;margin-bottom:0;}

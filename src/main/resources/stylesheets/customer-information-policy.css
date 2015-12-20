@@ -1,0 +1,57 @@
+#main{
+	
+}
+#content{
+	overflow: hidden;
+	width: 820px;
+	margin: 0 auto 48px;								
+}
+#nav{
+	width: 820px;
+	margin:0 auto;
+	height: 40px;
+	position: relative;
+	border-bottom: 5px solid #CACEDA;
+}
+#nav p span{
+	font-size: 1.4em;
+	font-weight: 500;
+	float: left;
+	left: 0;
+	text-indent: 10px;
+	color: #4A4A4A;
+}
+#back{
+	position: absolute;
+	right: 0;
+	top: 15px;
+	bottom: 5px;
+	font-size: 0.8em;
+}
+#back span a{
+	color: #9BA3B1;
+}
+#policynews{
+	margin: 10px auto 0;
+	width: 760px;
+	
+}
+#policynews ul li{
+	margin-left: -40px;
+	list-style-type:none;
+	font-size: 1.0em;
+	color: #4A4A4A;
+	border-bottom: 1px  dashed #E7E7E7; 
+	position: relative;
+	margin-top: 9px;
+}
+#policynews ul li a{
+	font-size: 0.9em;
+	color: #4A4A4A;
+}
+#policynews ul li span{
+	position: absolute;
+	right: 0;
+	font-size:1.0em;
+	color: #4A4A4A;
+}

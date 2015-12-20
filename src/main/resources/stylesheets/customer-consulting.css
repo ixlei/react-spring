@@ -1,0 +1,66 @@
+#content{
+	overflow: hidden;
+	width: 820px;
+	margin: 30px auto 48px;								
+}
+#policynews{
+	width: 400px;
+	margin-bottom: 0;
+	position: relative;
+	float: left;
+}
+#leftnews{
+	margin-top: -5px;
+	margin-bottom: 0;
+	width: 400px;
+	border-right: 5px solid #F7F7F7;
+	overflow: hidden;
+}
+#leftnews ul li{
+	border-bottom: 1px dashed #E7E7E7;
+	margin-left: -30px;
+	margin-top: 9px;
+	font-size: 1.0em;
+	color: #636364;
+}
+.nav{
+	border-bottom: 5px solid #CACEDA;
+	height: 40px;
+}
+.nav p{
+	display:block;
+	width: 100px;
+	margin: 0 auto 20px;
+	font-size: 1.5em;
+	color: #4A4A4A;
+}
+.nav a span{
+	position: absolute;
+	right: 5px;
+	top:14px;
+	font-size: 0.8em;
+	color: #717794;
+}
+ul li{
+	list-style-type: none;
+}
+#marketnews{
+	width: 400px;
+	margin-bottom: 0;
+	position: relative;
+	float: right;
+}
+#rightnews{
+	margin-top: -5px;
+	margin-bottom: 0;
+	width: 400px;
+	border-left: 5px solid #F7F7F7;
+	overflow: hidden;
+}
+#rightnews ul li{
+	border-bottom: 1px dashed #E7E7E7;
+	margin-left: -30px;
+	margin-top: 9px;
+	font-size: 1.0em;
+	color: #636364;
+}
