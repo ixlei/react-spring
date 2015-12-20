@@ -6,11 +6,7 @@ import * as types from '../constants/customerActionType';
 export function fetchCompNews(news) {
   return dispatch => {
   	dispatch(requestCompNews(news));
-<<<<<<< HEAD
   	return fetch('/customer/getCompNews')
-=======
-  	return fetch('/react-spring/customer/getCompNews')
->>>>>>> 3e93adb2ae05c6db12b5606074503f489a43b1aa
   	  .then(checkSatus)
   	  .then(response => response.json())
   	  .then(json => dispatch(receiveCompNews(json)))
