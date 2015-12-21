@@ -3,6 +3,9 @@
 import React, {Component, PropTypes} from 'react';
 import {connect} from 'react-redux';
 import FormRadio from './FormRadio';
+import FormUsername from './FormUsername';
+import FormUsernameContainer from '../containers/FormUsernameContainer';
+import FormPasswordContainer from '../containers/FormPasswordContainer';
 
 class RegForm extends Component {
 
@@ -22,6 +25,8 @@ class RegForm extends Component {
   	        <FormRadio {...Object.assign({value:'investor'}, regChoose)}/>
   	        <span className="check">投资者</span>
   	      </li>
+          <li><FormUsernameContainer /></li>
+          <li><FormPasswordContainer /></li>
   	    </ul>
   	  </form>
   	)
@@ -29,7 +34,7 @@ class RegForm extends Component {
 }
 
 function mapStateToProps(state) {
-  let {reg: {userType}} = state;
+  let {reg: {userType} } = state;
   return {
     userType
   }

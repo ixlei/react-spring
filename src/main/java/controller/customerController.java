@@ -150,11 +150,11 @@ public class customerController {
 	public String postLogin(HttpServletRequest req, HttpSession session) {
 		String username = req.getParameter("username");
 		String password = req.getParameter("password");
-		if (username == "") {
+		if (username.equals("")) {
 			return "redirect:/customer/login/ue";
 		}
 
-		if (password == "") {
+		if (password.equals("")) {
 			return "redirect:/customer/login/pe";
 		}
 
@@ -240,6 +240,40 @@ public class customerController {
 		}
 
 	}
+
+
+	@ResponseBody
+	@RequestMapping(value="/username", method = RequestMethod.POST)
+	public Object checkUsername(HttpServletRequest req) {
+		Map<String, String> map = new HashMap<String, String>();
+		String username = req.getParameter("username");
+		String userType = req.getParameter("userType");
+		if(userType.equals("investor")) {
+			try {
+				if(newuser.getInvestorByEmail(username) == null) {
+					map.put("check", "valid");
+				} else {
+					map.put("check", "invalid");
+				}
+			} catch(Exception e) {
+				map.put("check", "error");
+				e.printStackTrace();
+			}
+		} else {
+			try {
+				if (newCompanyUser.getCompanyUserByEmail(username) == null) {
+					map.put("check", "valid");
+				} else {
+					map.put("check", "invalid");
+				}
+			}catch(Exception e) {
+					map.put("check", "error");
+					e.printStackTrace();
+				}
+			}
+		return map;
+		}
+
 
 	@ResponseBody
 	@RequestMapping(value = "/echeck", method = RequestMethod.POST)

@@ -15,3 +15,25 @@ export function userType(userType) {
   	userType
   }
 }
+
+export function isFocus(IsFocus) {
+  return {
+  	type: types.ISFOCUS,
+  	IsFocus
+  }
+}
+
+export function itemTips(tips) {
+  return {
+  	type: types.ITEMTIPS,
+  	tips
+  }
+}
+
+export function itemInvalid(invalid) {
+  return {
+  	type: types.ITEM_INVALID,
+  	invalid
+  }
+}
+
