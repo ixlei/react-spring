@@ -3,27 +3,106 @@
 import * as types from '../constants/customerActionType';
 
 const initState = {
-<<<<<<< HEAD
   regStep: 0,
-  userType: 'investor'
-=======
-  regStep: 0
->>>>>>> 3e93adb2ae05c6db12b5606074503f489a43b1aa
+  userType: 'investor',
+  isFetching: false,
+  IsFocus: '',
+  postCheck: '',
+  itemState: [{
+    id: 'username',
+    valid: '',
+    tips: ''
+  }, {
+    id: 'password',
+    valid: '',
+    tips:''
+  }]
+ 
 }
 
 export function reg(state = initState, action) {
+  let newItemState, {itemState, postCheck, IsFocus} = state;
   switch(action.type) {
     case types.REGSTEP:
       return Object.assign({}, state, {
       	regStep: action.regStep
       })
-<<<<<<< HEAD
     case types.USERTYPE:
       return Object.assign({}, state, {
       	userType: action.userType
       })
-=======
->>>>>>> 3e93adb2ae05c6db12b5606074503f489a43b1aa
+    case types.POST_CHECKVALID:
+      return Object.assign({}, state, {
+        postCheck: action.postCheck,
+        isFetching: true
+      })
+    case types.RECEIVE_CHECKVALID:
+      let {entities: {check}} = action;
+      newItemState = itemState.map(function(item) {
+        let {id} = item;
+        if(id === postCheck) {
+          if(check === 'valid') {
+            return Object.assign(item, {
+              valid: 'valid',
+              tips: ''
+            })
+          }
+          return Object.assign(item, {
+            valid: 'invalid',
+            tips: '此用户名不可用'
+          })
+        }
+        return item;
+      })
+      return Object.assign({}, state, {
+        isFetching: false,
+        itemState: newItemState
+      })
+    case types.failureCheckInvalid:
+      newItemState = itemState.map(function(item) {
+        let {id} = item;
+        if(id === postCheck) {
+          return Object.assign(item, {
+            valid: 'invalid',
+            tips: '网络错误,稍后再试'
+          })
+        }
+        return item;
+      })
+      return Object.assign({}, state, {
+        isFetching: false,
+        itemState: newItemState
+      })
+    case types.ISFOCUS:
+      return Object.assign({}, state, {
+        IsFocus: action.IsFocus
+      })
+    case types.ITEM_INVALID:
+      newItemState = itemState.map(function(item) {
+        let {id} = item;
+        if(id === IsFocus) {
+          return Object.assign(item, {
+            valid: (action.invalid ? 'invalid' : 'valid')
+          })
+        }
+        return item;
+      })
+      return Object.assign({}, state, {
+        itemState: newItemState
+      })
+    case types.ITEMTIPS:
+      newItemState = itemState.map(function(item) {
+        let {id} = item;
+        if(id === IsFocus) {
+          return Object.assign(item ,{
+            tips: action.tips
+          })
+        }
+        return item;
+      })
+      return Object.assign({}, state, {
+        itemState: newItemState
+      })
     default:
       return state;
   }
