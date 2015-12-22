@@ -33,10 +33,20 @@ export default class FormUserName extends Component {
       dispatch(isFocus(''));
       return;
     }
-    dispatch(isFocus(''));
+    
     let formdata = new FormData();
     formdata.append('username', username);
-    dispatch(postCheckValid('username', formdata));
+    dispatch(postCheckValid('username', formdata))
+     .then((json) => {
+       const {entities: {check}} = json;
+       if(check === 'valid') {
+       	 dispatch(itemTips(''));
+       } else {
+       	 dispatch(itemTips('此用户名已被占用'));
+       }
+       dispatch(isFocus(''));
+    });
+    
   }
   
   getTipsClassName(IsFocus, valid) {
