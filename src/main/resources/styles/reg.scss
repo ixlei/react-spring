@@ -106,7 +106,7 @@
 	width: 20px;
 }
 
-#btn {
+input[type="submit"] {
 	width: 200px;
 	height: 25px;
 	color: white;
@@ -115,16 +115,12 @@
 	background-color: #2A324B;
 }
 
-#btn:hover {
+input[type="submit"]:hover {
 	border: none;
 }
 
 #reg a {
 	color: #7A95EE;
-}
-
-#login a {
-	font-size: 0.8em;
 }
 
 .icon-tips {
@@ -140,6 +136,7 @@
 
 input[disabled], input:disabled {
 	background-color: #DDDDDD;
+	color: #767B91
 }
 
 .check, #refresh, #auth-image {
