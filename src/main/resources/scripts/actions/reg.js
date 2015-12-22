@@ -37,3 +37,8 @@ export function itemInvalid(invalid) {
   }
 }
 
+export function iagree() {
+  return {
+  	type: types.AGREE
+  }
+}
