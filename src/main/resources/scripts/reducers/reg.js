@@ -8,6 +8,7 @@ const initState = {
   isFetching: false,
   IsFocus: '',
   postCheck: '',
+  iagree: true,
   itemState: [{
     id: 'username',
     valid: '',
@@ -16,6 +17,26 @@ const initState = {
     id: 'password',
     valid: '',
     tips:''
+  }, {
+    id: 'repassword',
+    valid: '',
+    tips: ''
+  },  {
+    id: 'name',
+    valid: '',
+    tips: ''
+  }, {
+    id: 'IdCard',
+    valid: '',
+    tips:''
+  }, {
+    id: 'companyname',
+    valid: '',
+    tips: ''
+  }, {
+    id: 'code',
+    valid: '',
+    tips: ''
   }]
  
 }
@@ -43,13 +64,11 @@ export function reg(state = initState, action) {
         if(id === postCheck) {
           if(check === 'valid') {
             return Object.assign(item, {
-              valid: 'valid',
-              tips: ''
+              valid: 'valid'
             })
           }
           return Object.assign(item, {
-            valid: 'invalid',
-            tips: '此用户名不可用'
+            valid: 'invalid'
           })
         }
         return item;
@@ -102,6 +121,11 @@ export function reg(state = initState, action) {
       })
       return Object.assign({}, state, {
         itemState: newItemState
+      })
+    case types.AGREE:
+      const {iagree} = state;
+      return Object.assign({}, state, {
+        iagree: (!iagree)
       })
     default:
       return state;
