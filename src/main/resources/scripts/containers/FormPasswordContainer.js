@@ -2,6 +2,7 @@
 
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
+import {router} from 'react-router';
 import FormPassword from '../components/FormPassword';
 
 class FormPasswordContainer extends Component {
