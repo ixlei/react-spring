@@ -11,7 +11,7 @@ export default class FormPassword extends Component {
   focus(e) {
     const {dispatch} = this.props;
     dispatch(isFocus(e.target.name));
-    dispatch(itemTips('密码要包含大小写字母和数字,长度6-12'))
+    dispatch(itemTips('密码要包含大小写字母和数字,长度6-12'));
   }
 
   blur(e) {
@@ -65,6 +65,7 @@ export default class FormPassword extends Component {
       <span className="label">密码:</span>
 	  <input type="password"
 	  className="reg-input"
+	  ref='password'
 	  name="password" onFocus={this.focus.bind(this)}
 	  onBlur={this.blur.bind(this)}/>
 	  <span className={this.getTipsClassName(IsFocus,valid)}>{this.props.tips}</span>
