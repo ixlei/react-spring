@@ -35,8 +35,10 @@
                         </li>
                         <li>
                             <span class="label">邮箱:</span>
-                            <input type="text" id="email" class="reg-input" name="email" /> <span class="check"> </span></li>
-                        <li><span class="label">密码:</span>
+                            <input type="text" id="email" class="reg-input" name="email" />
+                            <span class="check"></span></li>
+                        <li>
+                        <span class="label">密码:</span>
                             <input type="password" id="password" class="reg-input" name="password"/> <span class="check"></span></li>
                         <li><span class="label">确认密码:</span>
                             <input type="password" id="re-password" class="reg-input" name="re-password" /> <span class="check"></span></li>
@@ -46,19 +48,30 @@
                             <span id="refresh"><img src="/images/refresh.png" /></span>
                             <span class="check" id="check-auth"></span>
                         </li>
-                        <li class="investor"><span class="label">姓名:</span>
-                            <input type="text" id="username" class="reg-input" name="username" /> <span class="check"> </span></li>
-                        <li class="investor"><span class="label">身份证号:</span>
+                        <li class="investor">
+                            <span class="label">姓名:</span>
+                            <input type="text" id="username" class="reg-input" name="username" />
+                            <span class="check"></span>
+                        </li>
+                        <li class="investor">
+                            <span class="label">身份证号:</span>
                             <input type="text" id="IdCard" class="reg-input" name="IdCard" />
-                             <span class="check"> </span></li>
-                        <li class="company none"><span class="label">企业名称:</span>
-                            <input type="text" id="companyname" class="reg-input" name="companyName" /> <span class="check"> </span></li>
-                        <li class="company none"><span class="label">组织机构代码:</span>
+                            <span class="check"> </span>
+                        </li>
+                        <li class="company none">
+                            <span class="label">企业名称:</span>
+                            <input type="text" id="companyname" class="reg-input" name="companyName" /> <span class="check"></span>
+                        </li>
+                        <li class="company none">
+                           <span class="label">组织机构代码:</span>
                             <input type="text" id="code" class="reg-input" name="code" />
                              <span class="check"> </span></li>
-                        <li><span class="label"></span>
+                        <li>
+                          <span class="label"></span>
                             <input type="checkbox" name="iagree" value="企业" class="checke" id="agree" checked />
-                             <span>我同意<a href="/protopl">《网站服务协议》</a></span></li>
+                             <span>我同意<a href="/protopl">《网站服务协议》</a>
+                           </span>
+                        </li>
                         <li><span class="label"></span>
                             <input type="submit" id="btn" value="下一步" /> 
                             <span id="login"> <a href="/springmvc/customer/login">&nbsp;&nbsp;登陆</a></span></li>

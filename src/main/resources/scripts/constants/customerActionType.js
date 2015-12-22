@@ -18,4 +18,5 @@ export const FAILURE_CHECKVALID = 'RECEIVE_CHECKVALID';
 export const ISFOCUS = 'ISFOCUS';
 export const ITEMTIPS = 'ITEMTIPS';
 export const ITEM_INVALID = 'ITEM_INVALID';
+export const AGREE = 'AGRREE';
 
