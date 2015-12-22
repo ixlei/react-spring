@@ -6,18 +6,27 @@ import FormRadio from './FormRadio';
 import FormUsername from './FormUsername';
 import FormUsernameContainer from '../containers/FormUsernameContainer';
 import FormPasswordContainer from '../containers/FormPasswordContainer';
+import FormRepasswordContainer from '../containers/FormRepasswordContainer';
+import FormNameContainer from '../containers/FormNameContainer';
+import FormIdcardContainer from '../containers/FormIdcardContainer';
+import FormCheckboxContainer from '../containers/FormCheckboxContainer';
+import FormSubmitContainer from '../containers/FormSubmitContainer';
 
 class RegForm extends Component {
-
+  
+  submit(e) {
+    e.preventDefault();
+    this.context.history.pushState(null, '/');
+  }
+  
   render() {
   	let {dispatch, userType} = this.props;
     let regChoose = {
       dispatch,
       userType
     }
-
   	return (
-  	  <form id="form" name="reg">
+  	  <form id="form" name="reg" onSubmit={this.submit.bind(this)}>
   	    <ul>
   	      <li>
   	        <span className="label">用户类型:</span>
@@ -27,6 +36,11 @@ class RegForm extends Component {
   	      </li>
           <li><FormUsernameContainer /></li>
           <li><FormPasswordContainer /></li>
+          <li><FormRepasswordContainer /></li>
+          <li><FormNameContainer /></li>
+          <li><FormIdcardContainer /></li>
+          <li><FormCheckboxContainer /></li>
+          <li><FormSubmitContainer /></li>
   	    </ul>
   	  </form>
   	)
@@ -38,6 +52,10 @@ function mapStateToProps(state) {
   return {
     userType
   }
+}
+
+RegForm.contextTypes = {
+  history: PropTypes.object.isRequired
 }
 
 export default connect(mapStateToProps)(RegForm);
