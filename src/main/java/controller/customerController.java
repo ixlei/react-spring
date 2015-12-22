@@ -304,7 +304,7 @@ public class customerController {
 	}
 
 	@ResponseBody
-	@RequestMapping(value = "/IdCardCheck", method = RequestMethod.POST)
+	@RequestMapping(value = "/IdCard", method = RequestMethod.POST)
 	public Object checkIdCard(HttpServletRequest req) {
 		Map<String, String> map = new HashMap<String, String>();
 		String data = req.getParameter("data");
