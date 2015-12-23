@@ -2,8 +2,10 @@
 
 import React, {Component, PropTypes} from 'react';
 import {connect} from 'react-redux';
+import {subAction} from '../actions/submit';
 import FormRadio from './FormRadio';
 import FormUsername from './FormUsername';
+import UserType from '../containers/userType';
 import FormUsernameContainer from '../containers/FormUsernameContainer';
 import FormPasswordContainer from '../containers/FormPasswordContainer';
 import FormRepasswordContainer from '../containers/FormRepasswordContainer';
@@ -16,24 +18,25 @@ class RegForm extends Component {
   
   submit(e) {
     e.preventDefault();
-    this.context.history.pushState(null, '/');
+    const {dispatch} = this.props;
+    let reg = document.forms.reg;
+    let formdata = new FormData(reg);
+    let arg = {
+      action: '/customer/reg',
+      body: formdata,
+      subType: 'reg1'
+    }
+    dispatch(subAction(arg));
   }
   
   render() {
-  	let {dispatch, userType} = this.props;
-    let regChoose = {
-      dispatch,
-      userType
+    if(subType ==='reg1' && subSuccess && !isFetching) {
+      this.context.history.pushState(null, '/');
     }
   	return (
-  	  <form id="form" name="reg" onSubmit={this.submit.bind(this)}>
+  	  <form name="reg" onSubmit={this.submit.bind(this)}>
   	    <ul>
-  	      <li>
-  	        <span className="label">用户类型:</span>
-  	        <FormRadio {...Object.assign({value:'company'}, regChoose)} /><span>企业</span>
-  	        <FormRadio {...Object.assign({value:'investor'}, regChoose)}/>
-  	        <span className="check">投资者</span>
-  	      </li>
+  	      <li><UserType /></li>
           <li><FormUsernameContainer /></li>
           <li><FormPasswordContainer /></li>
           <li><FormRepasswordContainer /></li>
@@ -48,10 +51,7 @@ class RegForm extends Component {
 }
 
 function mapStateToProps(state) {
-  let {reg: {userType} } = state;
-  return {
-    userType
-  }
+  return {subReducer: {subType, subSuccess,isFetching}} = state;
 }
 
 RegForm.contextTypes = {
