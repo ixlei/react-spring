@@ -214,29 +214,38 @@ public class customerController {
 	}
 
 	@RequestMapping(value = "/reg", method = RequestMethod.POST)
-	public String postReg(HttpServletRequest req, HttpSession session) {
+	public Object postReg(HttpServletRequest req, HttpSession session) {
+        Map<String, Object> map = new HashMap<String, Object>();
 
 		String userType = req.getParameter("type");
+		try {
+			if (userType.equals("投资者")) {
+				Investor newInvestor = new Investor();
+				newInvestor.setEmail(req.getParameter("username"));
+				newInvestor.setPassword(req.getParameter("password"));
+				newInvestor.setUsername(req.getParameter("name"));
+				newInvestor.setIdCard(req.getParameter("IdCard"));
+				newuser.insert(newInvestor);
+				session.setAttribute("citiuser", "iid=" + req.getParameter("email"));
+				map.put("post", "success");
+				return map;
 
-		if (userType.equals("投资者")) {
-			Investor newInvestor = new Investor();
-			newInvestor.setEmail(req.getParameter("email"));
-			newInvestor.setPassword(req.getParameter("password"));
-			newInvestor.setUsername(req.getParameter("username"));
-			newInvestor.setIdCard(req.getParameter("IdCard"));
-			newuser.insert(newInvestor);
-			session.setAttribute("citiuser", "iid=" + req.getParameter("email"));
-			return "customer/investor-nextstep-reg";
+			} else {
+				companyuser newUser = new companyuser();
+				newUser.setEmail(req.getParameter("username"));
+				newUser.setPassword(req.getParameter("password"));
+				newUser.setCompanyName(req.getParameter("companyName"));
+				newUser.setCode(req.getParameter("code"));
+				newCompanyUser.insert(newUser);
+				session.setAttribute("citiuser", "cid=" + req.getParameter("email"));
+				map.put("post", "success");
+				return map;
+			}
 
-		} else {
-			companyuser newUser = new companyuser();
-			newUser.setEmail(req.getParameter("email"));
-			newUser.setPassword(req.getParameter("password"));
-			newUser.setCompanyName(req.getParameter("companyName"));
-			newUser.setCode(req.getParameter("code"));
-			newCompanyUser.insert(newUser);
-			session.setAttribute("citiuser", "cid=" + req.getParameter("email"));
-			return "customer/complete-company-reg";
+		} catch (Exception e) {
+			e.printStackTrace();
+			map.put("post", "error");
+			return map;
 		}
 
 	}
