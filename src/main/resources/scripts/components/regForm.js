@@ -29,10 +29,14 @@ class RegForm extends Component {
     dispatch(subAction(arg));
   }
   
-  render() {
+  componentWillReceiveProps(nextProps) {
+    const {subType, subSuccess, isFetching} = nextProps;
     if(subType ==='reg1' && subSuccess && !isFetching) {
       this.context.history.pushState(null, '/');
     }
+  }
+
+  render() {
   	return (
   	  <form name="reg" onSubmit={this.submit.bind(this)}>
   	    <ul>
@@ -51,7 +55,12 @@ class RegForm extends Component {
 }
 
 function mapStateToProps(state) {
-  return {subReducer: {subType, subSuccess,isFetching}} = state;
+  const {subReducer: {subType, subSuccess,isFetching}} = state;
+  return {
+    subType,
+    subSuccess,
+    isFetching
+  }
 }
 
 RegForm.contextTypes = {
