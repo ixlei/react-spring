@@ -213,13 +213,14 @@ public class customerController {
 		return "customer/reg";
 	}
 
+	@ResponseBody
 	@RequestMapping(value = "/reg", method = RequestMethod.POST)
 	public Object postReg(HttpServletRequest req, HttpSession session) {
         Map<String, Object> map = new HashMap<String, Object>();
 
 		String userType = req.getParameter("type");
 		try {
-			if (userType.equals("Í¶×ÊÕß")) {
+			if (userType.equals("investor")) {
 				Investor newInvestor = new Investor();
 				newInvestor.setEmail(req.getParameter("username"));
 				newInvestor.setPassword(req.getParameter("password"));
