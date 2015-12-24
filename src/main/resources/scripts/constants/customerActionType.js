@@ -19,4 +19,7 @@ export const ISFOCUS = 'ISFOCUS';
 export const ITEMTIPS = 'ITEMTIPS';
 export const ITEM_INVALID = 'ITEM_INVALID';
 export const AGREE = 'AGRREE';
+export const SUBTYPE = 'SUBTYPE';
+export const SUBMITSUCCESS = 'SUBMITSUCCESS';
+export const FAILURESUBMIT = 'FAILURESUBMIT';
 
