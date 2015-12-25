@@ -354,15 +354,21 @@ public class customerController {
 		return map;
 	}
 
+	@ResponseBody
 	@RequestMapping(value = "/investorNextStep", method = RequestMethod.POST)
-	public String investorNextStep(HttpServletRequest req, HttpSession session,
+	public Object investorNextStep(HttpServletRequest req, HttpSession session,
 			@RequestParam(value = "image", required = false) MultipartFile image) {
-		
+		Map<String, Object> map = new HashMap<String, Object>();
+
 		String sessionChar = (String) session.getAttribute("citiuser");
 		String[] splitSession = sessionChar.split("=");
 		if (sessionChar == null || !splitSession[0].equals("iid")) {
-			return "redirect:/customer/reg";
+			map.put("post", "error");
+			return map;
 		}
+
+		try {
+
 
 		String email = splitSession[1];
 		Investor finshInvestor = new Investor();
@@ -395,7 +401,12 @@ public class customerController {
 			finshInvestor.setLogoUrl(imageName);
 		}
 		newuser.updateOther(finshInvestor);
-		return "redirect:/customer/finshInvestorReg";
+		} catch(Exception e) {
+			e.printStackTrace();
+			return map.put("post", "error");
+		}
+		map.put("post", "success");
+		return map;
 
 	}
 
