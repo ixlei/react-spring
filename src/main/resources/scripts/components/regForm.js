@@ -32,7 +32,7 @@ class RegForm extends Component {
   componentWillReceiveProps(nextProps) {
     const {subType, subSuccess, isFetching} = nextProps;
     if(subType ==='reg1' && subSuccess && !isFetching) {
-      this.context.history.pushState(null, '/');
+      this.context.history.pushState(null, '/reg/investorNext');
     }
   }
 
@@ -55,11 +55,12 @@ class RegForm extends Component {
 }
 
 function mapStateToProps(state) {
-  const {subReducer: {subType, subSuccess,isFetching}} = state;
+  const {subReducer: {subType, subSuccess,isFetching}, reg: {userType}} = state;
   return {
     subType,
     subSuccess,
-    isFetching
+    isFetching,
+    userType
   }
 }
 
