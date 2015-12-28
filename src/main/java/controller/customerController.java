@@ -46,9 +46,7 @@ public class customerController {
     
 	@RequestMapping({ "/", "/index" })
 	
-	public Object showIndex(Map<String, Integer> model) {
-		model.put("flag", 0);
-		
+	public Object showIndex() {
 		return "customer/index";
 	}
 
@@ -227,7 +225,7 @@ public class customerController {
 				newInvestor.setUsername(req.getParameter("name"));
 				newInvestor.setIdCard(req.getParameter("IdCard"));
 				newuser.insert(newInvestor);
-				session.setAttribute("citiuser", "iid=" + req.getParameter("email"));
+				session.setAttribute("citiuser", "iid=" + req.getParameter("username"));
 				map.put("post", "success");
 				return map;
 
@@ -238,7 +236,7 @@ public class customerController {
 				newUser.setCompanyName(req.getParameter("companyName"));
 				newUser.setCode(req.getParameter("code"));
 				newCompanyUser.insert(newUser);
-				session.setAttribute("citiuser", "cid=" + req.getParameter("email"));
+				session.setAttribute("citiuser", "cid=" + req.getParameter("username"));
 				map.put("post", "success");
 				return map;
 			}
@@ -368,8 +366,6 @@ public class customerController {
 		}
 
 		try {
-
-
 		String email = splitSession[1];
 		Investor finshInvestor = new Investor();
 		finshInvestor.setEmail(email);
@@ -423,7 +419,6 @@ public class customerController {
 		}
 
 		String email = sessionSplit[1];
-				
 		user.setEmail(email);
 		user.setCompanyType(req.getParameter("companyType"));
 		user.setLegalRepresentative(req.getParameter("legalRepresentative"));
