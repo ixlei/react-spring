@@ -29,7 +29,7 @@ class InvestorNextstep extends Component {
   componentWillReceiveProps(nextProps) {
      const {subType, subSuccess, isFetching} = nextProps;
     if(subType ==='reg2' && subSuccess && !isFetching) {
-      this.context.history.pushState(null, '/reg/investorNext');
+      this.context.history.pushState(null, '/');
     }
   }
 

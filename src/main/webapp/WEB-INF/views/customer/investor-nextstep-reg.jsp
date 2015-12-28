@@ -32,10 +32,6 @@
 				<form method="post"  action="/springmvc/customer/investorNextStep" enctype="multipart/form-data">
 					<div id="left-reg">
 						<ul>
-							<%-- <li>
-								<span class="label">投资者名称:</span> 
-								<input type="text" name="" class="reg-input">
-							</li> --%>
 							<li><span class="label">公司名称:</span> 
 								<input type="text" name="companyName" class="reg-input">
 							</li>

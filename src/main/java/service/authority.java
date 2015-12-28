@@ -33,20 +33,17 @@ public class authority implements Filter {
 		HttpSession session = req.getSession(true);
 		String loginPath = fConfig.getInitParameter("login");
 		String servletPath = req.getServletPath();
-		
 		if (servletPath.equals("/")) {
 			chain.doFilter(req, res);
 		} else {
 			String pathFirst = servletPath.split("/")[1];
 			if (!pathFirst.equals("customer")
 					&& !pathFirst.equals("webSocketServer")) {
-
 				Object citiuser = session.getAttribute("citiuser");
 				if (citiuser == null) {
 					req.getRequestDispatcher(loginPath).forward(request,
 							response);
 				}
-
 				String[] citiuserSplit = ((String) citiuser).split("=");
 				if (pathFirst.equals("investor")) {
 					if (citiuserSplit[0].equals("iid")
@@ -57,20 +54,15 @@ public class authority implements Filter {
 						req.getRequestDispatcher(loginPath).forward(req, res);
 					}
 				}
-
 				if (pathFirst.equals("company")) {
-
 					if (citiuserSplit[0].equals("cid")
 							&& citiuserSplit[1] != null) {
 						chain.doFilter(req, res);
 					} else {
 						req.getRequestDispatcher(loginPath).forward(req, res);
 					}
-
 				}
-
 			} else {
-
 				chain.doFilter(request, response);
 			}
 		}

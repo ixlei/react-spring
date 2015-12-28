@@ -16,7 +16,7 @@
 		<url-pattern>/*</url-pattern>
 	</filter-mapping>
 	
-	<filter>
+	<!--<filter>
 		<filter-name>service</filter-name>
 		<filter-class>service.authority</filter-class>
 		<init-param>
@@ -27,7 +27,7 @@
 	<filter-mapping>
 		<filter-name>service</filter-name>
 		<url-pattern>/*</url-pattern>
-	</filter-mapping>
+	</filter-mapping>-->
     
 	<servlet>
 		<servlet-name>spring</servlet-name>
