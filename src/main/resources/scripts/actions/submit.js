@@ -8,7 +8,8 @@ export function subAction(arg) {
    	 dispatch(submitType(subType));
    	 return fetch(action, {
    	 	method: 'post',
-   	 	body
+   	 	body,
+   	 	credentials: 'include'
    	 }).then(checkSatus)
    	   .then(response => response.json())
        .then(json => {dispatch(submitSuccess(json))})
