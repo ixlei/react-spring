@@ -10,7 +10,8 @@ export function postCheckValid(checkKind,body) {
     body.append('userType', userType);
     return fetch('/customer/' + checkKind, {
       method: 'post',
-      body
+      body,
+      credentials: 'include'
     })
     .then(checkSatus)
     .then(response => response.json())
