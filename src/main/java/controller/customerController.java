@@ -213,9 +213,9 @@ public class customerController {
 
 	@ResponseBody
 	@RequestMapping(value = "/reg", method = RequestMethod.POST)
-	public Object postReg(HttpServletRequest req, HttpSession session) {
+	public Object postReg(HttpServletRequest req, HttpSession session, HttpServletResponse res) {
         Map<String, Object> map = new HashMap<String, Object>();
-
+        res.setHeader("Access-Control-Allow-Origin", "*");
 		String userType = req.getParameter("type");
 		try {
 			if (userType.equals("investor")) {
@@ -355,10 +355,12 @@ public class customerController {
 	@ResponseBody
 	@RequestMapping(value = "/investorNextStep", method = RequestMethod.POST)
 	public Object investorNextStep(HttpServletRequest req, HttpSession session,
-			@RequestParam(value = "image", required = false) MultipartFile image) {
+			@RequestParam(value = "image", required = false) MultipartFile image,
+								   HttpServletResponse res) {
 		Map<String, Object> map = new HashMap<String, Object>();
-
+		res.setHeader("Access-Control-Allow-Origin", "*");
 		String sessionChar = (String) session.getAttribute("citiuser");
+		System.out.println(sessionChar);
 		String[] splitSession = sessionChar.split("=");
 		if (sessionChar == null || !splitSession[0].equals("iid")) {
 			map.put("post", "error");
