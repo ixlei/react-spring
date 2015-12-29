@@ -24,7 +24,8 @@ class RegForm extends Component {
     let arg = {
       action: '/customer/reg',
       body: formdata,
-      subType: 'reg1'
+      subType: 'reg1',
+      credentials: 'include'
     }
     dispatch(subAction(arg));
   }

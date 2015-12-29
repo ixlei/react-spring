@@ -27,9 +27,9 @@ class InvestorNextstep extends Component {
   }
   
   componentWillReceiveProps(nextProps) {
-     const {subType, subSuccess, isFetching} = nextProps;
+    const {subType, subSuccess, isFetching} = nextProps;
     if(subType ==='reg2' && subSuccess && !isFetching) {
-      this.context.history.pushState(null, '/');
+      this.context.history.pushState(null, '/reg/finshInvestor');
     }
   }
 
@@ -58,7 +58,13 @@ class InvestorNextstep extends Component {
 }
 
 function mapStateToProps(state) {
-  return {};
+  const {subReducer: {subType, subSuccess,isFetching}, reg: {userType}} = state;
+  return {
+  	subType,
+  	subSuccess,
+  	isFetching,
+  	userType
+  };
 }
 
 InvestorNextstep.contextTypes = {

@@ -9,6 +9,7 @@ import InvestmentHall from '../components/investmentHall';
 import Reg from '../components/reg';
 import RegForm from '../components/regForm';
 import InvestorNextstep from '../components/investorNextStep';
+import FinshInvestorReg from '../components/finshInvestorReg';
 
 const history = useBasename(createHistory)({
   basename: '/customer'
@@ -24,6 +25,7 @@ export default class CustomerRoute extends Component {
             <Route path="invest/:index" component={InvestmentHall} />
             <Route path="reg" component={Reg}>
               <Route path="investorNext" component={InvestorNextstep} />
+              <Route path="finshInvestor" component={FinshInvestorReg} />
               <IndexRoute component={RegForm} />
             </Route>
 		  </Route>
