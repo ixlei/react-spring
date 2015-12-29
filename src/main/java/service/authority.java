@@ -28,8 +28,11 @@ public class authority implements Filter {
 
 	public void doFilter(ServletRequest request, ServletResponse response,
 			FilterChain chain) throws IOException, ServletException {
+
 		HttpServletRequest req = (HttpServletRequest) request;
 		HttpServletResponse res = (HttpServletResponse) response;
+
+		res.setHeader("Access-Control-Allow-Origin", "*");
 		HttpSession session = req.getSession(true);
 		String loginPath = fConfig.getInitParameter("login");
 		String servletPath = req.getServletPath();
