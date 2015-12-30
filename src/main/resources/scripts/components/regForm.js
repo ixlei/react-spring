@@ -33,7 +33,11 @@ class RegForm extends Component {
   componentWillReceiveProps(nextProps) {
     const {subType, subSuccess, isFetching} = nextProps;
     if(subType ==='reg1' && subSuccess && !isFetching) {
-      this.context.history.pushState(null, '/reg/investorNext');
+      if(userType === 'investor') {
+        this.context.history.pushState(null, '/customer/reg/investorNext');
+      } else {
+        this.context.history.pushState(null, '/customer/reg/companyNext');
+      }
     }
   }
 
