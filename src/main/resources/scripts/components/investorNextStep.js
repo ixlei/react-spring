@@ -6,6 +6,9 @@ import FormInput from './FormInput';
 import {regStep} from '../actions/reg';
 import FormSubmit  from './FormSubmit';
 import {subAction} from '../actions/submit';
+import Upload from '../components/upload';
+
+require('../../styles/completeReg.scss');
 
 class InvestorNextstep extends Component {
   componentDidMount() {
@@ -29,7 +32,7 @@ class InvestorNextstep extends Component {
   componentWillReceiveProps(nextProps) {
     const {subType, subSuccess, isFetching} = nextProps;
     if(subType ==='reg2' && subSuccess && !isFetching) {
-      this.context.history.pushState(null, '/reg/finshInvestor');
+      this.context.history.pushState(null, '/customer/reg/finshInvestor');
     }
   }
 
@@ -52,6 +55,7 @@ class InvestorNextstep extends Component {
 	      <li><FormSubmit ready={false} /></li>
 	    </ul>
 	  </div>
+	  <Upload />
   	</form>
   	)
   }
