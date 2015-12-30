@@ -107,25 +107,18 @@
 	<script type="text/javascript" src="/javascripts/jq.js"></script>
 	<script type="text/javascript" src="/javascripts/imd.js"></script>
 	<script type="text/javascript">
-		$(document)
-				.ready(
-						function() {
-							imd
-									.Event('#fileInput')
-									.on(
-											'change',
-											function(e) {
-												var fileReader = new FileReader();
-												var file = imd
-														.getElement('#fileInput').files[0];
-												fileReader.onload = function() {
-													var html = '<span><img src=' + '"' + fileReader.result + '"' + '></span>';
-													$('#logo-show')
-															.append(html);
-												}
-												fileReader.readAsDataURL(file);
-											});
-						});
+		$(document).ready(function() {
+			imd.Event('#fileInput').on('change',
+				function(e) {
+					var fileReader = new FileReader();
+					var file = imd.getElement('#fileInput').files[0];
+					fileReader.onload = function() {
+					var html = '<span><img src=' + '"' + fileReader.result + '"' + '></span>';
+					$('#logo-show').append(html);
+						}
+					fileReader.readAsDataURL(file);
+					});
+		});
 	</script>
 </body>
 

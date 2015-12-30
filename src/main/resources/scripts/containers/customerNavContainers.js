@@ -40,10 +40,10 @@ function mapStateToProps(state) {
 	}];
 
 	const loginList = [{
-		addr:'login',
+		addr:'customer/login',
 		text: '登录'
 	}, {
-		addr:'reg',
+		addr:'customer/reg',
 		text: '注册'
 	}];
 	return {

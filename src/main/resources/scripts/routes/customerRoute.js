@@ -10,22 +10,24 @@ import Reg from '../components/reg';
 import RegForm from '../components/regForm';
 import InvestorNextstep from '../components/investorNextStep';
 import FinshInvestorReg from '../components/finshInvestorReg';
+import CompanyNextContainer from '../containers/companyNextContainer';
 
 const history = useBasename(createHistory)({
-  basename: '/customer'
+  basename: '/'
 })
 
 export default class CustomerRoute extends Component {
   render() {
 	return (
 		<Router history={history}>
-		  <Route path="/" component={CustomerApp}>
+		  <Route path="/customer" component={CustomerApp}>
 			<IndexRoute component={CustomerIndex} />
 			<Route path="index/:index" component={CustomerIndex} />
             <Route path="invest/:index" component={InvestmentHall} />
             <Route path="reg" component={Reg}>
               <Route path="investorNext" component={InvestorNextstep} />
               <Route path="finshInvestor" component={FinshInvestorReg} />
+              <Route path="companyNext" component={CompanyNextContainer}/>
               <IndexRoute component={RegForm} />
             </Route>
 		  </Route>

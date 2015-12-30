@@ -37,14 +37,15 @@
 						<ul>
 							<li>
 							<span class="label">企业类型:</span> 
-								<select name="companyType" 	class="reg-input">
+							  <select name="companyType" 	
+								class="reg-input">
 									<option value=""></option>
 									<option value="有限责任公司">有限责任公司</option>
 									<option value="">股份有限公司</option>
 									<option value="股份有限公司">个人合伙企业</option>
 									<option value="个人独资企业">个人独资企业</option>
 									<option value="其他">其他</option>
-								</select>
+							  </select>
 							</li>
 							<li>
 								<span class="label">注册资本:</span>

@@ -26,7 +26,7 @@ export default class Nav extends Component {
 		      <ul>
 		      	{this.props.goList.map((list, index) =>(
 	      		<li key={list.addr}>
-	      			<Link to={list.addr + '/' + index}>
+	      			<Link to={'customer/' + list.addr + '/' + index}>
 	      				<span className=
 	      				{parseInt(this.props.activeIndex.index) === index 
 	      					? 'nav-item active' : 'nav-item'}>

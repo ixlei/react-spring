@@ -1,7 +1,5 @@
 @charset "utf-8";
 
-/* CSS Document */
-
 #main {
     padding: 0;
     margin: 0;
@@ -74,7 +72,6 @@ ul {
 #left-reg,
 #right-reg {
     position: relative;
-    /* border: 1px solid red;*/
     float: left;
 }
 
