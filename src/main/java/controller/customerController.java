@@ -144,44 +144,54 @@ public class customerController {
 		return "customer/login";
 	}
 
+	@ResponseBody
 	@RequestMapping(value = "/login", method = RequestMethod.POST)
-	public String postLogin(HttpServletRequest req, HttpSession session) {
+	public Object postLogin(HttpServletRequest req, HttpSession session) {
+
+		Map<String, Object> map = new HashMap<String, Object>();
 		String username = req.getParameter("username");
 		String password = req.getParameter("password");
 		if (username.equals("")) {
-			return "redirect:/customer/login/ue";
+			return map.put("post", "用户名不能为空");
 		}
 
 		if (password.equals("")) {
-			return "redirect:/customer/login/pe";
+			return map.put("post", "密码不能为空");
 		}
 
-		if (req.getParameter("logintype").equals("投资者")) {
-			Investor checkInvestorUser = newuser.getInvestorByEmail(username);
+		Investor checkInvestorUser;
+		if (req.getParameter("logintype").equals("investor")) {
+			try {
+				checkInvestorUser = newuser.getInvestorByEmail(username);
+			} catch(Exception e) {
+				e.printStackTrace();
+				return map.put("post", "error");
+			}
+
 			if (checkInvestorUser == null) {
-				return "redirect:/customer/login/ee";
+				return map.put("post", "此用户不存在");
 			}
 
 			if (checkInvestorUser.getPassword().equals(password)) {
 				session.setAttribute("citiuser", "iid=" + username);
-				return "redirect:/investor/index";
+				return map.put("post", "success");
 			}
 
-			return "redirect:/customer/login/alle";
+			return map.put("post", "用户名或密码错误");
 
 		} else {
 			companyuser checkCompanyUser = newCompanyUser
 					.getCompanyUserByEmail(username);
 			if (checkCompanyUser == null) {
-				return "redirect:/customer/index/ee";
+				return map.put("post", "此用户不存在");
 			}
 
 			if (checkCompanyUser.getPassword().equals(password)) {
 				session.setAttribute("citiuser", "cid=" + username);
-				return "redirect:/company/index";
+				return map.put("post", "success");
 			}
 
-			return "redirect:/customer/login/alle";
+			return map.put("post", "用户名或密码错误");
 		}
 	}
 
