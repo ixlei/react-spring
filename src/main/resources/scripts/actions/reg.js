@@ -9,13 +9,6 @@ export function regStep(regStep) {
   }
 }
 
-export function userType(userType) {
-  return {
-  	type: types.USERTYPE,
-  	userType
-  }
-}
-
 export function isFocus(IsFocus) {
   return {
   	type: types.ISFOCUS,
