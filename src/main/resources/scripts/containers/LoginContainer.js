@@ -25,12 +25,13 @@ class LoginFormContainer extends Component {
 }
 
 function mapStateToProps(state) {
-  const {subReducer: {subType, subSuccess, isFetching, text}} = state;
+  const {subReducer: {subType, subSuccess, isFetching, text}, user: {userType}} = state;
   return {
   	subType,
   	subSuccess,
   	isFetching,
-  	text
+  	text,
+  	uType: userType
   }
 }
 
