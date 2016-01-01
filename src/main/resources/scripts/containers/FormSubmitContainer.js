@@ -33,7 +33,8 @@ function mapStateToProps(state) {
   	})
   }
   return {
-  	ready: !(iagree && ready)
+  	ready: !(iagree && ready),
+    value: '下一步'
   };
 }
 

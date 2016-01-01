@@ -7,7 +7,7 @@ export default class FormSubmit extends Component {
   render() {
   	return (<div>
   	  <span className="label"></span>
-      <input type="submit" value="下一步" 
+      <input type="submit" value={this.props.value}
       disabled={this.props.ready} />
      </div>
   	)
@@ -15,6 +15,7 @@ export default class FormSubmit extends Component {
 }
 
 FormSubmit.propTypes = {
-  ready: PropTypes.bool.isRequired
+  ready: PropTypes.bool.isRequired,
+  value: PropTypes.string.isRequired
 }
 

@@ -5,7 +5,8 @@ import * as types from '../constants/customerActionType';
 const initState = {
   subType: '',
   subSuccess: false,
-  isFetching: false
+  isFetching: false,
+  text: ''
 }
 
 export function subReducer(state = initState, action) {
@@ -18,7 +19,8 @@ export function subReducer(state = initState, action) {
   	case types.SUBMITSUCCESS:
   	  return Object.assign({}, state, {
   	  	subSuccess: (action.res.post === 'success'),
-  	  	isFetching: false
+  	  	isFetching: false,
+        text: action.res.post
   	  })
   	case types.FAILURESUBMIT:
   	  return Object.assign({}, state, {

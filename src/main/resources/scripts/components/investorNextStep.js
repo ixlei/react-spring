@@ -52,7 +52,7 @@ class InvestorNextstep extends Component {
 	      <li><FormInput text="投资周期:" name="investCycle" /></li>
 	      <li><FormInput text="总部地址:" name="headquartersAddress"/></li>
 	      <li><FormInput text="咨询电话:" name="phonenumber"/></li>
-	      <li><FormSubmit ready={false} /></li>
+	      <li><FormSubmit ready={false} value="下一步"/></li>
 	    </ul>
 	  </div>
 	  <Upload />

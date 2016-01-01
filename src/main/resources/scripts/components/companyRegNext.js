@@ -104,7 +104,7 @@ export default class CompanyRegNext extends Component {
   	        <li><FormSelect text="盈利模式:" name="earnPattern" 
   	         options={earnPattern} />
   	        </li>
-  	        <li><FormSubmit ready={false} /></li>
+  	        <li><FormSubmit ready={false} value="下一步"/></li>
   	      </ul> 
   	    </div>
   	    <Upload />
@@ -117,4 +117,5 @@ CompanyRegNext.propTypes = {
   subType: PropTypes.string.isRequired,
   subSuccess: PropTypes.bool.isRequired,
   isFetching: PropTypes.bool.isRequired
+
 }
