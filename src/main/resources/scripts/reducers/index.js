@@ -6,13 +6,15 @@ import {compNews} from './companyNews';
 import {getNews} from './comNews';
 import {reg} from './reg';
 import {subReducer} from './submit';
+import {user} from './user';
 
 const rootReducer = combineReducers({
 	activeIndex,
 	compNews,
 	getNews,
 	reg,
-	subReducer
+	subReducer,
+	user
 });
 
 export default rootReducer;
