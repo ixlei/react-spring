@@ -31,7 +31,7 @@ class RegForm extends Component {
   }
   
   componentWillReceiveProps(nextProps) {
-    const {subType, subSuccess, isFetching} = nextProps;
+    const {subType, subSuccess, isFetching, userType} = nextProps;
     if(subType ==='reg1' && subSuccess && !isFetching) {
       if(userType === 'investor') {
         this.context.history.pushState(null, '/customer/reg/investorNext');
@@ -60,7 +60,7 @@ class RegForm extends Component {
 }
 
 function mapStateToProps(state) {
-  const {subReducer: {subType, subSuccess,isFetching}, reg: {userType}} = state;
+  const {subReducer: {subType, subSuccess,isFetching}, user:{userType}} = state;
   return {
     subType,
     subSuccess,
