@@ -16,10 +16,11 @@ export default class FormRadio extends Component {
   render() {
     let {value, userType} = this.props;
   	return <input type="radio" className="checked" 
-  	  value={this.props.value} name="type" 
+  	  value={this.props.value} name="type"
       onChange= {this.change.bind(this)} checked={userType === value}/>
   }
 }
+
 
 FormRadio.propTypes = {
 }
