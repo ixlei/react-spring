@@ -4,7 +4,6 @@ import * as types from '../constants/customerActionType';
 
 const initState = {
   regStep: 0,
-  userType: 'investor',
   isFetching: false,
   IsFocus: '',
   postCheck: '',
@@ -47,10 +46,6 @@ export function reg(state = initState, action) {
     case types.REGSTEP:
       return Object.assign({}, state, {
       	regStep: action.regStep
-      })
-    case types.USERTYPE:
-      return Object.assign({}, state, {
-      	userType: action.userType
       })
     case types.POST_CHECKVALID:
       return Object.assign({}, state, {

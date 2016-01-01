@@ -62,7 +62,7 @@ class InvestorNextstep extends Component {
 }
 
 function mapStateToProps(state) {
-  const {subReducer: {subType, subSuccess,isFetching}, reg: {userType}} = state;
+  const {subReducer: {subType, subSuccess,isFetching}, user:{userType}} = state;
   return {
   	subType,
   	subSuccess,

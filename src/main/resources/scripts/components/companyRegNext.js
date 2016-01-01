@@ -117,5 +117,4 @@ CompanyRegNext.propTypes = {
   subType: PropTypes.string.isRequired,
   subSuccess: PropTypes.bool.isRequired,
   isFetching: PropTypes.bool.isRequired
-
 }

@@ -13,7 +13,7 @@ class FormIdcardContainer extends Component {
 }
 
 function mapStateToProps(state) {
-  const {reg:{IsFocus, itemState, userType}} = state;
+  const {reg:{IsFocus, itemState}, user: {userType}} = state;
   const {valid, tips} = itemState[4];
   return {
   	IsFocus,

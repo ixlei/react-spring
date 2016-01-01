@@ -10,7 +10,7 @@ class UserType extends Component {
   	let {dispatch, userType} = this.props;
     let regChoose = {
       dispatch,
-      userType
+      ut: userType
     }
   	return (<div>
   		<span className="label">用户类型:</span>
@@ -24,7 +24,7 @@ class UserType extends Component {
 }
 
 function mapStateToProps(state) {
-  const {reg: {userType}} = state;
+  const {user:{userType}} = state;
   return {
   	userType
   }

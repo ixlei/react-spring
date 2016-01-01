@@ -147,7 +147,7 @@ public class customerController {
 	@ResponseBody
 	@RequestMapping(value = "/login", method = RequestMethod.POST)
 	public Object postLogin(HttpServletRequest req, HttpSession session) {
-
+        System.out.print("dhhd");
 		Map<String, Object> map = new HashMap<String, Object>();
 		String username = req.getParameter("username");
 		String password = req.getParameter("password");
@@ -156,42 +156,50 @@ public class customerController {
 		}
 
 		if (password.equals("")) {
-			return map.put("post", "密码不能为空");
+			map.put("post", "密码不能为空");
+			return map;
 		}
 
 		Investor checkInvestorUser;
-		if (req.getParameter("logintype").equals("investor")) {
+		if (req.getParameter("userType").equals("investor")) {
 			try {
 				checkInvestorUser = newuser.getInvestorByEmail(username);
 			} catch(Exception e) {
 				e.printStackTrace();
-				return map.put("post", "error");
+				map.put("post", "error");
+				return map;
 			}
 
 			if (checkInvestorUser == null) {
-				return map.put("post", "此用户不存在");
+				map.put("post", "此用户不存在");
+				return map;
 			}
 
 			if (checkInvestorUser.getPassword().equals(password)) {
 				session.setAttribute("citiuser", "iid=" + username);
-				return map.put("post", "success");
+				 map.put("post", "success");
+				return map;
 			}
 
-			return map.put("post", "用户名或密码错误");
+			map.put("post", "用户名或密码错误");
+			return map;
 
 		} else {
 			companyuser checkCompanyUser = newCompanyUser
 					.getCompanyUserByEmail(username);
 			if (checkCompanyUser == null) {
-				return map.put("post", "此用户不存在");
+			   map.put("post", "此用户不存在");
+				return map;
 			}
 
 			if (checkCompanyUser.getPassword().equals(password)) {
 				session.setAttribute("citiuser", "cid=" + username);
-				return map.put("post", "success");
+			    map.put("post", "success");
+				return map;
 			}
 
-			return map.put("post", "用户名或密码错误");
+			   map.put("post", "用户名或密码错误");
+			  return map;
 		}
 	}
 

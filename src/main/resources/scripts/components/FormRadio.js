@@ -1,7 +1,7 @@
 'use strict';
 
 import React, {Component, PropTypes} from 'react';
-import {userType} from '../actions/reg';
+import {userType} from '../actions/user';
 
 export default class FormRadio extends Component {
   constructor(props) {
@@ -14,10 +14,10 @@ export default class FormRadio extends Component {
   }
 
   render() {
-    let {value, userType} = this.props;
+    let {value, ut} = this.props;
   	return <input type="radio" className="checked" 
   	  value={this.props.value} name="type"
-      onChange= {this.change.bind(this)} checked={userType === value}/>
+      onChange= {this.change.bind(this)} checked={ut === value}/>
   }
 }
 

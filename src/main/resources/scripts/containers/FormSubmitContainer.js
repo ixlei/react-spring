@@ -13,7 +13,7 @@ class FormSubmitContainer extends Component {
 }
 
 function mapStateToProps(state) {
-  const {reg: {itemState, iagree, userType}} = state;
+  const {reg: {itemState, iagree}, user:{userType}} = state;
   let ready = false;
   if(userType === 'investor') {
   	ready = itemState.every(function(data) {
