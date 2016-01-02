@@ -30,39 +30,58 @@ export default class LoginForm extends Component {
   componentWillReceiveProps(nextProps) {
     const {subType, subSuccess, isFetching, text} = nextProps;
     if(subType === 'login' && !isFetching && subSuccess) {
-       this.context.history.pushState(null, '/customer/');
+       this.context.history.pushState(null, '/investor/');
        return;
     }
   }
 
-  render() {
-  	const {uType, text} = this.props;
+  renderPassword() {
   	return (
-  	  <form name="login" 
-  	    onSubmit={this.submit.bind(this)}>
-  	    <ul>
-  	      <li><FormInput name="username" text="用户名" /></li>
-  	      <li>
-  	        <span className="label">密码</span>
-  	        <input type="password" name="password" />
-  	      </li>
-  	      <li>
-  	        <input type="radio" name ="userType" 
-  	         value="investor" checked={uType === 'investor'} 
+  	  <div>
+  	    <span className="label">密码</span>
+  	    <input type="password" name="password" />
+  	  </div>
+  	)
+  }
+
+  renderUserType() {
+  	const {uType} = this.props;
+  	return (
+      <div>
+        <input type="radio" name ="userType" 
+  	         value="investor"
+  	         checked={uType === 'investor'} 
   	         onChange={this.change.bind(this)}/>
-  	        <span>投资者登陆</span>
-			<input type="radio" name="userType" 
+  	    <span>投资者登陆</span>
+		<input type="radio" name="userType" 
 			value="company" checked={uType === 'company'} 
 			onChange={this.change.bind(this)}/>
-			<span>企业用户登陆</span>
-		  </li>
-		  <li>
-		    <FormSubmit value="登录" ready={false}/>
-		    <span id="btn-reg">
-		      <Link to={'/customer/reg'}>立即注册</Link>
-		    </span>
-		  </li>
-		  <li><span>{text}</span></li>
+	    <span>企业用户登陆</span>
+      </div>  		
+  	)
+  }
+   
+  renderLoginBtn() {
+  	return (
+  	    <div>
+  	      <FormSubmit value="登录" ready={false}/>
+		  <span id="btn-reg">
+		    <Link to={'/customer/reg'}>立即注册</Link>
+		  </span>
+  	   </div>
+  	)
+  }
+
+  render() {
+  	const {text} = this.props;
+  	return (
+  	  <form name="login" onSubmit={this.submit.bind(this)}>
+  	    <ul>
+  	      <li><FormInput name="username" text="用户名" /></li>
+  	      <li>{this.renderPassword()}</li>
+  	      <li>{this.renderUserType()}</li>
+  	      <li>{this.renderLoginBtn()}</li>
+  	      <li><span>{text}</span></li>
   	    </ul>
   	  </form>
   	)
