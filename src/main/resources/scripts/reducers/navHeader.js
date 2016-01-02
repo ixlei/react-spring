@@ -1,5 +1,5 @@
 'use strict';
-import { ACTIVE_INDEX } from '../constants/customerActionType';
+import {ACTIVE_INDEX} from '../constants/customerActionType';
 
 const initState = {
 	index: 0
@@ -8,7 +8,7 @@ const initState = {
 export default function activeIndex(state = initState, action) {
 	if(Object.is(ACTIVE_INDEX, action.type)) {
 		return Object.assign({}, state, {
-			index:action.index
+			index: action.index
 		});
 	}
 	return state;

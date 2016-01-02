@@ -9,13 +9,13 @@ import CustomerApp from '../containers/customerApp';
 const store = configStore();
 
 export default class CustomerIndex extends Component {
-	render() {
-		return (
-		<Provider store= {store}>
-			<CustomerRoute />
-		</Provider>
-	  )
-	}
+  render() {
+	return (
+	  <Provider store= {store}>
+		<CustomerRoute />
+	  </Provider>
+	)
+  }
 }
 
 

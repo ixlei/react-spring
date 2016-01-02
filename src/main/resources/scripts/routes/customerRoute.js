@@ -12,6 +12,8 @@ import InvestorNextstep from '../components/investorNextStep';
 import FinshInvestorReg from '../components/finshInvestorReg';
 import CompanyNextContainer from '../containers/companyNextContainer';
 import LoginContainer from '../containers/LoginContainer';
+import InvestorApp from '../containers/investorApp';
+import InvestorIndexContainer from '../containers/investorIndexContainer';
 
 const history = useBasename(createHistory)({
   basename: '/'
@@ -20,20 +22,24 @@ const history = useBasename(createHistory)({
 export default class CustomerRoute extends Component {
   render() {
 	return (
-		<Router history={history}>
-		  <Route path="/customer" component={CustomerApp}>
-			<IndexRoute component={CustomerIndex} />
-			<Route path="index/:index" component={CustomerIndex} />
-            <Route path="invest/:index" component={InvestmentHall} />
-            <Route path="login" component={LoginContainer} />
-            <Route path="reg" component={Reg}> 
-              <Route path="investorNext" component={InvestorNextstep} />
-              <Route path="finshInvestor" component={FinshInvestorReg} />
-              <Route path="companyNext" component={CompanyNextContainer}/>
-              <IndexRoute component={RegForm} />
-            </Route>
-		  </Route>
-		</Router>
+	  <Router history={history}>
+		<Route path="/customer" component={CustomerApp}>
+		  <IndexRoute component={CustomerIndex} />
+		  <Route path="index/:index" component={CustomerIndex} />
+          <Route path="invest/:index" component={InvestmentHall} />
+          <Route path="login" component={LoginContainer} />
+          <Route path="reg" component={Reg}> 
+            <Route path="investorNext" component={InvestorNextstep} />
+            <Route path="finshInvestor" component={FinshInvestorReg} />
+            <Route path="companyNext" component={CompanyNextContainer}/>
+            <IndexRoute component={RegForm} />
+          </Route>
+		</Route>
+		<Route path="/investor" component={InvestorApp}>
+		  <IndexRoute component={InvestorIndexContainer} />
+		  <Route path="index/:index" component={InvestorIndexContainer} />
+		</Route>
+	  </Router>
 	)
   }
 }

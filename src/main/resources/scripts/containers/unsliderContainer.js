@@ -5,11 +5,11 @@ import {connect} from 'react-redux';
 import Unslider from '../components/unslider';
 
 class UnsliderContainer extends Component {
-	render() {
-		return (
-			<Unslider {...this.props} />
-		)
-	}
+  render() {
+    return (
+	  <Unslider {...this.props} />
+    )
+  }
 }
 
 function mapStateToProps(state) {
