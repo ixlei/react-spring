@@ -66,14 +66,6 @@ public class investorController {
 		return "redirect:/investor/login";
 	}
 
-	@RequestMapping({ "/", "/index" })
-	public String index(HttpServletRequest req, HttpServletResponse res, Map<String, Integer> model) {
-		model.put("flag", 0);
-		
-		res.setHeader("Access-Control-Allow-Origin", "*");
-		return "investor/logined-invest-index";
-	}
-
 	@RequestMapping("/logout")
 	public String logout(HttpSession session, Map<String, Integer> model) {
 		if (session.getAttribute("citiuser") != null) {
