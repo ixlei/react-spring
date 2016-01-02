@@ -5,9 +5,9 @@ import {connect} from 'react-redux';
 import Nav from '../components/customerNavHeader';
 
 class NavContainer extends Component {
-	render() {
-		return (<Nav {...this.props} />)
-	}
+  render() {
+	return (<Nav {...this.props} />)
+  }
 }
 
 function mapStateToProps(state) {
