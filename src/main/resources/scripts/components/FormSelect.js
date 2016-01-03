@@ -6,7 +6,7 @@ export default class FormSelect extends Component {
   render() {
   	const {labelText, name, options} = this.props;
   	return (<div>
-  		<span className="label">{labelText}</span>
+  		<label className="label">{labelText}</label>
   		<select name={name}>
   		  {options.map(function(option) {
             return <option value={option.value} key={option.id}>{option.text}</option>

@@ -18,6 +18,7 @@ public class privateEquity {
 	private double minAddto;
 	private String customer;
 	private String time;
+	private String returnMoneyWay;
 	
 	public privateEquity() {
 		
@@ -157,6 +158,19 @@ public class privateEquity {
 	
 	public String getTime() {
 		return this.time;
+	}
+
+	public void setReturnMoneyWay(String returnMoneyWay) {
+		this.returnMoneyWay = returnMoneyWay;
+	}
+	
+	public String getReturnMoneyWay() {
+		return this.returnMoneyWay;
+	}
+
+	public void setoccupyMaxInterestMin(double parseDouble) {
+	
+		
 	}
 	
 	

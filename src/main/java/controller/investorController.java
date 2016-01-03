@@ -7,19 +7,14 @@ import java.util.List;
 import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import model.Investor;
-import model.appointment;
-import model.companyuser;
-import model.debtBuy;
-import model.stockBuy;
-
+import model.*;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -76,9 +71,21 @@ public class investorController {
 	}
 
 	@RequestMapping("/investModel")
-	public String investModel(Map<String, Integer> model) {
-		model.put("flag", 1);
-		return "investor/user-corporate-mode-finance-patch";
+	@ResponseBody
+	public Object investModel() {
+		Map<String, Object> model = new HashMap<String, Object>();
+		ArrayList<investModel> proList;
+		try {
+			proList = newuser.getInvestModel();
+		} catch (Exception e) {
+			e.printStackTrace();
+			model.put("res", "error");
+			return model;
+		}
+		model.put("res", "success");
+		model.put("data", proList);
+
+		return model;
 	}
 
 	@RequestMapping(value = "/releaseTender", method = RequestMethod.GET)
@@ -367,7 +374,7 @@ public class investorController {
 		String[] email = sessionChar.split("=");
 		model.addAttribute("username", newuser.getInvestorByEmail(email[1]).getUsername());
 		
-		model.addAttribute("session",sessionChar);
+		model.addAttribute("session", sessionChar);
 		return "investor/investor-chat";
 	}
 
@@ -539,5 +546,39 @@ public class investorController {
 	@RequestMapping("/push")
 	public String getPush() {
 		return "investor/push";
+	}
+
+	@ResponseBody
+	@RequestMapping("/equity/{pid}")
+	public Object getEquity(@PathVariable String pid) {
+		Map<String, Object> model = new HashMap<String, Object>();
+		equity pro;
+		try {
+			pro = newuser.getequity(pid);
+		} catch (Exception e) {
+			e.printStackTrace();
+			model.put("error", "error");
+			return model;
+		}
+		model.put("equ", pro);
+		return model;
+
+	}
+
+	@ResponseBody
+	@RequestMapping("/debtDetail/{pid}")
+	public Object getdebtDetail(@PathVariable String pid) {
+		Map<String, Object> model = new HashMap<String, Object>();
+		debtDetail pro;
+		try {
+			pro = newuser.getDebtDetail(pid);
+		} catch (Exception e) {
+			e.printStackTrace();
+			model.put("error", "err");
+			return model;
+		}
+
+		model.put("debt", pro);
+		return model;
 	}
 }

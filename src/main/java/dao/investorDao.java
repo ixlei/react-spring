@@ -4,15 +4,14 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-import org.springframework.dao.DataAccessException;
-import org.springframework.jdbc.core.ResultSetExtractor;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.jdbc.core.simple.ParameterizedRowMapper;
 import org.springframework.jdbc.core.simple.SimpleJdbcTemplate;
 
-import com.itextpdf.text.List;
-
 import model.Investor;
+import model.investModel;
+import model.debtDetail;
+import model.equity;
 
 @SuppressWarnings("deprecation")
 public class investorDao {
@@ -240,4 +239,115 @@ public class investorDao {
 		});
 	}
 
+	public ArrayList<investModel> getInvestModel() {
+		String sql = "select id, companyName,  productType, registerAddress, workField, publishMoneyMin, "
+				+ "netProfit / turnover as turnRate, creditLevel from privateequity as pe, companyuser as c "
+				+ "where pe.customer = c.email union all select id, companyName,  productType, registerAddress,"
+				+ " workField, publishMoneyMin, netProfit / turnover as turnRate, creditLevel from privatedebt as pd, "
+				+ "companyuser c where pd.customer = c.email";
+		ArrayList<investModel> list = (ArrayList<investModel>) jdbcTemplate
+				.query(sql, new RowMapper<investModel>() {
+
+					public investModel mapRow(ResultSet rs, int RowNum)
+							throws SQLException {
+						investModel pro = new investModel();
+						pro.setid(rs.getString(1));
+						pro.setcompanyName(rs.getString(2));
+						pro.setproductType(rs.getString(3));
+						pro.setregisterAddress(rs.getString(4));
+						pro.setWorkField(rs.getString(5));
+						pro.setPublishMoneyMin(Double.parseDouble(rs
+								.getString(6)));
+						pro.setreturnRate(Double.parseDouble(rs.getString(7)));
+						pro.setcreditLevel(rs.getString(8));
+						return pro;
+					}
+
+				});
+		return list;
+
+	}
+
+	public equity getequity(String pid) {
+		String sql = "select companyName, workField, registerAddress, createTime, registerCapital, "
+				+ "bondsman, turnover, netAsset, netProfit, publishMoneyMin, publishFixedYesrs, publishFinsh,"
+				+ "productType, investmentMinRequest, minAddto, occupyPercentMin, occupyPercentMax, "
+				+ "exitWay, exitMinTime, currentStage, id from privateequity as p, companyuser as c "
+				+ "where id = ? and c.email = p.customer ";
+		return jdbcTemplate.queryForObject(sql,
+				new ParameterizedRowMapper<equity>() {
+					public equity mapRow(ResultSet rs, int RowNum)
+							throws SQLException {
+						equity pro = new equity();
+
+						pro.setcompanyName(rs.getString(1));
+						pro.setWorkField(rs.getString(2));
+						pro.setregisterAddress(rs.getString(3));
+						pro.setcreateTime(rs.getString(4));
+						pro.setregisterCapital(rs.getShort(5));
+						pro.setbondsman(rs.getString(6));
+						pro.setturnover(Double.parseDouble(rs.getString(7)));
+						pro.setnetAsset(Double.parseDouble(rs.getString(8)));
+						pro.setnetProfit(Double.parseDouble(rs.getString(9)));
+						pro.setPublishMoneyMin(Double.parseDouble(rs
+								.getString(10)));
+						pro.setpublishFixedYesrs(Integer.parseInt(rs
+								.getString(11)));
+						pro.setpublishFinsh(rs.getString(12));
+						pro.setproductType(rs.getString(13));
+						pro.setinvestmentMinRequest(Double.parseDouble(rs
+								.getString(14)));
+						pro.setminAddto(Double.parseDouble(rs.getString(15)));
+						pro.setoccupyPercentMin(Double.parseDouble(rs
+								.getString(16)));
+						pro.setoccupyPercentMax(Double.parseDouble(rs
+								.getString(17)));
+						pro.setexitWay(rs.getString(18));
+						pro.setexitMinTime(Integer.parseInt(rs.getString(19)));
+						pro.setcurrentStage(rs.getString(20));
+						pro.setid(rs.getString(21));
+						return pro;
+					}
+
+				}, pid);
+	}
+
+	public debtDetail getDebtDetail(String pid) {
+		String sql = "select companyName, workField, registerAddress, createTime, registerCapital,"
+				+ "bondsman, turnover, netAsset, netProfit, publishMoneyMin, publishFixedYesrs, publishFinsh,"
+				+ "productType, returnMoneyWay, occupyMaxInterestMax, occupyTime, riskCotrollRequest, returnSource,"
+				+ "id from privatedebt as p, companyuser as c where id = ? and c.email = p.customer";
+		return jdbcTemplate.queryForObject(sql,
+				new ParameterizedRowMapper<debtDetail>() {
+
+					public debtDetail mapRow(ResultSet rs, int RowNum)
+							throws SQLException {
+						debtDetail pro = new debtDetail();
+						pro.setcompanyName(rs.getString(1));
+						pro.setWorkField(rs.getString(2));
+						pro.setregisterAddress(rs.getString(3));
+						pro.setcreateTime(rs.getString(4));
+						pro.setregisterCapital(rs.getShort(5));
+						pro.setbondsman(rs.getString(6));
+						pro.setturnover(Double.parseDouble(rs.getString(7)));
+						pro.setnetAsset(Double.parseDouble(rs.getString(8)));
+						pro.setnetProfit(Double.parseDouble(rs.getString(9)));
+						pro.setPublishMoneyMin(Double.parseDouble(rs
+								.getString(10)));
+						pro.setpublishFixedYesrs(Integer.parseInt(rs
+								.getString(11)));
+						pro.setpublishFinsh(rs.getString(12));
+						pro.setproductType(rs.getString(13));
+						pro.setreturnMoneyWay(rs.getString(14));
+						pro.setoccupyMaxInterestMax(Double.parseDouble(rs
+								.getString(15)));
+						pro.setoccupyTime(rs.getString(16));
+						pro.setriskCotrollRequest(rs.getString(17));
+						pro.setreturnSource(rs.getString(18));
+						pro.setid(rs.getString(19));
+						return pro;
+					}
+
+				}, pid);
+	}
 }
