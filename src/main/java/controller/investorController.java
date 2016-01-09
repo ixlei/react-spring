@@ -70,9 +70,9 @@ public class investorController {
 		return "redirect:/customer/index";
 	}
 
-	@RequestMapping("/investModel")
+	@RequestMapping("/investModel/{modelType}")
 	@ResponseBody
-	public Object investModel() {
+	public Object investModel(@PathVariable String modelType) {
 		Map<String, Object> model = new HashMap<String, Object>();
 		ArrayList<investModel> proList;
 		try {
