@@ -8,10 +8,13 @@ import {checkStatus} from '../utils/fetchStatus';
 export function getInvestorModel(modelType) {
   return dispatch => {
   	dispatch(requestInvestorModel(modelType));
-  	return fetch(constructInvestorModelUrl(modelType))
-  	  .then(checkStatus(response))
+  	return fetch(constructInvestorModelUrl(modelType), {
+      credentials: 'include'
+      })
+  	  .then(response => checkStatus(response))
+      .then(res => res.json())
   	  .then(json => dispatch(receive(json)))
-  	  .catch(error => failure(error));
+  	  .catch(error => dispatch(failure(error)));
   }
 }
 
@@ -31,7 +34,7 @@ function receive(entity) {
 
 function failure(error) {
   return {
-  	type: FAILURE_INVESTORMODEL,
+  	type: types.FAILURE_INVESTORMODEL,
   	error
   }
 }
