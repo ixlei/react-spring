@@ -8,7 +8,7 @@ export function postCheckValid(checkKind,body) {
   	dispatch(post(checkKind));
   	let {reg:{userType}} = getState();
     body.append('userType', userType);
-    return fetch('/customer/' + checkKind, {
+    return fetch(`/customer/${checkKind}`, {
       method: 'post',
       body,
       credentials: 'include'
