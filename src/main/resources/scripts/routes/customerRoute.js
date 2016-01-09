@@ -14,6 +14,7 @@ import CompanyNextContainer from '../containers/companyNextContainer';
 import LoginContainer from '../containers/LoginContainer';
 import InvestorApp from '../containers/investorApp';
 import InvestorIndexContainer from '../containers/investorIndexContainer';
+import InvestorModelContainer from '../containers/InvestorModelContainer';
 
 const history = useBasename(createHistory)({
   basename: '/'
@@ -38,6 +39,7 @@ export default class CustomerRoute extends Component {
 		<Route path="/investor" component={InvestorApp}>
 		  <IndexRoute component={InvestorIndexContainer} />
 		  <Route path="index/:index" component={InvestorIndexContainer} />
+		  <Route path="investModel/:index" component={InvestorModelContainer}/>
 		</Route>
 	  </Router>
 	)

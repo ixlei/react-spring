@@ -124,5 +124,5 @@ export default class InvestorNav extends Component {
 }
 
 InvestorNav.propTypes = {
-  index: PropTypes.number.isRequired
+  index: PropTypes.string.isRequired
 }

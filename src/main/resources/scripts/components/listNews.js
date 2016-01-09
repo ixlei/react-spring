@@ -9,7 +9,7 @@ export default class ListNews extends Component {
   	  <div className="zixun-item">
   	    {this.props.news.map((item, index) => (
   	      <p key={'news' + item.nid}>
-  	        <Link to={'/getComNews/' + item.nid} title={item.title}>{item.title}</Link>
+  	        <Link to={`/getComNews/${item.nid}`} title={item.title}>{item.title}</Link>
   	      </p>
   	    ))}
   	  </div>

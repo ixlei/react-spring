@@ -8,8 +8,8 @@ export default class FormSelect extends Component {
   	return (<div>
   		<label className="label">{labelText}</label>
   		<select name={name}>
-  		  {options.map(function(option) {
-            return <option value={option.value} key={option.id}>{option.text}</option>
+  		  {options.map(function(option, index) {
+          return <option value={option.value} key={`index${index}`}>{option.text}</option>
   		  })}
   		</select>
   	  </div>

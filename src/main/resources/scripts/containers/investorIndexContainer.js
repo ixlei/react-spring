@@ -11,7 +11,7 @@ class InvestorIndexContainer extends Component {
 		arrowImgUrl = ['btn-pre.png', 'btn-next.png'],
 		unsliderLeft = ['touzizhe1.png', 'touzizhe2.png'],
 		unsliderRight = ['touzizhe3.png', 'touzizhe4.png'];
-	let props = {unsliderTop, arrowImgUrl, unsliderLeft, unsliderRight}
+	let props = Object.assign({}, this.props, {unsliderTop, arrowImgUrl, unsliderLeft, unsliderRight});
   	return (
   	  <InvestorIndex {...props} />
   	)

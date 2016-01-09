@@ -3,7 +3,7 @@
 import * as types from '../constants/customerActionType';
 
 const initState = {
-  modelType: 'all',
+  modelType: 'any',
   data: [],
   isFetching: false,
   success: false,
@@ -18,10 +18,10 @@ export function investorModel(state = initState, action) {
       	isFetching: true
       })
     case types.RECEIVE_INVESTORMODEL:
-      const {entity: {res}} = action;
+      const {entity: {res, data}} = action;
       if(res === 'success') {
       	return Object.assign({}, state, {
-      	 data: action.data,
+      	 data: data,
       	 isFetching: false,
       	 success: true
        })
