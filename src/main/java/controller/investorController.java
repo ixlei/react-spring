@@ -88,18 +88,23 @@ public class investorController {
 		return model;
 	}
 
-	@RequestMapping(value = "/releaseTender", method = RequestMethod.GET)
-	public String releaseTender(HttpSession session, Map<String, Object> model) {
-		model.put("flag", 1);
+	@ResponseBody
+	@RequestMapping(value = "/user", method = RequestMethod.GET)
+	public Object user(HttpSession session) {
+		Map<String, Object> map = new HashMap<String, Object>();
 		String sessionId = (String) session.getAttribute("citiuser");
 		String email = sessionId.split("=")[1];
-		Investor customer = newuser.getInvestorForDebt(email);
-		model.put("username", customer.getUsername());
-		model.put("investorAddress", customer.getInvestAddress());
-		model.put("companyAddress", customer.getCompanyAddress());
-		model.put("legalRepresentative", customer.getLegalRepresentative());
-		model.put("investFiled", customer.getInvestFiled());
-		return "investor/release_tender_offers";
+		Investor customer;
+		try{
+			customer = newuser.getInvestorForDebt(email);
+		} catch(Exception e) {
+			e.printStackTrace();
+			map.put("res", "error");
+			return map;
+		}
+		map.put("res", "success");
+		map.put("data", customer);
+		return map;
 	}
 
 	@ResponseBody

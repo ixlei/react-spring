@@ -147,7 +147,6 @@ public class customerController {
 	@ResponseBody
 	@RequestMapping(value = "/login", method = RequestMethod.POST)
 	public Object postLogin(HttpServletRequest req, HttpSession session) {
-        System.out.print("dhhd");
 		Map<String, Object> map = new HashMap<String, Object>();
 		String username = req.getParameter("username");
 		String password = req.getParameter("password");
@@ -161,6 +160,7 @@ public class customerController {
 		}
 
 		Investor checkInvestorUser;
+		companyuser checkCompanyUser;
 		if (req.getParameter("userType").equals("investor")) {
 			try {
 				checkInvestorUser = newuser.getInvestorByEmail(username);
@@ -185,7 +185,7 @@ public class customerController {
 			return map;
 
 		} else {
-			companyuser checkCompanyUser = newCompanyUser
+			checkCompanyUser = newCompanyUser
 					.getCompanyUserByEmail(username);
 			if (checkCompanyUser == null) {
 			   map.put("post", "此用户不存在");
