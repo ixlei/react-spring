@@ -6,8 +6,6 @@ import {Link} from 'react-router';
 import {activeIndex} from '../actions/navHeader';
 import {getInvestorModel} from '../actions/investorModel';
 
-require('../../styles/investorModel.scss');
-
 export default class InvestorModel extends Component {
   componentDidMount() {
   	const {params:{index}, dispatch} = this.props;

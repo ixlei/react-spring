@@ -3,8 +3,6 @@
 import React, {Component, PropTypes} from 'react';
 import InvestorNavContainer from '../containers/investorNavContainer';
 
-require('../../styles/investHeader.scss');
-
 export default class InvestorApp extends Component {
   render() {
   	return (<div>

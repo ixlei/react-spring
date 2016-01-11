@@ -1,0 +1,209 @@
+.loginPage {
+    #first-glance {
+        top: 80px;
+        height: 320px;
+    }
+    #first-glance ul {
+        margin: 10px -40px;
+    }
+    #first-glance ul,
+    #first-glance ul li,
+    #main {
+        width: 100%;
+        height: 100%;
+    }
+    .banner {
+        position: relative;
+        overflow: hidden;
+    }
+    .banner li {
+        list-style: none;
+    }
+    .banner a {
+        z-index: 100;
+        position: absolute;
+        top: 40%;
+    }
+    .banner a:nth-child(2) {
+        left: 360px;
+    }
+    .banner a:nth-child(1) {
+        left: 30px;
+    }
+    .banner ul li {
+        background: no-repeat;
+        background-size: 400px 320px;
+        float: left;
+    }
+    .banner a img {
+        width: 20px;
+    }
+}
+
+#login {
+    border: 1px solid #DEDFE1;
+    border-radius: 3px;
+    position: absolute;
+    width: 400px;
+    height: 310px;
+    top: 90px;
+    left: 420px;
+}
+
+#login ul {
+    margin-top: 10px;
+    list-style: none;
+}
+
+#login ul li {
+    position: relative;
+    margin-left: -20px;
+    height: 50px;
+}
+
+#login ul li span {
+    display: inline-block;
+}
+
+.loginPage .label {
+    position: absolute;
+    margin: 2px -3px;
+    height: 38px;
+    border-right: 1px solid #45578F;
+    position: relative;
+    text-align: center;
+    line-height: 38px;
+    width: 60px;
+    margin: 0;
+    padding: 0;
+    color: white;
+    background: #45578F;
+}
+
+.input-text {
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    left: 60px;
+    height: 35px;
+    width: 260px;
+    vertical-align: middle;
+}
+
+#auth-in {
+    width: 100px;
+    display: inline-block;
+    padding: 0;
+    margin-left: -10px;
+    height: 35px;
+    vertical-align: middle;
+}
+
+#auth-tips {
+    padding: 0;
+    margin-top: 2px;
+    height: 35px;
+    text-align: left;
+    line-height: 32px;
+    width: 75px;
+    color: #586798;
+}
+
+#refresh {
+    position: absolute;
+    left: 280px;
+    color: #B2B1B1;
+}
+
+#iforget {
+    width: 68px;
+    margin-left: 50px;
+    text-align: right;
+}
+
+#iforget a {
+    font-size: 0.8em;
+    color: #B2B1B1;
+}
+
+#nologin {
+    margin-left: 20px;
+}
+
+#nologin-text {
+    width: 80px;
+    font-size: 0.8em;
+    text-align: left;
+    color: #B2B1B1;
+}
+
+#btn-login,
+#btn-reg {
+    width: 120px;
+    margin-left: 30px;
+    height: 35px;
+    color: white;
+    border: 1px solid #45578F;
+    border-radius: 3px;
+    background-color: #45578F;
+    display: inline-block;
+    text-align: center;
+    line-height: 35px;
+}
+
+#btn-login {
+    height: 36px;
+}
+
+#btn-reg a {
+    color: white;
+}
+
+#btn-reg {
+    margin-top: -20px;
+}
+
+#auth {
+    position: absolute;
+    width: 70px;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+#auth img {
+    height: 35px;
+}
+
+#footer {
+    width: 100%;
+    background-color: #2A324B;
+}
+
+#main {
+    min-height: 100%;
+    margin-bottom: -80px;
+}
+
+#main:after {
+    content: "";
+    display: block;
+}
+
+#footer,
+#main:after {
+    height: 80px;
+}
+
+#feedback {
+    color: red;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+input[type="radio"] {
+    margin-left: 20px;
+}

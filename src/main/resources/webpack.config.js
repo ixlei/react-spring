@@ -7,10 +7,10 @@ new webpack.HotModuleReplacementPlugin('common.js');
 
 module.exports = {
 	entry: {
-		customerEntry: [
+		main: [
             'webpack-dev-server/client?http://127.0.0.1:3000',
             'webpack/hot/dev-server',
-            './scripts/entry/customerEntry.js',
+            './scripts/entry/entry.js',
         ]
 	},
 	output: {

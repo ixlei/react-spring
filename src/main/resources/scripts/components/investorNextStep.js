@@ -8,8 +8,6 @@ import FormSubmit  from './FormSubmit';
 import {subAction} from '../actions/submit';
 import Upload from '../components/upload';
 
-require('../../styles/completeReg.scss');
-
 class InvestorNextstep extends Component {
   componentDidMount() {
     const {dispatch} = this.props;

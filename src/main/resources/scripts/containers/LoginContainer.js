@@ -5,8 +5,6 @@ import LoginForm from '../components/LoginForm';
 import {connect} from 'react-redux';
 import Unslider from '../components/unslider';
 
-require('../../styles/login.scss');
-
 class LoginFormContainer extends Component {
   render() {
   	let unslider = {

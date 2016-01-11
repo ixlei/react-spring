@@ -1,0 +1,121 @@
+#main {
+    color: #767B91;
+}
+
+#content-reg {
+    width: 820px;
+    margin: 0 auto;
+}
+
+#content-reg {
+    #sitenav {
+        height: 30px;
+        margin-top: 30px;
+        width: 100%;
+    }
+    #complete-reg,
+    #complete-reg form {
+        width: 100%;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+    #left-reg,
+    #upload {
+        position: relative;
+        float: left;
+    }
+    #left-reg {
+        width: 50%;
+    }
+    #left-reg,
+    #upload {
+        left: 10%;
+    }
+    #left-reg ul li {
+        height: 45px;
+        margin-left: -30px;
+    }
+    .label {
+        display: inline-block;
+        width: 120px;
+        text-align: right;
+    }
+    .reg-input {
+        width: 220px;
+    }
+    #first {
+        width: 48px;
+    }
+    #second {
+        width: 150px;
+    }
+    input {
+        height: 25px;
+        display: inline-block;
+        border: 1px solid #2A324B;
+        border-radius: 3px;
+    }
+    #btn {
+        width: 180px;
+    }
+    #file {
+        top: 15px;
+        position: relative;
+        width: 90px;
+        height: 30px;
+        border-radius: 3px;
+        background: white;
+        border: 1px solid #2A324B;
+        text-align: center;
+        cursor: pointer;
+        line-height: 30px;
+    }
+    #text {
+        display: inline-block;
+        height: 30px;
+        line-height: 30px;
+        color: #666;
+        font-size: 18px;
+    }
+    input[type="file"] {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 120px;
+        height: 30px;
+        opacity: 0;
+        -moz-opacity: 0;
+        filter: alpha(opacity=0);
+    }
+    #upload {
+        height: 260px;
+        width: 30%;
+    }
+    #right-reg div {
+        margin: 0 auto;
+    }
+    #logo-show {
+        background: #2A324B;
+        top: 10px;
+        position: relative;
+        border: 1px solid #2A324B;
+        height: 200px;
+        width: 80%;
+    }
+    #logo-show span {
+        display: inline-block;
+        width: 100%;
+        margin: 0 auto;
+    }
+    #logo-show img {
+        height: 200px;
+    }
+    #upload p {
+        text-align: center;
+    }
+    #title {
+        position: relative;
+        height: 20px;
+    }
+}

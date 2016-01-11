@@ -6,8 +6,6 @@ import {Link} from 'react-router';
 import {activeIndex} from '../actions/navHeader';
 import NewsConatiner from '../containers/listNewsContainer';
 
-require('../../styles/investIndex.scss');
-
 export default class InvestorIndex extends Component {
   
   componentDidMount() {

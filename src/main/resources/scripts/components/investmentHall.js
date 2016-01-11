@@ -6,8 +6,6 @@ import UnsliderContainer from '../containers/unsliderContainer';
 import InvestIntroduce from './investintroduce';
 import {activeIndex} from '../actions/navHeader';
 
-require('../../styles/investmentHall.scss');
-
 class InvestmentHall extends Component {
 
   componentDidMount() {

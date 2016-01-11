@@ -10,8 +10,6 @@ import IncreateRateContainer from './increaseRateContainer';
 import NewsConatiner from './listNewsContainer';
 import {activeIndex} from '../actions/navHeader';
 
-require('../../styles/customerIndex.scss');
-
 class CustomerIndex extends Component {
 	componentDidMount() {
       const {dispatch} = this.props;
@@ -20,7 +18,7 @@ class CustomerIndex extends Component {
 
 	render() {
 	  return (
-	    <div id="content">
+	    <div id="content-cindex">
 	      <UnsliderContainer />
 		  <CompNewsContainer />
 		  <div id="invest-center">

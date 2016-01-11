@@ -5,8 +5,6 @@ import {Link} from 'react-router';
 import {connect} from 'react-redux';
 import {regStep} from '../actions/reg';
 
-require('../../styles/finish-reg.scss');
-
 class FinshInvestorReg extends Component {
   componentDidMount() {
     const {dispatch} = this.props;
