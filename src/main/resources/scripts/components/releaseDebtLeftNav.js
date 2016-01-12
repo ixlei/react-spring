@@ -7,10 +7,10 @@ export default class ReleaseDebtLeftNav extends Component {
   render() {
   	return (<div id="list-item">
 	  <span>
-		<Link to={'/investor/releaseTender'}>股权收购</Link>
+		<Link to={'/investor/pub/render'}>股权收购</Link>
 	  </span> 
 	  <span id="selected">
-	    <Link to={'/investor/debtPurchase'}>债权购买</Link>
+	    <Link to={'/investor/pub/debt'}>债权购买</Link>
 	  </span>
     </div>
   	)
