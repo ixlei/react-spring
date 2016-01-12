@@ -253,19 +253,6 @@ public class investorController {
 		return "investor/moreInvestor";
 	}
 
-	@RequestMapping(value = "/debtPurchase", method = RequestMethod.GET)
-	public String getDebtPurchase(HttpSession session, Map<String, Object> model) {
-		String sessionId = (String) session.getAttribute("citiuser");
-		String email = sessionId.split("=")[1];
-		Investor customer = newuser.getInvestorForDebt(email);
-		model.put("username", customer.getUsername());
-		model.put("investAddress", customer.getInvestAddress());
-		model.put("companyAddress", customer.getCompanyAddress());
-		model.put("legalRepresentative", customer.getLegalRepresentative());
-		model.put("investFiled", customer.getInvestFiled());
-		return "investor/release_debt_purchase";
-	}
-
 	@ResponseBody
 	@RequestMapping(value = "/debtPurchase", method = RequestMethod.POST)
 	public Object postDebtPurchase(HttpServletRequest req) {

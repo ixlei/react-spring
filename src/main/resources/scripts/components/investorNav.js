@@ -37,7 +37,7 @@ export default class InvestorNav extends Component {
 				    </Link>
 				  </li>
 				  <li>
-					<Link to={'/investor/releaseTender'}>
+					<Link to={'/investor/pub/render'}>
 					  <span>意向发布</span>
 					</Link>
 				  </li>
