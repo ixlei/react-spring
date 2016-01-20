@@ -162,25 +162,25 @@ export default class InvestorModel extends Component {
 	      <thead>
 		   <tr>
 			<th>产品名称</th>
-		    <th>类型</th>
+		  <th>类型</th>
 			<th>地区</th>
 			<th>所属行业</th>
 			<th>资金类型</th>
-		    <th>收益率</th>
+		  <th>收益率</th>
 			<th className="rightItem">信用等级</th>
 		   </tr>
 		  </thead>
 		   <tbody>
 		   {data.map(data => (
-              <tr key={`index${data.id}`}>
-                <td>{data.companyName}</td>
-                <td>{data.productType}</td>
-                <td>{data.registerAddress}</td>
-                <td>{data.workField}</td>
-                <td>{data.productType}</td>
-                <td>{data.returnRate}</td>
-                <td>{data.creditLevvel}</td>
-              </tr>
+          <tr key={`index${data.id}`}>
+            <td>{data.companyName}</td>
+            <td>{data.productType}</td>
+            <td>{data.registerAddress}</td>
+            <td>{data.workField}</td>
+            <td>{data.productType}</td>
+            <td>{data.returnRate}</td>
+            <td>{data.creditLevvel}</td>
+          </tr>
 		   	))}
 		  </tbody>
 		</table>
