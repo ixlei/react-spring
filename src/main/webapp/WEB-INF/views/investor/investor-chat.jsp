@@ -25,7 +25,6 @@
         <div id="content">
             <div id="first-galance">
                 <div id="chat-title">
-  
                     <div data-uid="${session}" id="title">
                         <span>
 	    					<a href="" title="">${username }，欢迎您进行业务洽谈</a>
@@ -37,10 +36,8 @@
 	    				</span>
                     </div>
                 </div>
-             	
                 <div id="to-list">
                     <ul>
-                    	
                         <li>
                         	 <c:forEach var="friendList" items="${friendList }">
 	                           <span class="to-one">

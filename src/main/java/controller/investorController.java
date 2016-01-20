@@ -103,6 +103,7 @@ public class investorController {
 			return map;
 		}
 		map.put("res", "success");
+		customer.setEmail(email);
 		map.put("data", customer);
 		return map;
 	}
@@ -357,17 +358,34 @@ public class investorController {
 		return "investor/eletronic-contrating-inquiry-protocol";
 	}
 
-	@RequestMapping("/investorChat")
-	public String getInvestorChat(HttpSession session, Model model) {
-		model.addAttribute("flag", (Integer) 1);
-		ArrayList<companyuser> user = companyCusDao.getCompanyUserAll();
-		model.addAttribute("friendList", user);
+
+	@RequestMapping("/chat")
+	@ResponseBody
+	public Object getInvestorChat(HttpSession session) {
+		Map<String, Object> map = new HashMap<String, Object>();
+		ArrayList<companyuser> user;
+		try {
+			user = companyCusDao.getCompanyUserAll();
+		} catch(Exception e) {
+			e.printStackTrace();
+			map.put("res", "error");
+			return map;
+		}
+		Investor iuser;
 		String sessionChar = (String) session.getAttribute("citiuser");
 		String[] email = sessionChar.split("=");
-		model.addAttribute("username", newuser.getInvestorByEmail(email[1]).getUsername());
-		
-		model.addAttribute("session", sessionChar);
-		return "investor/investor-chat";
+		try {
+			iuser = newuser.getInvestorByEmail(email[1]);
+		} catch (Exception e) {
+			e.printStackTrace();
+			map.put("res", "error");
+			return map;
+		}
+		map.put("res", "success");
+		map.put("friends", user);
+		map.put("username", iuser.getUsername());
+		map.put("session", sessionChar);
+		return map;
 	}
 
 	@RequestMapping(value = "/resavation", method = RequestMethod.GET)

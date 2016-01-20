@@ -42,7 +42,7 @@ export default class InvestorNav extends Component {
 					</Link>
 				  </li>
 				  <li>
-				    <Link to={'/investor/investorChat'}>
+				    <Link to={'/investor/chat'}>
 					  <span>业务洽谈</span>
 					</Link>
 				  </li>
