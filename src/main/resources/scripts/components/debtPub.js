@@ -2,6 +2,8 @@
 
 import React, {Component, PropTypes} from 'react';
 import ReleaseDebtLeftNav from './releaseDebtLeftNav';
+import {activeIndex} from '../actions/navHeader';
+import {fetchUser} from '../actions/user';
 
 export default class DebtPub extends Component {
    
