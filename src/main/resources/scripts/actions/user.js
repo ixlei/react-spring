@@ -3,12 +3,13 @@
 import * as types from '../constants/customerActionType';
 import fetch from 'isomorphic-fetch';
 import {checkStatus} from '../utils/fetchStatus';
+import {constructUserUrl, constructChatUrl} from '../utils/userUrl';
 
 export function fetchUser() {
   return (dispatch, getState) => {
   	const {user:{userType}} = getState();
   	dispatch(requestUser());
-  	return fetch(`/${userType}/user`, {
+  	return fetch(constructUserUrl(userType), {
   	  credentials: 'include'
   	})
   	.then(res => checkStatus(res))
@@ -18,6 +19,19 @@ export function fetchUser() {
   }
 }
 
+export function fetchFriends() {
+  return (dispatch, getState) => {
+    const {user:{userType}} = getState();
+    dispatch(requestFriends());
+    return fetch(constructChatUrl(userType), {
+      credentials: 'include'
+    })
+    .then(res => checkStatus(res))
+    .then(res => res.json())
+    .then(json => dispatch(receiveFriends(json)))
+    .catch(err => dispatch(failureFriends(err)))
+  }
+}
 export function userType(userType) {
   return {
   	type: types.USERTYPE,
@@ -42,5 +56,25 @@ function failureUser(error) {
 function requestUser() {
   return {
   	type: types.REQUESTUSER
+  }
+}
+
+function requestFriends() {
+  return {
+    type: types.REQUESTFRIENDS
+  }
+}
+
+function receiveFriends(entity) {
+  return {
+    type: types.RECEIVEFRIENDS,
+    entity
+  }
+}
+
+function failureFriends(err) {
+  return {
+    type: types.FAILUREFRIENDS,
+    error
   }
 }
