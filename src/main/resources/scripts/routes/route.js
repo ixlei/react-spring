@@ -18,6 +18,7 @@ import InvestorModelContainer from '../containers/InvestorModelContainer';
 import ReleaseTenderContainer from '../containers/releaseTenderContainer';
 import DebtPubContainer from '../containers/DebtPubContainer';
 import DebtPurchaseContainer from '../containers/DebtPurchaseContainer';
+import ChatContainer from '../containers/chatContainer';
 
 const history = useBasename(createHistory)({
   basename: '/'
@@ -47,6 +48,7 @@ export default class CustomerRoute extends Component {
 		    <Route path="render" component={ReleaseTenderContainer} />
 		    <Route path="debt" component={DebtPurchaseContainer} />
 		  </Route>
+		  <Route path="chat" component={ChatContainer} />
 		</Route>
 	  </Router>
 	)
