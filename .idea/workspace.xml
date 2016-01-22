@@ -2,19 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dde6da6f-7e4e-482b-99c6-eaeefb36cd36" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/styles/common/common.scss" afterPath="$PROJECT_DIR$/src/main/resources/styles/common/common.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/scripts/constants/customerActionType.js" afterPath="$PROJECT_DIR$/src/main/resources/scripts/constants/customerActionType.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/scripts/components/debtPub.js" afterPath="$PROJECT_DIR$/src/main/resources/scripts/components/debtPub.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/stylesheets/invest-chat.css" afterPath="$PROJECT_DIR$/src/main/resources/stylesheets/invest-chat.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/investor/investor-chat.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/investor/investor-chat.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/controller/investorController.java" afterPath="$PROJECT_DIR$/src/main/java/controller/investorController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/scripts/components/investorModel.js" afterPath="$PROJECT_DIR$/src/main/resources/scripts/components/investorModel.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/scripts/components/investorNav.js" afterPath="$PROJECT_DIR$/src/main/resources/scripts/components/investorNav.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/package.json" afterPath="$PROJECT_DIR$/src/main/resources/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/scripts/routes/route.js" afterPath="$PROJECT_DIR$/src/main/resources/scripts/routes/route.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/scripts/actions/user.js" afterPath="$PROJECT_DIR$/src/main/resources/scripts/actions/user.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/scripts/reducers/user.js" afterPath="$PROJECT_DIR$/src/main/resources/scripts/reducers/user.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="react-spring.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -61,8 +50,8 @@
       <file leaf-file-name="investorController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/controller/investorController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.19583334">
-              <caret line="383" column="34" selection-start-line="383" selection-start-column="34" selection-end-line="383" selection-end-column="34" />
+            <state vertical-scroll-proportion="0.12708333">
+              <caret line="171" column="35" selection-start-line="171" selection-start-column="22" selection-end-line="171" selection-end-column="35" />
               <folding>
                 <element signature="e#2415#2431#0" expanded="true" />
                 <element signature="e#6830#6831#0" expanded="true" />
@@ -74,16 +63,16 @@
                 <element signature="e#10303#10319#0" expanded="true" />
                 <element signature="e#12717#12718#0" expanded="true" />
                 <element signature="e#12754#12755#0" expanded="true" />
-                <element signature="e#15724#15725#0" expanded="true" />
-                <element signature="e#15764#15765#0" expanded="true" />
-                <element signature="e#15871#15872#0" expanded="true" />
-                <element signature="e#15909#15910#0" expanded="true" />
-                <element signature="e#15984#15985#0" expanded="true" />
-                <element signature="e#16024#16025#0" expanded="true" />
-                <element signature="e#16099#16100#0" expanded="true" />
-                <element signature="e#16139#16140#0" expanded="true" />
-                <element signature="e#16194#16195#0" expanded="true" />
-                <element signature="e#16223#16224#0" expanded="true" />
+                <element signature="e#15718#15719#0" expanded="true" />
+                <element signature="e#15758#15759#0" expanded="true" />
+                <element signature="e#15865#15866#0" expanded="true" />
+                <element signature="e#15903#15904#0" expanded="true" />
+                <element signature="e#15978#15979#0" expanded="true" />
+                <element signature="e#16018#16019#0" expanded="true" />
+                <element signature="e#16093#16094#0" expanded="true" />
+                <element signature="e#16133#16134#0" expanded="true" />
+                <element signature="e#16188#16189#0" expanded="true" />
+                <element signature="e#16217#16218#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -1084,12 +1073,12 @@
       <workItem from="1452572029930" duration="2187000" />
       <workItem from="1452645999216" duration="2097000" />
       <workItem from="1453049397555" duration="2411000" />
-      <workItem from="1453223000507" duration="5506000" />
+      <workItem from="1453223000507" duration="6945000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="88307000" />
+    <option name="totallyTimeSpent" value="89746000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1102,7 +1091,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="2" width="1932" height="1036" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295838" sideWeight="0.10193133" order="6" side_tool="false" content_ui="tabs" />
@@ -1113,7 +1102,7 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32845894" sideWeight="0.49570817" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24839056" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.38556933" sideWeight="0.8540773" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.38556933" sideWeight="0.8540773" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295838" sideWeight="0.49785408" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21190988" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -1184,16 +1173,16 @@
             <element signature="e#10303#10319#0" expanded="true" />
             <element signature="e#12717#12718#0" expanded="true" />
             <element signature="e#12754#12755#0" expanded="true" />
-            <element signature="e#15724#15725#0" expanded="true" />
-            <element signature="e#15764#15765#0" expanded="true" />
-            <element signature="e#15871#15872#0" expanded="true" />
-            <element signature="e#15909#15910#0" expanded="true" />
-            <element signature="e#15984#15985#0" expanded="true" />
-            <element signature="e#16024#16025#0" expanded="true" />
-            <element signature="e#16099#16100#0" expanded="true" />
-            <element signature="e#16139#16140#0" expanded="true" />
-            <element signature="e#16194#16195#0" expanded="true" />
-            <element signature="e#16223#16224#0" expanded="true" />
+            <element signature="e#15718#15719#0" expanded="true" />
+            <element signature="e#15758#15759#0" expanded="true" />
+            <element signature="e#15865#15866#0" expanded="true" />
+            <element signature="e#15903#15904#0" expanded="true" />
+            <element signature="e#15978#15979#0" expanded="true" />
+            <element signature="e#16018#16019#0" expanded="true" />
+            <element signature="e#16093#16094#0" expanded="true" />
+            <element signature="e#16133#16134#0" expanded="true" />
+            <element signature="e#16188#16189#0" expanded="true" />
+            <element signature="e#16217#16218#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1588,8 +1577,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/controller/investorController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.19583334">
-          <caret line="383" column="34" selection-start-line="383" selection-start-column="34" selection-end-line="383" selection-end-column="34" />
+        <state vertical-scroll-proportion="0.12708333">
+          <caret line="171" column="35" selection-start-line="171" selection-start-column="22" selection-end-line="171" selection-end-column="35" />
           <folding>
             <element signature="e#2415#2431#0" expanded="true" />
             <element signature="e#6830#6831#0" expanded="true" />
@@ -1601,16 +1590,16 @@
             <element signature="e#10303#10319#0" expanded="true" />
             <element signature="e#12717#12718#0" expanded="true" />
             <element signature="e#12754#12755#0" expanded="true" />
-            <element signature="e#15724#15725#0" expanded="true" />
-            <element signature="e#15764#15765#0" expanded="true" />
-            <element signature="e#15871#15872#0" expanded="true" />
-            <element signature="e#15909#15910#0" expanded="true" />
-            <element signature="e#15984#15985#0" expanded="true" />
-            <element signature="e#16024#16025#0" expanded="true" />
-            <element signature="e#16099#16100#0" expanded="true" />
-            <element signature="e#16139#16140#0" expanded="true" />
-            <element signature="e#16194#16195#0" expanded="true" />
-            <element signature="e#16223#16224#0" expanded="true" />
+            <element signature="e#15718#15719#0" expanded="true" />
+            <element signature="e#15758#15759#0" expanded="true" />
+            <element signature="e#15865#15866#0" expanded="true" />
+            <element signature="e#15903#15904#0" expanded="true" />
+            <element signature="e#15978#15979#0" expanded="true" />
+            <element signature="e#16018#16019#0" expanded="true" />
+            <element signature="e#16093#16094#0" expanded="true" />
+            <element signature="e#16133#16134#0" expanded="true" />
+            <element signature="e#16188#16189#0" expanded="true" />
+            <element signature="e#16217#16218#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -495,8 +495,6 @@ public class investorController {
 		newCustomer.setInvestAddress(req.getParameter("investAddress"));
 		newCustomer.setCompanyName(req.getParameter("companyName"));
 		newCustomer.setCompanyAddress(req.getParameter("companyAddress"));
-		
-		
 		newCustomer.setLegalRepresentative(req.getParameter("legalRepresentative"));
 		newCustomer.setLegalRepresentativewt(req.getParameter("legalRepresentativewt"));
 		newCustomer.setShareholderBackground(req.getParameter("shareholderBackground"));
