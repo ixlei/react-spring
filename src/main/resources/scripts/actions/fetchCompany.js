@@ -4,11 +4,12 @@ import fetch from 'isomorphic-fetch';
 import {normalize, Schema, arrayOf} from 'normalizr';
 import * as types from '../constants/customerActionType';
 import {checkStatus} from '../utils/fetchStatus';
+import {constructCompNews} from '../utils/constructUrl';
 
 export function fetchCompanyNews() {
 	return dispatch => {
 	  dispatch(requestCompany('compNews'));
-	  return fetch('/customer/compNews')
+	  return fetch(constructCompNews())
 	    .then(checkStatus)
 	    .then(response => response.json())
 	    .then(json => dispatch(receiveCompanyNews(json)))

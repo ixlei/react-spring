@@ -3,11 +3,12 @@
 import fetch from 'isomorphic-fetch';
 import * as types from '../constants/customerActionType';
 import {checkStatus} from '../utils/fetchStatus';
+import {constructFetchComNews} from '../utils/constructUrl';
 
 export function fetchCompNews(news) {
   return dispatch => {
   	dispatch(requestCompNews(news));
-  	return fetch('/customer/getCompNews')
+  	return fetch(constructFetchComNews())
   	  .then(checkStatus)
   	  .then(response => response.json())
   	  .then(json => dispatch(receiveCompNews(json)))
