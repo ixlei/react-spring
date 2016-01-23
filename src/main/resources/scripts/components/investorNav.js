@@ -55,7 +55,7 @@ export default class InvestorNav extends Component {
 			  </div>
 			</li>
 			<li>
-			  <Link to={'/investor/infoCenter/2'}>
+			  <Link to={'/investor/news/2/infoCenter'}>
 			    <span className={parseInt(index) === 2 ? 'nav-item active': 'nav-item'}>信息披露</span>
 			  </Link>
 			</li>
