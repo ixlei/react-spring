@@ -72,7 +72,7 @@ function receiveFriends(entity) {
   }
 }
 
-function failureFriends(err) {
+function failureFriends(error) {
   return {
     type: types.FAILUREFRIENDS,
     error
