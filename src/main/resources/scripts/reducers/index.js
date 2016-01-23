@@ -8,6 +8,7 @@ import {reg} from './reg';
 import {subReducer} from './submit';
 import {user} from './user';
 import {investorModel} from './investorModel';
+import {news} from './news';
 
 const rootReducer = combineReducers({
 	activeIndex,
@@ -16,7 +17,8 @@ const rootReducer = combineReducers({
 	reg,
 	subReducer,
 	user,
-	investorModel
+	investorModel,
+	news
 });
 
 export default rootReducer;
