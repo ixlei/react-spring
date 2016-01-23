@@ -8,25 +8,25 @@ export default class NewsLeftNav extends Component {
     return (<div className="list">
       <ul>
 		<li className="left-nav">
-		  <Link to={"/investor/news/:infoCenter"}>中心公告</Link>
+		  <Link to={"/investor/news/2/infoCenter"}>中心公告</Link>
 		</li>
 		<li className="left-nav">
-		  <Link to={"/investor/news/:privateDebtList"}>私募债券列表</Link>
+		  <Link to={"/investor/news/2/privateDebtList"}>私募债券列表</Link>
 		</li>
 		<li className="left-nav">
-		  <Link to={"/investor/news/:infoRecords"}>备案发行报告</Link>
+		  <Link to={"/investor/news/2/infoRecords"}>备案发行报告</Link>
 		</li>
 		<li className="left-nav">
-		  <Link to={"/investor/news/:infoTransform"}>转让交易报告</Link>
+		  <Link to={"/investor/news/2/infoTransform"}>转让交易报告</Link>
 		</li>
 		<li className="left-nav">
-		  <Link to={"/investor/news/:infoRegular"}>定期报告</Link>
+		  <Link to={"/investor/news/2/infoRegular"}>定期报告</Link>
 		</li>
 		<li className="left-nav">
-		  <Link to={"/investor/news/:infoTemporary"}>临时报告</Link>
+		  <Link to={"/investor/news/2/infoTemporary"}>临时报告</Link>
 		</li>
 		<li className="left-nav">
-		  <Link to={"/investor/news/:infoCredit"}>信用报告</Link>
+		  <Link to={"/investor/news/2/infoCredit"}>信用报告</Link>
 		</li>
 	  </ul>
     </div>
