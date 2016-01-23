@@ -35,7 +35,7 @@
             <div class="main_head">
                 <p>中心报告</p>
                 <div class="search">
-                    <input type="text" class="input" placeholder="请输入关键字搜索">
+                    <input type="text" class="input" placeholder="搜索">
                     <button class="search_button">&nbsp;&nbsp;&nbsp;搜&nbsp;索</button>
                 </div>
             </div>
