@@ -7,3 +7,7 @@ export function constructCompNews() {
 export function constructFetchComNews() {
   return `/customer/getCompNews`;
 }
+
+export function constructNewsUrl(newsType) {
+  return `/news/${newsType}`;
+}
