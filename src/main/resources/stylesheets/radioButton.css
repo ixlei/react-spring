@@ -1,8 +1,9 @@
-input[type=radio]{
+input[type=radio] {
     display: none;
     cursor: pointer;
 }
-input[type=radio] + label{
+
+input[type=radio] + label {
     cursor: pointer;
     position: relative;
     width: 50px;
@@ -10,7 +11,8 @@ input[type=radio] + label{
     padding-left: 20px;
     margin-right: 30px;
 }
-input[type=radio]+label:before{
+
+input[type=radio]+label:before {
     content: "";
     position: absolute;
     top: 0;
@@ -20,13 +22,15 @@ input[type=radio]+label:before{
     border: 1px solid lightgray;
     border-radius: 5px;
 }
-input[type=radio]:checked +label:before{
+
+input[type=radio]:checked +label:before {
     background-color: #2A324B;
     border-style: none;
     width: 18px;
     height: 18px;
 }
-input[type=radio]:checked + label:after{
+
+input[type=radio]:checked + label:after {
     content: "";
     position: absolute;
     width: 9px;
