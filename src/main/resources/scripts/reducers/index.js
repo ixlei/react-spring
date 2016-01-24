@@ -9,6 +9,7 @@ import {subReducer} from './submit';
 import {user} from './user';
 import {investorModel} from './investorModel';
 import {news} from './news';
+import {socket} from './socketManage';
 
 const rootReducer = combineReducers({
 	activeIndex,
@@ -18,7 +19,8 @@ const rootReducer = combineReducers({
 	subReducer,
 	user,
 	investorModel,
-	news
+	news,
+	socket
 });
 
 export default rootReducer;
