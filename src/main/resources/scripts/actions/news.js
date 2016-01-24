@@ -2,7 +2,7 @@
 
 import fetch from 'isomorphic-fetch';
 import * as types from '../constants/customerActionType';
-import {constructNewsUrl} from '../utils/constructUrl';
+import {constructNewsUrl, constructIfollerUrl} from '../utils/constructUrl';
 import {checkStatus} from '../utils/fetchStatus';
 
 export function fetchNews(newsType) {
@@ -15,6 +15,20 @@ export function fetchNews(newsType) {
     .then(res => res.json())
     .then(json => dispatch(receiveNews(json)))
     .catch(err => dispatch(failureNews(err)))
+  }
+}
+
+export function fetchIfollowers() {
+  return (dispatch, getState) => {
+    const {user:userType} = getState();
+    dispatch(reqNews('ifollowers'));
+    fetch(constructIfollerUrl(userType), {
+      credentiails: 'include'
+    })
+    .then(response => checkStatus(response))
+    .then(res => res.json())
+    .then(json => dispatch(receiveNews(josn)))
+    .catch(err => dispatch(failureNews(err)));
   }
 }
 
