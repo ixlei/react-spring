@@ -21,6 +21,7 @@ import DebtPurchaseContainer from '../containers/DebtPurchaseContainer';
 import ChatContainer from '../containers/chatContainer';
 import NewsContainer from '../containers/newsContainer';
 import ManageSocket from '../containers/manageSocketContainer';
+import IfollowContainer from '../containers/ifollowContainer';
 
 const history = useBasename(createHistory)({
   basename: '/'
@@ -53,6 +54,7 @@ export default class CustomerRoute extends Component {
 		  <Route path="chat" component={ChatContainer} />
 		  <Route path="news/:index/:newsType" component={NewsContainer} />
 		  <Route path="manage/:index/:investType" component={ManageSocket} />
+		  <Route path="ifollow" component={IfollowContainer} />
 		</Route>
 	  </Router>
 	)
