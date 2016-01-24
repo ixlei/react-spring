@@ -60,7 +60,7 @@ export default class InvestorNav extends Component {
 			  </Link>
 			</li>
 			<li id="service">
-			  <Link to={'/investor/investSituation/3'}>
+			  <Link to={'/investor/manage/3/invest'}>
 				<span className={parseInt(index) === 3 ? 'nav-item active': 'nav-item'}>资产管理</span>
 			  </Link>
 		    </li>
