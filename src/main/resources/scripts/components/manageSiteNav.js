@@ -9,7 +9,7 @@ import Socket from './socket';
 export default class ManageSiteNav extends Component {
   query(e) {
     e.preventDefault();
-    console.log(this.refs);
+    console.log(this.refs.search.value);
   }
   
   querySocketTime(e) {
