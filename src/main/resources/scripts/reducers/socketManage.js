@@ -5,9 +5,12 @@ import * as types from '../constants/customerActionType';
 const initState = {
   isFetching: false,
   validate: false,
-  socket:[],
+  sockets:[],
   err:'',
-  investType: 'any'
+  fetchType: 'fetch',
+  investType: 'any',
+  investTime: 'any',
+  searchQuery: ''
 }
 
 export function socket(state = initState, action) {
@@ -16,15 +19,16 @@ export function socket(state = initState, action) {
   	  return Object.assign({}, state, {
   	    isFetching: true,
         validate: false,
+        fetchType: 'fetch',
         investType: action.investType
   	  })
   	case types.RECEIVESOCKET:
-  	  const {entity:{res, socket}, entity} = action;
+  	  const {entity:{res, sockets}, entity} = action;
   	  return res === 'success'
   	  ? Object.assign({}, state, {
         isFetching: false,
         validate: true,
-        socket
+        sockets
   	  })
   	  : Object.assign({}, state, {
         isFetching: false,
@@ -36,6 +40,16 @@ export function socket(state = initState, action) {
   	    isFetching: false,
         validate: false,
         err: action.err
+  	  })
+  	case types.SOCKETTIME:
+  	  return Object.assign({}, state, {
+  	  	investTime: action.time
+  	  })
+  	case types.SOCKETSEARCH:
+  	  return Object.assign({}, state, {
+  	  	fetchType: 'search',
+  	  	isFetching: true,
+        validate: false
   	  })
   	default:
   	  return state;
