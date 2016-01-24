@@ -21,3 +21,7 @@ export function constructSocketSearchUrl(args) {
   const {userType, socketType, socketTime, query} = args;
   return `/${userType}/manage/${socketType}?socketTime=${socketTime}&query=${query}`;
 }
+
+export function constructIfollerUrl(userType) {
+  return `/${userType}/ifollow`;
+}
