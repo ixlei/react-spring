@@ -53,29 +53,16 @@
     text-align: center;
 }
 
-#tab1 {
+.stock-tab {
+    display: inline-block;
+    height: 43px;
+    width: 140px;
+    line-height: 48px;
+    text-align: center;
+}
+
+.stock-tab:nth-child(1) {
     margin-left: 15px;
-    display: inline-block;
-    height: 43px;
-    width: 140px;
-    line-height: 48px;
-    text-align: center;
-}
-
-#tab2 {
-    display: inline-block;
-    height: 43px;
-    width: 140px;
-    line-height: 48px;
-    text-align: center;
-}
-
-#tab3 {
-    display: inline-block;
-    height: 43px;
-    width: 140px;
-    line-height: 48px;
-    text-align: center;
 }
 
 #search {
@@ -99,7 +86,7 @@
     vertical-align: top;
 }
 
-#search-button {
+.investor-search input[type="submit"] {
     display: inline-block;
     height: 25px;
     text-align: center;
@@ -137,7 +124,6 @@
     width: 100%;
     display: flex;
 }
-
 
 #content {
     font-size: 0.9em;
@@ -186,7 +172,7 @@
 }
 
 .curentActive {
-    border-style: none solid none none; 
+    border-style: none solid none none;
     border-color: lightgray;
     border-width: 1px;
 }
