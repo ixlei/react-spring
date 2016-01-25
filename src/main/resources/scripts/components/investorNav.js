@@ -2,19 +2,10 @@
 
 import React, {Component, PropTypes} from 'react';
 import {Link} from 'react-router';
+import Logo from './logo';
 
 export default class InvestorNav extends Component {
 
-  renderLogo() {
-    return (
-      <div id="nav-logo">
-        <span>
-          <img src="/images/logo-last.png" id="logo" /> 
-        </span>
-       </div>
-    )
-  }
-  
   renderGoList() {
   	const {index} = this.props;
   	return (
@@ -114,7 +105,7 @@ export default class InvestorNav extends Component {
   	return (
   	  <div id="header-investor">
 	    <div id="header-nav">
-		{this.renderLogo()}
+		<Logo />
 		{this.renderGoList()}
 		{this.renderUser()}
 	   </div>
