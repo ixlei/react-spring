@@ -2,12 +2,18 @@
 
 import React, {Component, PropTypes} from 'react';
 import FormSelect from './FormSelect';
+import {fetchIfollowers} from '../actions/news';
 
 export default class Ifollow extends Component {
    
   search(e) {
   	e.preventDefault();
   	console.log(this.refs.search)
+  }
+  
+  componentDidMount() {
+  	const {dispatch} = this.props;
+  	dispatch(fetchIfollowers())
   }
 
   renderSearch() {
