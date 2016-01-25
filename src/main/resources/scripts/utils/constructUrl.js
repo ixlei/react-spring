@@ -25,3 +25,7 @@ export function constructSocketSearchUrl(args) {
 export function constructIfollerUrl(userType) {
   return `/${userType}/ifollow`;
 }
+
+export function constructInewsUrl(userType) {
+  return `/${userType}/inews`;
+}
