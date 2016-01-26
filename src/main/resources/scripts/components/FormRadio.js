@@ -9,18 +9,24 @@ export default class FormRadio extends Component {
   }
   
   change(e) {
-  	let {dispatch} = this.props;
+  	const {dispatch} = this.props;
     dispatch(userType(e.target.value));
   }
 
   render() {
-    let {value, ut} = this.props;
-  	return <input type="radio" className="checked" 
-  	  value={this.props.value} name="type"
-      onChange= {this.change.bind(this)} checked={ut === value}/>
+    const {value, ut} = this.props;
+  	return (<input type="radio" 
+      className="checked"
+      name="type"
+  	  value={this.props.value}
+      onChange= {this.change.bind(this)} 
+      checked={ut === value}/>
+    )
   }
 }
 
 
 FormRadio.propTypes = {
+  value: PropTypes.string.isRequired,
+  ut: PropTypes.string.isRequired
 }
