@@ -11,7 +11,7 @@ class CompanyIndexContainer extends Component {
 }
 
 function mapStateToProps(state) {
-  let unsliderTop = ['banner1.jpg', 'banner2.png', 'banner3.png'],
+  const unsliderTop = ['banner1.jpg', 'banner2.png', 'banner3.png'],
 	  arrowImgUrl = ['btn-pre.png', 'btn-next.png'],
 	  unsliderLeft = ['touzizhe1.png', 'touzizhe2.png'],
 	  unsliderRight = ['touzizhe3.png', 'touzizhe4.png'];
