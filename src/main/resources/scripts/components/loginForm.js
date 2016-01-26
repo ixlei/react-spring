@@ -28,17 +28,20 @@ export default class LoginForm extends Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    const {subType, subSuccess, isFetching, text} = nextProps;
+    const {subType, subSuccess, isFetching, text, uType} = nextProps;
     if(subType === 'login' && !isFetching && subSuccess) {
-       this.context.history.pushState(null, '/investor/');
-       return;
+       if(uType === 'investor') {
+        this.context.history.pushState(null, '/investor/');
+        return;
+       }
+       this.context.history.pushState(null, '/company/');
     }
   }
 
   renderPassword() {
   	return (
   	  <div>
-  	    <span className="label">密码</span>
+  	    <label className="label">密码</label>
   	    <input type="password" name="password" />
   	  </div>
   	)
@@ -48,27 +51,29 @@ export default class LoginForm extends Component {
   	const {uType} = this.props;
   	return (
       <div>
-        <input type="radio" name ="userType" 
-  	         value="investor"
-  	         checked={uType === 'investor'} 
-  	         onChange={this.change.bind(this)}/>
-  	    <span>投资者登陆</span>
-		<input type="radio" name="userType" 
-			value="company" checked={uType === 'company'} 
-			onChange={this.change.bind(this)}/>
-	    <span>企业用户登陆</span>
+        <input type="radio" 
+          name ="userType" 
+  	      value="investor"
+  	      checked={uType === 'investor'} 
+  	      onChange={this.change.bind(this)}/>
+  	    <label>投资者</label>
+		    <input type="radio"
+          name="userType"
+			    value="company"
+          checked={uType === 'company'} 
+			    onChange={this.change.bind(this)}/>
+	      <label>企业用户</label>
       </div>  		
   	)
   }
    
   renderLoginBtn() {
-  	return (
-  	    <div>
-  	      <FormSubmit value="登录" ready={false}/>
+  	return (<div>
+  	  <FormSubmit value="登录" ready={false}/>
 		  <span id="btn-reg">
 		    <Link to={'/customer/reg'}>立即注册</Link>
 		  </span>
-  	   </div>
+  	</div>
   	)
   }
 
