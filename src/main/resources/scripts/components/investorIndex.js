@@ -44,7 +44,7 @@ export default class InvestorIndex extends Component {
     return (
       <div id="news">
         <p id="zixun">资讯</p>
-	    <NewsConatiner />
+	      <NewsConatiner />
       </div>
     )
   }
