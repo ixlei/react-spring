@@ -13,7 +13,7 @@ class InvestorNavContainer extends Component {
 function mapStateToProps(state) {
   const {activeIndex: {index}} = state;
   return {
-  	index
+  	index: index || 0
   }
 }
 
