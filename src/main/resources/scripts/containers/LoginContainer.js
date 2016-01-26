@@ -9,7 +9,7 @@ class LoginFormContainer extends Component {
   render() {
   	let unslider = {
   	  list: ['banner1.jpg', 'banner2.png', 'banner3.png'],
-	  arrowImgUrl: ['btn-pre.png', 'btn-next.png']
+	    arrowImgUrl: ['btn-pre.png', 'btn-next.png']
   	}
 
   	return (<div id="content" className="loginPage">
@@ -23,13 +23,13 @@ class LoginFormContainer extends Component {
 }
 
 function mapStateToProps(state) {
-  const {subReducer: {subType, subSuccess, isFetching, text}, user: {userType}} = state;
+  const {subReducer: {subType, subSuccess, isFetching, text}, user: {userType : uType}} = state;
   return {
   	subType,
   	subSuccess,
   	isFetching,
   	text,
-  	uType: userType
+  	uType
   }
 }
 
