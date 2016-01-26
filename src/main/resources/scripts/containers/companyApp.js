@@ -2,7 +2,7 @@
 
 import React, {Component,PropTypes} from 'react';
 import {connect} from 'react-redux';
-import CompanyNavContainer from '../containers/comapnyNavContainer';
+import CompanyNavContainer from '../containers/companyNavContainer';
 
 class CompanyApp extends Component {
   render() {
