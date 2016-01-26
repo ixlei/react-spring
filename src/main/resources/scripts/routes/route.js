@@ -23,6 +23,8 @@ import NewsContainer from '../containers/newsContainer';
 import ManageSocket from '../containers/manageSocketContainer';
 import IfollowContainer from '../containers/ifollowContainer';
 import Inews from '../containers/inewsContainer';
+import CompanyApp from '../containers/companyApp';
+import CompanyIndexContainer from '../containers/companyIndexContainer';
 
 const history = useBasename(createHistory)({
   basename: '/'
@@ -57,6 +59,10 @@ export default class CustomerRoute extends Component {
 		  <Route path="manage/:index/:investType" component={ManageSocket} />
 		  <Route path="ifollow" component={IfollowContainer} />
 		  <Route path="inews" component={Inews} />
+		</Route>
+		<Route path="/company" component={CompanyApp}>
+		  <IndexRoute component={CompanyIndexContainer} />
+          <Route path="index/:index" component={CompanyIndexContainer} />
 		</Route>
 	  </Router>
 	)
