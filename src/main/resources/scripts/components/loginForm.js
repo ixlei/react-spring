@@ -34,7 +34,7 @@ export default class LoginForm extends Component {
         this.context.history.pushState(null, '/investor/');
         return;
        }
-       this.context.history.pushState(null, '/customer/');
+       this.context.history.pushState(null, '/company/');
     }
   }
 
