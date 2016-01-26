@@ -11,7 +11,7 @@ export default class LoginForm extends Component {
   
   change(e) {
   	const {dispatch} = this.props;
-    e.target.name === 'userType' ? dispatch(userType(e.target.value)) : '';
+    dispatch(userType(e.target.value));
   }
 
   submit(e) {
@@ -34,7 +34,7 @@ export default class LoginForm extends Component {
         this.context.history.pushState(null, '/investor/');
         return;
        }
-       this.context.history.pushState(null, '/company/');
+       this.context.history.pushState(null, '/customer/');
     }
   }
 
@@ -63,7 +63,7 @@ export default class LoginForm extends Component {
           checked={uType === 'company'} 
 			    onChange={this.change.bind(this)}/>
 	      <label>企业用户</label>
-      </div>  		
+      </div>
   	)
   }
    
