@@ -77,7 +77,7 @@ export default class CompanyNav extends Component {
         	</a>
 	      </span>
 	    </li>
-	    <li id="go">
+	    <li id="cgo">
 	      <span id="text">我的账号<img src="/images/back-bottom.png" /></span>
 	        <ul>
 	          <li>
@@ -113,7 +113,7 @@ export default class CompanyNav extends Component {
   }
 
   render() {
-  	return (<div id="header">
+  	return (<div id="company-header">
       <div id="header-nav">
        <Logo />
        {this.renderGoList()}
