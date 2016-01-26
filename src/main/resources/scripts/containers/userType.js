@@ -7,17 +7,18 @@ import FormRadio from '../components/FormRadio';
 class UserType extends Component {
   
   render() {
-  	let {dispatch, userType} = this.props;
-    let regChoose = {
+  	const {dispatch, userType: ut} = this.props;
+    const regChoose = {
       dispatch,
-      ut: userType
-    }
+      ut
+    };
+    
   	return (<div>
   		<span className="label">用户类型:</span>
         <FormRadio {...Object.assign({value:'company'}, regChoose)} />
-        <span>企业</span>
+        <label>企业</label>
         <FormRadio {...Object.assign({value:'investor'}, regChoose)}/>
-        <span className="check">投资者</span>
+        <label className="check">投资者</label>
   	  </div>
   	)
   }
