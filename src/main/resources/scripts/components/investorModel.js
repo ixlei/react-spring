@@ -9,7 +9,7 @@ import {getInvestorModel} from '../actions/investorModel';
 export default class InvestorModel extends Component {
   componentDidMount() {
   	const {params:{index}, dispatch} = this.props;
-    dispatch(activeIndex(index));
+    dispatch(activeIndex(parseInt(index)));
     dispatch(getInvestorModel('any'));
   }
 
@@ -144,7 +144,7 @@ export default class InvestorModel extends Component {
   	  <div>
   	    <p>信用等级</p>
   	    <div className="selectItem-group">
-          <input type="text" className="sizeSelect" name="lowCreditRank"/>&nbsp;-&nbsp;
+          <input type="text" className="sizeSelect" name="lowCreditRank"/>-
           <input type="text" className="sizeSelect" name="highCreditRank"/>
         </div>
         <div>
