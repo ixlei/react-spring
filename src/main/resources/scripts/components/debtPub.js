@@ -16,9 +16,7 @@ export default class DebtPub extends Component {
    renderLeftNav() {
   	return (
   	  <div id="list">
-        <div id="list-title">
-          <span>意向发布</span>
-        </div>
+        <p id="list-title">意向发布</p>
         <ReleaseDebtLeftNav />
       </div>
   	)
@@ -27,23 +25,17 @@ export default class DebtPub extends Component {
   rederUserInfo() {
   	const {userInfo} = this.props;
     return (<div>
-      <div className="body_title">
-        基本信息
+      <p className="body_title">基本信息</p>
+      <div className="first">
+        <p>姓名：{userInfo.username}</p>
+        <p>所在地区：{userInfo.companyAddress}</p>
+        <p>产品类型：股权投资</p>
       </div>
       <div className="first">
-        <p >
-          姓名：{userInfo.username}<br/>
-          所在地区：{userInfo.companyAddress}<br/>
-          产品类型：股权投资<br/>
-        </p>
+        <p>投资地区：{userInfo.investorAddress}</p>
+        <p>资金主体：{userInfo.legalRepresentative}</p>
+        <p>投资行业：{userInfo.investFiled}</p>
       </div>
-      <div className="first">
-        <p >
-          投资地区：{userInfo.investorAddress}<br/>
-          资金主体：{userInfo.legalRepresentative}<br/>
-          投资行业：{userInfo.investFiled}<br/>
-        </p>
-       </div>
      </div>
     )
   }
