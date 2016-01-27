@@ -47,12 +47,12 @@ export default class InvestorModel extends Component {
         text: '全部'
   	 },
   	 {
-  	 	value: '股权投资',
-        text: '股权投资'
+  	 	value: '私募债',
+      text: 'debt'
   	 },
   	 {
-  	    value: '债权投资',
-  	    text: '债权投资'
+  	    value: '私募股权',
+  	    text: 'stock'
   	 }
   	];
 
@@ -66,7 +66,7 @@ export default class InvestorModel extends Component {
   renderPush() {
     return (
       <div>
-        <Link to={'/push'} >查看推荐</Link>
+        <Link to={'/investor/push'} >查看推荐</Link>
       </div>
     )
   }
@@ -118,13 +118,13 @@ export default class InvestorModel extends Component {
     return (
       <div className="selectItemGroup">
         <span className="select-item">
-          <input type="checkbox" value="全部" name="moneyType"/>全部</span>
+          <input type="checkbox" value="any" name="moneyType"/>全部</span>
         <span className="select-item">
-          <input type="checkbox" value="无担保" name="moneyType"/>无担保</span>
+          <input type="checkbox" value="no" name="moneyType"/>无担保</span>
         <span className="select-item">
-          <input type="checkbox" value="公司/机构担保" name="moneyType"/>公司/机构担保</span>
+          <input type="checkbox" value="company" name="moneyType"/>公司/机构担保</span>
         <span className="select-item">
-          <input type="checkbox" value="个人担保" name="moneyType"/>个人担保</span>
+          <input type="checkbox" value="person" name="moneyType"/>个人担保</span>
       </div>
     )
   }
@@ -134,7 +134,7 @@ export default class InvestorModel extends Component {
        <div>
          <p>资金区间</p>
          <div className="selectItem-group">
-           <input type="text" className="sizeSelect"/>&nbsp;-&nbsp;
+           <input type="text" className="sizeSelect"/>-
            <input type="text" className="sizeSelect"/>万元
          </div>
        </div>
