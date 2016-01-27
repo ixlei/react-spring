@@ -4,9 +4,17 @@ import React, {Component, PropTypes} from 'react';
 import FinancePubNav from './financePubNav';
 import FormInput from './FormInput';
 import FormSubmit from './FormSubmit';
+import {activeIndex} from '../actions/navHeader';
+import {fetchUser} from '../actions/user';
 
 export default class FinancePub extends Component {
   
+  componentDidMount() {
+  	const {dispatch, params:{index}} = this.props;
+    dispatch(fetchUser());
+    dispatch(activeIndex(parseInt(index)));
+  }
+
   renderUserInfo() {
   	const {userInfo} = this.props;
   	return (<div>
@@ -38,7 +46,7 @@ export default class FinancePub extends Component {
       </div>
       <div>
         <label for="text">发行完成:</label>
-        <textarea id="textarea" cols=50 rows=6 name="publishFinsh">
+        <textarea id="textarea" cols="50" rows="6" name="publishFinsh">
         </textarea>
       </div>
     </div>
@@ -94,7 +102,7 @@ export default class FinancePub extends Component {
   }
 
   render() {
-  	return (<div className="finance-pub-content">
+  	return (
       <form name="financePub">
         <div className="basic_info">
          {this.renderUserInfo()}
@@ -106,11 +114,11 @@ export default class FinancePub extends Component {
          {this.renderMoreInfoR()}
         </div>
       </form>
-     </div>
   	)
   }
 }
 
 FinancePub.propTypes = {
-  userInfo: PropTypes.object.isRequired
+  userInfo: PropTypes.object.isRequired,
+  params: PropTypes.object.isRequired
 }
