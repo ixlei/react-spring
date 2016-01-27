@@ -6,7 +6,9 @@ import java.util.ArrayList;
 
 import model.Investor;
 import model.companyuser;
-
+import model.stock;
+import model.corporateModel;
+import model.debt;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.jdbc.core.simple.ParameterizedRowMapper;
 import org.springframework.jdbc.core.simple.SimpleJdbcTemplate;
@@ -165,5 +167,94 @@ public class companyuserDao {
 			}
 			
 		});
+	}
+
+	public ArrayList<corporateModel> getCorporateModel() {
+		String sql = "select id, companyName, registerAddress, investmentMin, investmentMax, productType, moneyType,"
+				+ "username from stockbuy as s, investor as i where s.customer = i.email union all select id, companyName,"
+				+ "registerAddress, investmentMin, investmentMax, productType, moneyType,username from debtbuy as d, investor as "
+				+ "i where d.customer = i.email limit 0, 10";
+		ArrayList<corporateModel> list = (ArrayList<corporateModel>) jdbcTemplate
+				.query(sql, new RowMapper<corporateModel>() {
+
+					public corporateModel mapRow(ResultSet rs, int RowNum)
+							throws SQLException {
+						corporateModel pro = new corporateModel();
+						pro.setid(rs.getString(1));
+						pro.setcompanyName(rs.getString(2));
+						pro.setregisterAddress(rs.getString(3));
+						pro.setinvestmentMin(Integer.parseInt(rs.getString(4)));
+						pro.setinvestmentMax(Integer.parseInt(rs.getString(5)));
+						pro.setproductType(rs.getString(6));
+						pro.setmoneyType(rs.getString(7));
+						pro.setusername(rs.getString(8));
+						return pro;
+					}
+
+				});
+		return list;
+	}
+
+	public stock getstock(String id) {
+		String sql = "select username, registerAddress, investorIndustry, investAddress, companyName,"
+				+ "investmentMin, investmentMax, investmentTimeOut, investmentProportionMin, "
+				+ "investmentProportionMax, investmentStage, fileProvideRequest, investmentRequest from"
+				+ " stockbuy as s, investor as i where s.id = ? and i.email = s.customer limit 0, 10";
+		ArrayList<stock> list = (ArrayList<stock>) jdbcTemplate.query(sql,
+				new RowMapper<stock>() {
+
+					public stock mapRow(ResultSet rs, int RowNum)
+							throws SQLException {
+						stock s = new stock();
+						s.setusername(rs.getString(1));
+						s.setregisterAddress(rs.getString(2));
+						s.setinvestorIndustry(rs.getString(3));
+						s.setinvestAddress(rs.getString(4));
+						s.setcompanyName(rs.getString(5));
+						s.setInvestmentMin(Integer.parseInt(rs.getString(6)));
+						s.setInvestmentMax(Integer.parseInt(rs.getString(7)));
+						s.setInvestmentTimeOut(Integer.parseInt(rs.getString(8)));
+						s.setInvestmentProportionMin(Integer.parseInt(rs
+								.getString(9)));
+						s.setInvestmentProportionMax(Integer.parseInt(rs
+								.getString(10)));
+						s.setInvestmentStage(rs.getString(11));
+						s.setFileProvideRequest(rs.getString(12));
+						s.setInvestmentRequest(rs.getString(13));
+						return s;
+					}
+
+				}, id);
+		return list.get(0);
+	}
+
+	public debt getdebt(String id) {
+		String sql = "select username, registerAddress, investorIndustry, investAddress, companyName,"
+				+ "investmentMin, investmentMax, investmentTimeOut, returnRateMin, returnRateMax, "
+				+ "fileProvideRequest, investmentRequest, riskControllRequest from debtbuy as d, "
+				+ "investor as i where d.id = ? and i.email = d.customer";
+		return jdbcTemplate.queryForObject(sql,
+				new ParameterizedRowMapper<debt>() {
+
+					public debt mapRow(ResultSet rs, int RowNum)
+							throws SQLException {
+						debt s = new debt();
+						s.setusername(rs.getString(1));
+						s.setregisterAddress(rs.getString(2));
+						s.setinvestorIndustry(rs.getString(3));
+						s.setinvestAddress(rs.getString(4));
+						s.setcompanyName(rs.getString(5));
+						s.setInvestmentMin(Integer.parseInt(rs.getString(6)));
+						s.setInvestmentMax(Integer.parseInt(rs.getString(7)));
+						s.setInvestmentTimeOut(Integer.parseInt(rs.getString(8)));
+						s.setReturnRateMin(Integer.parseInt(rs.getString(9)));
+						s.setReturnRateMax(Integer.parseInt(rs.getString(10)));
+						s.setFileProvideRequest(rs.getString(11));
+						s.setInvestmentRequest(rs.getString(12));
+						s.setRiskControllRequest(rs.getString(13));
+						return s;
+					}
+
+				}, id);
 	}
 }
