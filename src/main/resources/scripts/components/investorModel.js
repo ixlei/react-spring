@@ -73,29 +73,16 @@ export default class InvestorModel extends Component {
       </div>
     )
   }
-  
-  renderMoneyType() {
-    return (
-      <div className="selectItemGroup">
-        <span className="select-item">
-          <input type="checkbox" value="any" name="moneyType"/>全部</span>
-        <span className="select-item">
-          <input type="checkbox" value="no" name="moneyType"/>无担保</span>
-        <span className="select-item">
-          <input type="checkbox" value="company" name="moneyType"/>公司/机构担保</span>
-        <span className="select-item">
-          <input type="checkbox" value="person" name="moneyType"/>个人担保</span>
-      </div>
-    )
-  }
    
    renderInterval() {
      return (
        <div>
          <p>资金区间</p>
          <div className="selectItem-group">
-           <input type="text" className="sizeSelect"/>-
-           <input type="text" className="sizeSelect"/>万元
+           <input type="text" className="sizeSelect"/>
+          <span>-</span>
+           <input type="text" className="sizeSelect"/>
+           <span>万元</span>
          </div>
        </div>
      )
@@ -104,8 +91,12 @@ export default class InvestorModel extends Component {
   renderReturnRate() {
   	return (
   	  <div className="selectItem-group">
-        <input type="text" className="sizeSelect" name="lowLeastReturnDemand"/>&nbsp;-&nbsp;
-        <input type="text" className="sizeSelect" name="highLeastReturnDemand"/> %
+        <input type="text" 
+        className="sizeSelect" name="lowLeastReturnDemand"/>
+        <span>-</span>
+        <input type="text" 
+        className="sizeSelect" name="highLeastReturnDemand"/>
+        <span>%</span>
       </div>
   	)
   }
@@ -115,7 +106,9 @@ export default class InvestorModel extends Component {
   	  <div>
   	    <p>信用等级</p>
   	    <div className="selectItem-group">
-          <input type="text" className="sizeSelect" name="lowCreditRank"/>-
+          <input type="text" 
+           className="sizeSelect" name="lowCreditRank"/>
+           <span>-</span>
           <input type="text" className="sizeSelect" name="highCreditRank"/>
         </div>
         <div>
@@ -182,7 +175,5 @@ export default class InvestorModel extends Component {
 }
 
 InvestorModel.propTypes = {
-  area:PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
-  industry: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
   data: PropTypes.arrayOf(PropTypes.object.isRequired).isRequired
 }
