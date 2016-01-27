@@ -25,7 +25,7 @@ export default class InvestorModel extends Component {
   renderSearch() {
     return (
       <div id="searchForm">
-		<div id="searchInput">
+		  <div id="searchInput">
 		  <div id="textClear">
 		    <a href="javascript:;">
 		      <img src="/images/cancel.png"/>
@@ -78,8 +78,14 @@ export default class InvestorModel extends Component {
   	   <p>地区选择</p>
   	   <div className="selectItemGroup">
   	     {area.map((data, index) => (
-  	       <span className="selectItem" key={`area${index}`}>
-             <input type="checkbox" name="investArea" value={data} />{data}
+  	       <span 
+             className="selectItem" 
+             key={`area${index}`}>
+             <input 
+              type="checkbox" 
+              name="investArea" 
+              value={data} />
+              {data}
            </span>
   	      ))}
   	   </div>
@@ -94,8 +100,13 @@ export default class InvestorModel extends Component {
   	    <p>行业选择</p>
   	    <div className="selectItemGroup">
   	      {industry.map((data, index) => (
-  	      	<span className="selectItem" key={`ind${index}`}>
-  	      	  <input type="checkbox" name="investIndustry" value={data} />{data}
+  	      	<span 
+              className="selectItem" 
+              key={`ind${index}`}>
+  	      	  <input 
+               type="checkbox" 
+              name="investIndustry" 
+              value={data} />{data}
   	      	</span>
   	      	))}
   	    </div>
@@ -160,17 +171,17 @@ export default class InvestorModel extends Component {
   	  <div id="TableList">
 	    <table>
 	      <thead>
-		   <tr>
-			<th>产品名称</th>
-		  <th>类型</th>
-			<th>地区</th>
-			<th>所属行业</th>
-			<th>资金类型</th>
-		  <th>收益率</th>
-			<th className="rightItem">信用等级</th>
-		   </tr>
-		  </thead>
-		   <tbody>
+		     <tr>
+			    <th>产品名称</th>
+      	  <th>类型</th>
+      		<th>地区</th>
+      		<th>所属行业</th>
+      		<th>资金类型</th>
+      	  <th>收益率</th>
+      		<th className="rightItem">信用等级</th>
+		     </tr>
+		    </thead>
+		    <tbody>
 		   {data.map(data => (
           <tr key={`index${data.id}`}>
             <td>{data.companyName}</td>
