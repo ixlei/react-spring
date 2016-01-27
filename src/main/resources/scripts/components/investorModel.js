@@ -7,6 +7,7 @@ import {activeIndex} from '../actions/navHeader';
 import {getInvestorModel} from '../actions/investorModel';
 import Area from './area';
 import Industry from './industry';
+import MoneyType from './moneyType';
 
 export default class InvestorModel extends Component {
   componentDidMount() {
@@ -73,27 +74,6 @@ export default class InvestorModel extends Component {
     )
   }
   
-  renderIndustry() {
-  	const {industry} = this.props;
-  	return (
-  	  <div>
-  	    <p>行业选择</p>
-  	    <div className="selectItemGroup">
-  	      {industry.map((data, index) => (
-  	      	<span 
-              className="selectItem" 
-              key={`ind${index}`}>
-  	      	  <input 
-               type="checkbox" 
-              name="investIndustry" 
-              value={data} />{data}
-  	      	</span>
-  	      	))}
-  	    </div>
-  	  </div>
-  	)
-  }
-
   renderMoneyType() {
     return (
       <div className="selectItemGroup">
@@ -191,7 +171,7 @@ export default class InvestorModel extends Component {
         <form name="investorModel">
          <Area />
          <Industry />
-         {this.renderMoneyType()}
+         <MoneyType />
          {this.renderInterval()}
          {this.renderCreditRank()}
         </form>
