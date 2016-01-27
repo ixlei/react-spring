@@ -35,17 +35,17 @@ export default class CompanyNav extends Component {
                 </Link>
                </li>
                <li>
-                  <Link to={"/company/financepublish"}>
+                  <Link to={"/company/financepub/1"}>
                     <span>意向发布</span>
                   </Link>
                 </li>
                 <li>
-                  <Link to={"/company/chat"}>
+                  <Link to={"/company/chat/1"}>
                     <span>业务洽谈</span>
                   </Link>
                 </li>
                 <li>
-                  <Link to={"/company/appliedCompany"}>
+                  <Link to={"/company/appliedCompany/1"}>
                     <span>电子签约</span>
                   </Link>
                 </li>
