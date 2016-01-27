@@ -5,6 +5,8 @@ import FormSelect from './FormSelect';
 import {Link} from 'react-router';
 import {activeIndex} from '../actions/navHeader';
 import {getInvestorModel} from '../actions/investorModel';
+import Area from './area';
+import Industry from './industry';
 
 export default class InvestorModel extends Component {
   componentDidMount() {
@@ -47,12 +49,12 @@ export default class InvestorModel extends Component {
         text: '全部'
   	 },
   	 {
-  	 	value: '私募债',
-      text: 'debt'
+  	 	value: 'debt',
+      text: '私募债'
   	 },
   	 {
-  	    value: '私募股权',
-  	    text: 'stock'
+  	    value: 'stock',
+  	    text: '私募股权'
   	 }
   	];
 
@@ -71,28 +73,6 @@ export default class InvestorModel extends Component {
     )
   }
   
-  renderPatchPanel() {
-  	const {area} = this.props;
-  	return (
-  	  <div>
-  	   <p>地区选择</p>
-  	   <div className="selectItemGroup">
-  	     {area.map((data, index) => (
-  	       <span 
-             className="selectItem" 
-             key={`area${index}`}>
-             <input 
-              type="checkbox" 
-              name="investArea" 
-              value={data} />
-              {data}
-           </span>
-  	      ))}
-  	   </div>
-  	  </div>
-  	)
-  }
-
   renderIndustry() {
   	const {industry} = this.props;
   	return (
@@ -209,8 +189,8 @@ export default class InvestorModel extends Component {
         </div>
          {this.renderPush()}
         <form name="investorModel">
-         {this.renderPatchPanel()}
-         {this.renderIndustry()}
+         <Area />
+         <Industry />
          {this.renderMoneyType()}
          {this.renderInterval()}
          {this.renderCreditRank()}
