@@ -12,8 +12,8 @@ export default class CompanyNav extends Component {
   	  indexAdd = parseInt(indexAdd);
   	  let currIndex = parseInt(index);
   	  return indexAdd === currIndex 
-  	         ? 'nav-item active'
-  	         : 'nav-item';
+  	    ? 'nav-item active'
+  	    : 'nav-item';
   	}
 
   	return (<div id="nav-list">
