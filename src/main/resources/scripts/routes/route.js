@@ -25,6 +25,7 @@ import IfollowContainer from '../containers/ifollowContainer';
 import Inews from '../containers/inewsContainer';
 import CompanyApp from '../containers/companyApp';
 import CompanyIndexContainer from '../containers/companyIndexContainer';
+import CorporateModelContainer from '../containers/corporateModelContainer';
 
 const history = useBasename(createHistory)({
   basename: '/'
@@ -63,6 +64,7 @@ export default class CustomerRoute extends Component {
 		<Route path="/company" component={CompanyApp}>
 		  <IndexRoute component={CompanyIndexContainer} />
           <Route path="index/:index" component={CompanyIndexContainer} />
+          <Route path="corporateModel/:index" component={CorporateModelContainer} />
 		</Route>
 	  </Router>
 	)
