@@ -30,7 +30,7 @@ export default class CompanyNav extends Component {
           <div id="finance-subnav">
             <ul>
               <li>
-                <Link to={"/company/corporateModel"}>
+                <Link to={"/company/corporateModel/1"}>
                   <span>撮合配对</span>
                 </Link>
                </li>
@@ -81,29 +81,29 @@ export default class CompanyNav extends Component {
 	      <span id="text">我的账号<img src="/images/back-bottom.png" /></span>
 	        <ul>
 	          <li>
-                <Link to={"/company/ifollow"}>
-                  <span>我关注的</span>
-                </Link>
+              <Link to={"/company/ifollow"}>
+                <span>我关注的</span>
+              </Link>
 	          </li>
 	          <li>
-                <Link to={"/company/inews"}>
-                  <span>我的消息</span>
-                </Link>
+              <Link to={"/company/inews"}>
+                <span>我的消息</span>
+              </Link>
 	          </li>
 	          <li>
-                <Link to={"/company/currentReservation"}>
-                  <span>预约管理</span>
-                </Link>
+              <Link to={"/company/currentReservation"}>
+                <span>预约管理</span>
+              </Link>
 	          </li>
 	          <li>
-                <Link to={"/company/isource"}>
-                  <span>资料管理</span>
-                </Link>
+              <Link to={"/company/isource"}>
+                <span>资料管理</span>
+              </Link>
 	          </li>
 	          <li>
-                <Link to={"/company/logout"}>
-                  <span>退出</span>
-                </Link>
+              <Link to={"/company/logout"}>
+                <span>退出</span>
+              </Link>
 	          </li>
 	        </ul>
 	    </li>
