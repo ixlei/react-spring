@@ -5,8 +5,8 @@ import {Link} from 'react-router';
 import Logo from './logo';
 
 export default class CompanyNav extends Component {
+  
   renderGoList() {
-
   	let getClass = indexAdd => {
   	  const {index} = this.props;
   	  indexAdd = parseInt(indexAdd);
