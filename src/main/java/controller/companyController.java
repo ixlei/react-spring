@@ -115,17 +115,25 @@ public class companyController {
 		return "company/inews_direction_down";
 	}
 
-	@RequestMapping(value = "/financepublish", method = RequestMethod.GET)
-	public String getpublish(HttpSession session, Map<String, Object> model) {
+	@RequestMapping(value = "/user", method = RequestMethod.GET)
+	@ResponseBody
+	public Object getpublish(HttpSession session) {
 		String sessionId = (String) session.getAttribute("citiuser");
 		String email = sessionId.split("=")[1];
-		companyuser user = customerDao.getCompanyUserForPrivateEquity(email);
-		model.put("companyName", user.getCompanyName());
-		model.put("registerAddress", user.getRegisterAddress());
-		model.put("createTime", user.getCreateTime());
-		model.put("registerCapital", user.getRegisterCapital());
-		model.put("workField", user.getWorkField());
-		return "company/finacing-publish";
+		Map<String, Object> model = new HashMap<String, Object>();
+		companyuser user;
+		try {
+			user = customerDao.getCompanyUserForPrivateEquity(email);
+		} catch (Exception e) {
+			e.printStackTrace();
+			model.put("res", "error");
+			return model;
+		}
+
+		model.put("data", user);
+		user.setEmail(email);
+		model.put("res", "success");
+		return model;
 	}
 
 	@ResponseBody
