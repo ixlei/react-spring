@@ -29,3 +29,7 @@ export function constructIfollerUrl(userType) {
 export function constructInewsUrl(userType) {
   return `/${userType}/inews`;
 }
+
+export function constructModelUrl(modelType) {
+  return `/company/corporateModel/${modelType}`;
+}
