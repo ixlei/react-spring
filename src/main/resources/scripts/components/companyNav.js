@@ -35,7 +35,7 @@ export default class CompanyNav extends Component {
                 </Link>
                </li>
                <li>
-                  <Link to={"/company/financepub/1"}>
+                  <Link to={"/company/pub/finance/1"}>
                     <span>意向发布</span>
                   </Link>
                 </li>
