@@ -4,11 +4,18 @@ import * as types from '../constants/customerActionType';
 import fetch from 'isomorphic-fetch';
 import {constructInvestorModelUrl} from '../utils/InvestorUrl';
 import {checkStatus} from '../utils/fetchStatus';
+import {constructModelUrl} from '../utils/constructUrl';
 
 export function getInvestorModel(modelType) {
-  return dispatch => {
+  return (dispatch,getState) => {
   	dispatch(requestInvestorModel(modelType));
-  	return fetch(constructInvestorModelUrl(modelType), {
+    const {user:{userType}} = getState();
+
+    const url = userType === 'investor' 
+     ? constructInvestorModelUrl(modelType)
+     : constructModelUrl(modelType);
+
+  	return fetch(url, {
       credentials: 'include'
       })
   	  .then(response => checkStatus(response))
@@ -17,6 +24,7 @@ export function getInvestorModel(modelType) {
   	  .catch(error => dispatch(failure(error)));
   }
 }
+
 
 function requestInvestorModel(modelType) {
   return {
