@@ -13,13 +13,16 @@ import model.Investor;
 import model.companyuser;
 import model.privateDebt;
 import model.privateEquity;
-
+import model.corporateModel;
+import model.debt;
+import model.stock;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.socket.TextMessage;
 
@@ -472,4 +475,61 @@ public class companyController {
 	public String getIsourceEdit() {
 		return "company/sourceEdit";
 	}
+
+	@ResponseBody
+	@RequestMapping("/corporateModel/{type}")
+	public Object getCorporateModel(@PathVariable String type) {
+		Map<String, Object> model = new HashMap<String, Object>();
+		ArrayList<corporateModel> cor;
+
+		try {
+			cor = customerDao.getCorporateModel();
+		} catch (Exception e) {
+			e.printStackTrace();
+			model.put("res", "error");
+			return model;
+		}
+
+		model.put("data", cor);
+		model.put("res", "success");
+		return model;
+
+	}
+
+	@ResponseBody
+	@RequestMapping("/stock/{id}")
+	public Object getstock(@PathVariable String id) {
+		Map<String, Object> model = new HashMap<String, Object>();
+		stock s;
+		try {
+			s = customerDao.getstock(id);
+		} catch (Exception e) {
+			e.printStackTrace();
+			model.put("error", "error");
+			return model;
+		}
+
+		model.put("stock", s);
+		return model;
+	}
+
+	@ResponseBody
+	@RequestMapping("/debt/{id}")
+	public Object getDebt(@PathVariable String id) {
+		Map<String, Object> model = new HashMap<String, Object>();
+		debt d;
+
+		try {
+			d = customerDao.getdebt(id);
+		} catch (Exception e) {
+			e.printStackTrace();
+			model.put("debt", "error");
+			return model;
+		}
+
+		model.put("debt", d);
+		return model;
+	}
+
+
 }
