@@ -258,15 +258,26 @@ public class companyController {
 	}
 
 	@RequestMapping("/chat")
-	public String getChat(HttpSession session, Model model) {
+	@ResponseBody
+	public Object getChat(HttpSession session, Model model) {
 		String sessionChar = (String) session.getAttribute("citiuser");
-		ArrayList<Investor> friendList = investorD.getInvestorAll();
-		model.addAttribute("friendList", friendList);
+		Map<String, Object> map = new HashMap<String, Object>();
+
+		ArrayList<Investor> friendList;
+		try {
+			friendList = investorD.getInvestorAll();
+		} catch (Exception e) {
+			e.printStackTrace();
+			map.put("res", "error");
+			return map;
+		}
+
+		map.put("res", "success");
+		map.put("friends",friendList );
 		String[] email = sessionChar.split("=");
-	
-		model.addAttribute("companyname", customerDao.getCompanyUserByEmail(email[1]).getCompanyName());
-		model.addAttribute("session", sessionChar);
-		return "company/company-chat";
+		map.put("username", customerDao.getCompanyUserByEmail(email[1]).getCompanyName());
+        map.put("session", sessionChar);
+		return map;
 	}
 
 	@RequestMapping("/resavation")
