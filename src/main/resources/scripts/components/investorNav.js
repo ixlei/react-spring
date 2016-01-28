@@ -23,22 +23,22 @@ export default class InvestorNav extends Component {
 			  <div id="finance-subnav">
 			    <ul>
 				  <li>
-					<Link to={'/investor/investModel'}>
+					<Link to={'/investor/investModel/1'}>
 					  <span>撮合配对</span>
 				    </Link>
 				  </li>
 				  <li>
-					<Link to={'/investor/pub/render'}>
+					<Link to={'/investor/pub/render/1'}>
 					  <span>意向发布</span>
 					</Link>
 				  </li>
 				  <li>
-				    <Link to={'/investor/chat'}>
+				    <Link to={'/investor/chat/1'}>
 					  <span>业务洽谈</span>
 					</Link>
 				  </li>
 				  <li>
-				    <Link to={'/investor/appliedInvest'}>
+				    <Link to={'/investor/appliedInvest/1'}>
 				      <span>电子签约</span>
 				    </Link>
 				  </li>
