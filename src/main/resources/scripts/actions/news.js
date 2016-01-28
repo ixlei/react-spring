@@ -3,7 +3,8 @@
 import fetch from 'isomorphic-fetch';
 import * as types from '../constants/customerActionType';
 import {checkStatus} from '../utils/fetchStatus';
-import {constructNewsUrl, 
+import {
+  constructNewsUrl, 
   constructIfollerUrl, 
   constructInewsUrl
 } from '../utils/constructUrl';

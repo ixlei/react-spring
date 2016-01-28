@@ -3,9 +3,9 @@
 import React, {Component, PropTypes} from 'react';
 import {Link} from 'react-router';
 
-class InfoPub extends Component {
+class InfoPubNav extends Component {
   render() {
-    return (<div className="list">
+    return (<div className="list" id="listContent">
 	 <ul>
 	  <li className="left-side-nav">
 	    <Link to={"/company/infoPublish"}>中心公告</Link>
@@ -25,4 +25,4 @@ class InfoPub extends Component {
   }
 }
 
-export default InfoPub;
+export default InfoPubNav;
