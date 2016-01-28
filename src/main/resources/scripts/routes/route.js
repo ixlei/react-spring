@@ -55,10 +55,10 @@ export default class CustomerRoute extends Component {
 		  <Route path="index/:index" component={InvestorIndexContainer} />
 		  <Route path="investModel/:index" component={InvestorModelContainer}/>
 		  <Route path="pub" component={DebtPubContainer}>
-		    <Route path="render" component={ReleaseTenderContainer} />
-		    <Route path="debt" component={DebtPurchaseContainer} />
+		    <Route path="render/:index" component={ReleaseTenderContainer} />
+		    <Route path="debt/:index" component={DebtPurchaseContainer} />
 		  </Route>
-		  <Route path="chat" component={ChatContainer} />
+		  <Route path="chat/:index" component={ChatContainer} />
 		  <Route path="news/:index/:newsType" component={NewsContainer} />
 		  <Route path="manage/:index/:investType" component={ManageSocket} />
 		  <Route path="ifollow" component={IfollowContainer} />
@@ -72,6 +72,7 @@ export default class CustomerRoute extends Component {
             <Route path="finance/:index" component={FinancePubContainer} />
             <Route path="raisedbonds:/index" component={RaisedbondsContainer} />
           </Route>
+          <Route path="chat/:index" component={ChatContainer} />
 		</Route>
 	  </Router>
 	)
