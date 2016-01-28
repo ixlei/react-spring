@@ -1,7 +1,7 @@
 'use strict';
 
 import React, {Component, PropTypes} from 'react';
-import {Link} form 'react-router';
+import {Link} from 'react-router';
 
 export default class FinancePubNav extends Component {
   render() {
@@ -14,10 +14,10 @@ export default class FinancePubNav extends Component {
 	  <div className="list">
 	   <ul>
         <li className="side-item">
-         <Link to={"/company/financepublish"}>私募股权</Link>
+         <Link to={"/company/pub/finance/1"}>私募股权</Link>
         </li>
 	    <li className="side-item">
-	      <Link to={"/company/raisedbonds"}>私募债</Link>
+	      <Link to={"/company/pub/raisedbonds/1"}>私募债</Link>
 	    </li>
 	   </ul>
 	  </div>
