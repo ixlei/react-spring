@@ -1,7 +1,6 @@
 'use strict';
 
 import React, {Component, PropTypes} from 'react';
-import FinancePubNav from './financePubNav';
 import FormInput from './FormInput';
 import FormSubmit from './FormSubmit';
 import {activeIndex} from '../actions/navHeader';
