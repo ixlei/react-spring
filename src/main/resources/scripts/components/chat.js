@@ -3,12 +3,14 @@
 import React, {Component, PropTypes} from 'react';
 import {Link} from 'react-router';
 import {fetchFriends} from '../actions/user';
+import {activeIndex} from '../actions/navHeader';
 
 export default class Chat extends Component {
   
   componentDidMount() {
-    const {dispatch} = this.props;
+    const {dispatch, params: {index}} = this.props;
     dispatch(fetchFriends());
+    dispatch(activeIndex(parseInt(index)));
   }
   
   componentWillReceiveProps(nextProps) {
@@ -39,7 +41,7 @@ export default class Chat extends Component {
   
   renderTr(data, index) {
     return (<tr key={`list${index}`}>
-      {data.map(data => (
+      {data.map((data, index) => (
         <td key={data.email}>
           <span className="to-one">
 	       <span className="name">{data.companyName}</span>
@@ -55,25 +57,46 @@ export default class Chat extends Component {
      </tr>
     )
   }
+  
+  renderTrCom(data, index) {
+    return (<tr key={`list${index}`}>
+      {data.map((data, uindex) => (
+        <td key={`user${index}${uindex}`}>
+          <span className="to-one">
+         <span className="name">{data.username}</span>
+         <span className="connect-btn">
+          <a href="javascript:;" 
+            data-form={data.email}
+            data-nickname={data.username }>联系</a>
+         </span>
+        </span>
+      </td>
+        )
+      )}
+     </tr>
+    )
+  }
 
   renderToList() {
-  	const {friends} = this.props;
+  	const {friends, userType} = this.props;
   	let dyadicArr = [],
   	    i = 0;
   	friends.forEach((data, index) => {
-  	  if(!(dyadicArr[i] instanceof Array)) {
-        dyadicArr[i] = [];
-  	  }
-      dyadicArr[i].push(data, index);
-      if(i > 0 && index % 6 === 0) {
-      	i++
+      if(index > 0 && index % 6 === 0) {
+        i++
       }
+      if(!(dyadicArr[i] instanceof Array)) {
+        dyadicArr[i] = [];
+      }
+      dyadicArr[i].push(data);
   	})
   	return (
   	  <table>
   	    <tbody>
-  	     {dyadicArr.map(data => (
-  	       this.renderTr(data)
+  	     {dyadicArr.map((data, index) => (
+  	       userType === 'investor' 
+           ? this.renderTr(data, index)
+           : this.renderTrCom(data, index)
   	     ))}
   	    </tbody>
   	  </table>
@@ -107,7 +130,7 @@ export default class Chat extends Component {
   	return (<div id="sub-nav">
       <ul>
         <li>
-          <span>
+         <span>
 			<Link 
 			to={userType === 'investor' ? '/investor/resavation': '#'}>
 			{userType === 'investor' ? '一键预约' : '修订合同'}</Link>
@@ -121,8 +144,8 @@ export default class Chat extends Component {
         <li>
           <span id="upload">
             <input type="file" name=""/>
-			<Link to="javascript:;">上传合同</Link>
-		  </span>
+			      <Link to="javascript:;">上传合同</Link>
+		      </span>
         </li>
       </ul>
     </div>

@@ -8,8 +8,8 @@ import {fetchUser} from '../actions/user';
 export default class DebtPub extends Component {
    
    componentDidMount() {
-  	const {dispatch} = this.props;
-  	dispatch(activeIndex(1));
+  	const {dispatch, params: {index}} = this.props;
+  	dispatch(activeIndex(parseInt(index)));
   	dispatch(fetchUser());
   }
 
