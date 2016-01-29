@@ -79,6 +79,7 @@ export default class CustomerRoute extends Component {
             <Route path="release" component={NewsReleaseContainer}/>
             <IndexRoute component={NewsReleaseContainer}/>
           </Route>
+          <Route path="manage/:index/:investType" component={ManageSocket} />
 		</Route>
 	  </Router>
 	)
