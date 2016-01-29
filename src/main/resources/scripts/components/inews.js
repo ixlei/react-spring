@@ -16,7 +16,7 @@ export default class Inews extends Component {
 
   renderLeftNav() {
   	return (<div id="sidebarContainer">
-	  <p id="sidebarTitle" className="sidebarItem">我的消息</p>
+	    <p id="sidebarTitle">我的消息</p>
       <InewsLeftNav />
      </div>
   	)
@@ -29,7 +29,7 @@ export default class Inews extends Component {
   	  {this.renderLeftNav()}
   	  <FormSearch />
   	  <AdminNews inews={inews}/>
-  	  </div>
+  	</div>
   	)
   }
 }
