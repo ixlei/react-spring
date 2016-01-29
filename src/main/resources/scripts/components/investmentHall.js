@@ -10,7 +10,7 @@ class InvestmentHall extends Component {
 
   componentDidMount() {
   	const {dispatch, params: {index}} = this.props;
-    dispatch(activeIndex(parseInt(index));
+    dispatch(activeIndex(parseInt(index)));
   }
   
   componentWillUnmount() {
