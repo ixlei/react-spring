@@ -58,7 +58,7 @@ export default class CompanyNav extends Component {
           </Link>
         </li>
         <li id="service">
-          <Link to={"/company/manage/3"}>
+          <Link to={"/company/manage/3/debt"}>
             <span className={getClass(3)}>资产管理</span>
           </Link>
         </li>
