@@ -12,6 +12,11 @@ export default class CompanyIndex extends Component {
     const {dispatch, params: {index}} = this.props;
     dispatch(activeIndex(parseInt(index)));
   }
+  
+  componentWillUnmount() {
+    const {dispatch} = this.props;
+    dispatch(activeIndex(-1));
+  }
 
   renderPushList() {
   	const {arrowImgUrl, unsliderLeft, unsliderRight} = this.props;

@@ -14,7 +14,12 @@ class Raisedbonds extends Component {
     dispatch(fetchUser());
     dispatch(activeIndex(parseInt(index)));
   }
-
+  
+  componentWillUnmount() {
+    const {dispatch} = this.props;
+    dispatch(activeIndex(-1));
+  }
+  
   renderUserInfo() {
   	const {userInfo} = this.props;
   	return (<div>

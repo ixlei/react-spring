@@ -7,13 +7,18 @@ import {fetchUser} from '../actions/user';
 
 export default class DebtPub extends Component {
    
-   componentDidMount() {
+  componentDidMount() {
   	const {dispatch, params: {index}} = this.props;
   	dispatch(activeIndex(parseInt(index)));
   	dispatch(fetchUser());
   }
+  
+  componentWillUnmount() {
+    const {dispatch} = this.props;
+    dispatch(activeIndex(-1));
+  }
 
-   renderLeftNav() {
+  renderLeftNav() {
   	return (
   	  <div id="list">
         <p id="list-title">意向发布</p>

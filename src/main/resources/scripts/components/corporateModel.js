@@ -18,6 +18,11 @@ export default class CorporateModel extends Component {
     dispatch(getInvestorModel('any'));
   }
   
+  componentWillUnmount() {
+    const {dispatch} = this.props;
+    dispatch(activeIndex(-1));
+  }
+  
   renderSearch() {
     return (
       <div id="searchForm">

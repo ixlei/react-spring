@@ -14,7 +14,12 @@ export default class NewsCenter extends Component {
     dispatch(activeIndex(index));
     dispatch(fetchNews(newsType));
   }
-
+  
+  componentWillUnmount() {
+    const {dispatch} = this.props;
+    dispatch(activeIndex(-1));
+  }
+  
   getTitle(type) {
     switch(type) {
       case 'infoCenter':

@@ -25,6 +25,11 @@ export default class InvestorModel extends Component {
   	}
   }
 
+  componentWillUnmount() {
+    const {dispatch} = this.props;
+    dispatch(activeIndex(-1));
+  }
+
   renderSearch() {
     return (
       <div id="searchForm">

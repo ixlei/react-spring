@@ -12,7 +12,12 @@ export default class InvestorIndex extends Component {
     const {dispatch} = this.props;
     dispatch(activeIndex(0))
   }
-
+  
+  componentWillUnmount() {
+    const {dispatch} = this.props;
+    dispatch(activeIndex(-1));
+  }
+  
   renderPushList() {
   	const {arrowImgUrl, unsliderLeft, unsliderRight} = this.props;
   	return (

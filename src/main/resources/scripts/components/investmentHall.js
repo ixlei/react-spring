@@ -9,19 +9,24 @@ import {activeIndex} from '../actions/navHeader';
 class InvestmentHall extends Component {
 
   componentDidMount() {
-  	 const {dispatch} = this.props;
-     dispatch(activeIndex(this.props.params.index));
+  	const {dispatch, params: {index}} = this.props;
+    dispatch(activeIndex(parseInt(index));
+  }
+  
+  componentWillUnmount() {
+    const {dispatch} = this.props;
+    dispatch(activeIndex(-1));
   }
 
   render() {
     return (
-      <div id="content">
-        <UnsliderContainer />
-        <div id="service-item">
+     <div id="content">
+       <UnsliderContainer />
+       <div id="service-item">
           <InvestIntroduce />
-        </div>
       </div>
-	)
+    </div>
+	) 
   }
 }
 
