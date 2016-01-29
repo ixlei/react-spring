@@ -22,6 +22,11 @@ export default class Chat extends Component {
   	}
   }
 
+  componentWillUnmount() {
+    const {dispatch} = this.props;
+    dispatch(activeIndex(-1));
+  }
+
   renderTitle() {
   	const {username} = this.props;
   	return (<div id="chat-title">

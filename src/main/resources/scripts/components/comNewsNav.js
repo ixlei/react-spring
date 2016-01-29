@@ -8,7 +8,7 @@ class ComNewsNav extends Component {
   	return (<ul id="sidebar">
   	  <li className="sidebarItem">
         <Link to={"company/inews"}>
-        	系统信息
+          系统信息
         </Link>
       </li>
       <li className="sidebarItem">
@@ -18,7 +18,7 @@ class ComNewsNav extends Component {
       </li>
       <li className="sidebarItem">
         <Link to={"company/directionDown"}>
-            定向披露
+          定向披露
         </Link>
       </li>
      </ul>

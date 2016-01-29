@@ -23,7 +23,12 @@ export default class ManageSiteNav extends Component {
     dispatch(activeIndex(index));
     dispatch(fetchSocket(investType))
   }
-
+  
+  componentWillUnmount() {
+    const {dispatch} = this.props;
+    dispatch(activeIndex(-1));
+  }
+  
   renderTimeSelect() {
   	const {investTime} = this.props;
   	return (

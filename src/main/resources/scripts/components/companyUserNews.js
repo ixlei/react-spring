@@ -12,7 +12,12 @@ class CompanyUserNews extends Component {
   	const {dispatch, params: {index}} = this.props;
     dispatch(activeIndex(parseInt(index)));
   }
-
+  
+  componentWillUnmount() {
+    const {dispatch} = this.props;
+    dispatch(activeIndex(-1));
+  }
+  
   renderNewsNav() {
     return (<div id="sidebarContainer">
       <p id="sidebarTitle">我的消息</p>
