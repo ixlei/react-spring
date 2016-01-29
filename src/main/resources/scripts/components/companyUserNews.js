@@ -4,6 +4,7 @@ import React, {Component, PropTypes} from 'react';
 import InfoPubNav from '../components/infoPubNav';
 import {Link} from 'react-router';
 import {activeIndex} from '../actions/navHeader';
+import FormSearch from './FormSearch';
 
 class CompanyUserNews extends Component {
 
@@ -19,14 +20,6 @@ class CompanyUserNews extends Component {
      </div>
     )
   }
-
-  renderSearch() {
-  	return (<div id="searchForm">
-      <input type="search" name="search" />
-      <input type="submit" value="搜索" />
-    </div>
-    )
-  }
   
   render() {
   	return (<div className="main">
@@ -34,7 +27,7 @@ class CompanyUserNews extends Component {
       <div className="main-cla fl">
       <div className="main_head">
         <p>中心公告</p>
-        {this.renderSearch()}
+        <FormSearch />
       </div>
       {this.props.children}
       </div>

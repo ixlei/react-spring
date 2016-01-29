@@ -5,6 +5,7 @@ import InewsLeftNav from './inewsLeftNav';
 import AdminNews from './adminNews';
 import {Link} from 'react-router';
 import {fetchInews} from '../actions/news';
+import FormSearch from './FormSearch';
 
 export default class Inews extends Component {
   
@@ -21,20 +22,12 @@ export default class Inews extends Component {
   	)
   }
 
-  renderSearch() {
-  	return (<div id="searchForm">
-      <input type="search" name="search" />
-      <input type="submit" value="搜索" />
-	 </div>
-	)
-  }
-
   render() {
     const {inews} = this.props;
   	return (
   	  <div id="inews-main">
   	  {this.renderLeftNav()}
-  	  {this.renderSearch()}
+  	  <FormSearch />
   	  <AdminNews inews={inews}/>
   	  </div>
   	)

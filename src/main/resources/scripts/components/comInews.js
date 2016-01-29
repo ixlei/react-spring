@@ -2,6 +2,7 @@
 
 import React, {Component, PropTypes} from 'react';
 import ComNewsNav from '../components/comNewsNav';
+import FormSearch from './FormSearch';
 
 class ComInews extends Component {
   
@@ -12,21 +13,13 @@ class ComInews extends Component {
     </div>
     )
   }
-
-  renderSearch() {
-  	return (<div id="searchForm">
-      <input type="search" name="search" />
-      <input type="submit" value="搜索" />
-	</div>
-	)
-  }
   
   render() {
   	return (<div id="mainContainer">
       <div id="main-c">
        {this.renderLeftNav()}
        <div id="mainContent">
-        {this.renderSearch()}
+        <FormSearch />
         {this.props.children}
        </div>
       </div>
