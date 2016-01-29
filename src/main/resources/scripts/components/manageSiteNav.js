@@ -81,7 +81,7 @@ export default class ManageSiteNav extends Component {
           <Link to={"/investor/manage/invest"}>投资概况</Link>
         </span>
     let span = userType === 'investor' ? investSpan : '';
-     
+
   	return (
   	  <div id="nav">
   	   {span}
@@ -120,7 +120,9 @@ export default class ManageSiteNav extends Component {
     return (<div id="main">
       <div id="nav-boder">
       {this.renderMangeNav()}
-      <div id="selected1">投资概况</div>
+      <div id="selected1">
+        {userType === 'investor' ? '投资概况' : '股权管理' }
+      </div>
       {this.renderTimeSelect()}
       <Socket {...socketProps}/>
       </div>
@@ -130,8 +132,9 @@ export default class ManageSiteNav extends Component {
 }
 
 ManageSiteNav.propTypes = {
-  investType: PropTypes.string.isRequired,
   userType: PropTypes.string.isRequired,
-  socketTime: PropTypes.string.isRequired,
-  params: PropTypes.object.isRequired
+  investTime: PropTypes.string.isRequired,
+  sockets: PropTypes.array.isRequired,
+  isFetching: PropTypes.bool.isRequired,
+  validate: PropTypes.bool.isRequired
 }
