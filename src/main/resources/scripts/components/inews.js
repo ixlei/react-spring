@@ -2,6 +2,7 @@
 
 import React, {Component, PropTypes} from 'react';
 import InewsLeftNav from './inewsLeftNav';
+import AdminNews from './adminNews';
 import {Link} from 'react-router';
 import {fetchInews} from '../actions/news';
 
@@ -24,44 +25,17 @@ export default class Inews extends Component {
   	return (<div id="searchForm">
       <input type="search" name="search" />
       <input type="submit" value="搜索" />
-	</div>
+	 </div>
 	)
   }
 
-  renderNewsList() {
-  	const {inews} = this.props;
-  	return (<div id="TableList">
-      <table className="hovertable">
-        <thead>
-         <tr>
-           <th>日期</th>
-           <th>内容</th>
-           <th>更多操作</th>
-         </tr>
-        </thead>
-        <tbody>
-         {inews.map((data, index) => (
-           <tr key={data.id}>
-             <td>{data.date}</td>
-             <td>{data.content}</td>
-             <td>
-               <button value="删除" data-id={data.id} />
-               <Link to={`/companyDetail/${data.cid}`}>企业详情</Link>
-             </td>
-           </tr>
-          ))}
-        </tbody>
-      </table>
-     </div>
-  	)
-  }
-
   render() {
+    const {inews} = this.props;
   	return (
   	  <div id="inews-main">
   	  {this.renderLeftNav()}
   	  {this.renderSearch()}
-  	  {this.renderNewsList()}
+  	  <AdminNews inews={inews}/>
   	  </div>
   	)
   }
