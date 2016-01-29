@@ -8,9 +8,10 @@ export default class FormSelect extends Component {
   	return (<div>
   		<label className="label">{labelText}</label>
   		<select name={name}>
-  		  {options.map(function(option, index) {
-          return <option value={option.value} key={`index${index}`}>{option.text}</option>
-  		  })}
+  		  {options.map((option, index) => (
+          <option value={option.value} 
+           key={`index${index}`}>{option.text}</option>
+  		  ))}
   		</select>
   	  </div>
   	)
@@ -19,5 +20,6 @@ export default class FormSelect extends Component {
 
 FormSelect.propTypes = {
   labelText: PropTypes.string.isRequired,
-  options: PropTypes.array.isRequired
+  options: PropTypes.array.isRequired,
+  name: PropTypes.string.isRequired
 }
