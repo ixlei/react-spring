@@ -6,7 +6,8 @@ import {checkStatus} from '../utils/fetchStatus';
 import {
   constructNewsUrl, 
   constructIfollerUrl, 
-  constructInewsUrl
+  constructInewsUrl,
+  constructReservationUrl
 } from '../utils/constructUrl';
 
 
@@ -29,6 +30,19 @@ export function fetchIfollowers() {
     dispatch(reqNews('ifollowers'));
     fetch(constructIfollerUrl(userType), {
       credentiails: 'include'
+    })
+    .then(response => checkStatus(response))
+    .then(res => res.json())
+    .then(json => dispatch(receiveNews(josn)))
+    .catch(err => dispatch(failureNews(err)));
+  }
+}
+
+export function fetchReservation(query) {
+  return (dispatch, getState) => {
+    dispatch(reqNews('reservation'));
+    return fetch(constructReservationUrl(query), {
+      credentials: 'include'
     })
     .then(response => checkStatus(response))
     .then(res => res.json())
