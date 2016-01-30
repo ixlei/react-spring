@@ -91,7 +91,7 @@ export default class CompanyNav extends Component {
               </Link>
 	          </li>
 	          <li>
-              <Link to={"/company/currentReservation"}>
+              <Link to={"/company/reservation"}>
                 <span>预约管理</span>
               </Link>
 	          </li>
