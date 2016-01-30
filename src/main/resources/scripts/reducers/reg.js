@@ -53,10 +53,10 @@ export function reg(state = initState, action) {
         isFetching: true
       })
     case types.RECEIVE_CHECKVALID:
-      let {entities: {check}} = action;
-      newItemState = itemState.map(function(item) {
+      let {entities: {check, checkKind}} = action;
+      newItemState = itemState.map(item => {
         let {id} = item;
-        if(id === postCheck) {
+        if(id === checkKind) {
           if(check === 'valid') {
             return Object.assign(item, {
               valid: 'valid'
@@ -73,9 +73,10 @@ export function reg(state = initState, action) {
         itemState: newItemState
       })
     case types.failureCheckInvalid:
-      newItemState = itemState.map(function(item) {
+      const {error: {checkKind : checkType}} = action;
+      newItemState = itemState.map(item => {
         let {id} = item;
-        if(id === postCheck) {
+        if(id === checkType) {
           return Object.assign(item, {
             valid: 'invalid',
             tips: '网络错误,稍后再试'
@@ -92,11 +93,12 @@ export function reg(state = initState, action) {
         IsFocus: action.IsFocus
       })
     case types.ITEM_INVALID:
-      newItemState = itemState.map(function(item) {
+      const {entity: {invalid, checkKind: validType}} = action;
+      newItemState = itemState.map(item => {
         let {id} = item;
-        if(id === IsFocus) {
+        if(id === validType) {
           return Object.assign(item, {
-            valid: (action.invalid ? 'invalid' : 'valid')
+            valid: (invalid ? 'invalid' : 'valid')
           })
         }
         return item;
@@ -105,11 +107,12 @@ export function reg(state = initState, action) {
         itemState: newItemState
       })
     case types.ITEMTIPS:
-      newItemState = itemState.map(function(item) {
+      const {tips: {text, checkKind : tipsType}} = action;
+      newItemState = itemState.map(item => {
         let {id} = item;
-        if(id === IsFocus) {
+        if(id === tipsType) {
           return Object.assign(item ,{
-            tips: action.tips
+            tips: text
           })
         }
         return item;
@@ -121,6 +124,29 @@ export function reg(state = initState, action) {
       const {iagree} = state;
       return Object.assign({}, state, {
         iagree: (!iagree)
+      })
+    case types.INITREGITEM:
+      let initItem = itemState.map(item => (
+        Object.assign({}, item, {
+          valid: '',
+          tips: ''
+        })
+      ))
+      return Object.assign({}, state, {itemState: initItem});
+
+    case types.INITITEMVALID:
+      const {checkKind: initValid} = action;
+      newItemState = itemState.map(item => {
+        let {id} = item;
+        if(id === initValid) {
+          return Object.assign(item ,{
+            valid: ''
+          })
+        }
+        return item;
+      })
+      return Object.assign({}, state, {
+        itemState: newItemState
       })
     default:
       return state;
