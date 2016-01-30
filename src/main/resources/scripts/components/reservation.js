@@ -48,7 +48,7 @@ class Reservation extends Component {
        <FormSearch />
        {this.renderSelect()}
        {this.props.children}
-       </div>
+      </div>
       </div>
      </div>
     )
