@@ -7,7 +7,7 @@ import FormRadio from '../components/FormRadio';
 class UserType extends Component {
   
   render() {
-  	const {dispatch, userType: ut} = this.props;
+  	const {dispatch, ut} = this.props;
     const regChoose = {
       dispatch,
       ut
@@ -25,9 +25,9 @@ class UserType extends Component {
 }
 
 function mapStateToProps(state) {
-  const {user:{userType}} = state;
+  const {user:{userType: ut}} = state;
   return {
-  	userType
+  	ut
   }
 }
 

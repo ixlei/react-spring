@@ -4,7 +4,7 @@ import React, {Component, PropTypes} from 'react';
 
 export default class RegStep extends Component {
   render() {
-  	let {regStep} = this.props;
+  	const {regStep} = this.props;
     return (
       <div id="sitenav">
         <ul>
