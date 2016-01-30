@@ -1,13 +1,14 @@
 'use strict';
 
 import React, {Component, PropTypes} from 'react';
-import {isFocus, itemTips, itemInvalid} from '../actions/reg';
+import {isFocus, itemTips, itemInvalid, initItemInvalid} from '../actions/reg';
 
 export default class FormRepassword extends Component {
+
   focus(e) {
     const {dispatch} = this.props;
     dispatch(isFocus(e.target.name));
-    dispatch(itemTips('重新输入密码'));
+    dispatch(itemTips({text: '重新输入密码', checkKind: 'repassword'}));
   }
 
   blur(e) {
@@ -16,22 +17,28 @@ export default class FormRepassword extends Component {
   	let ele = form.querySelector('input[name=password]');
     let password = ele.value;
     if(password === '') {
-      dispatch(itemInvalid(true));
-      dispatch(itemTips('重复密码'));
+      dispatch(itemInvalid({invalid: true, checkKind: 'repassword'}));
+      dispatch(itemTips({text: '重复密码', checkKind: 'repassword'}));
       dispatch(isFocus(''));
       return;
     }
 
     if(e.target.value !== password) {
-      dispatch(itemInvalid(true));
-      dispatch(itemTips('两次密码不一致'));
+      dispatch(itemInvalid({invalid: true, checkKind: 'repassword'}));
+      dispatch(itemTips({text:'两次密码不一致', checkKind: 'repassword'}));
       dispatch(isFocus(''));
       return;
     }
-    dispatch(itemInvalid(false));
-    dispatch(itemTips(''));
+
+    dispatch(itemInvalid({invalid: false, checkKind: 'repassword'}));
+    dispatch(itemTips({text:'', checkKind: 'repassword'}));
     dispatch(isFocus(''));
-    
+  }
+  
+  componentWillUnmount() {
+    const {dispatch} = this.props;
+    dispatch(initItemInvalid('repassword'));
+    dispatch(itemTips({text:'', checkKind: 'repassword'}));
   }
 
   getTipsClassName(IsFocus, valid) {

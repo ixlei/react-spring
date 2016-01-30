@@ -1,30 +1,35 @@
 'use strict';
 
 import React, {Component, PropTypes} from 'react';
-import {isFocus, itemTips, itemInvalid} from '../actions/reg';
+import {isFocus, itemTips, itemInvalid, initItemInvalid} from '../actions/reg';
 
 export default class FormName extends Component {
   
   focus(e) {
     const {dispatch} = this.props;
     dispatch(isFocus(e.target.name));
-    dispatch(itemTips('你的姓名'));
+    dispatch(itemTips({text:'你的姓名', checkKind: 'name'}));
   }
 
   blur(e) {
     const {dispatch} = this.props;
     let value = e.target.value;
     if(value === '') {
-      dispatch(itemInvalid(true));
-      dispatch(itemTips('姓名不能为空'));
+      dispatch(itemInvalid({invalid: true, checkKind: 'name'}));
+      dispatch(itemTips({text:'姓名不能为空', checkKind: 'name'}));
       dispatch(isFocus(''));
       return;
     }
 
-    dispatch(itemInvalid(false));
-    dispatch(itemTips(''));
+    dispatch(itemInvalid({invalid: false, checkKind: 'name'}));
+    dispatch(itemTips({text:'', checkKind: 'name'}));
     dispatch(isFocus(''));
-    return;
+  }
+  
+  componentWillUnmount() {
+    const {dispatch} = this.props;
+    dispatch(itemTips({text:'', checkKind: 'name'}));
+    dispatch(initItemInvalid('name'));
   }
 
   getTipsClassName(IsFocus, valid) {
@@ -43,16 +48,16 @@ export default class FormName extends Component {
   }
 
   render() {
-  	const {IsFocus, valid, tips,userType} = this.props;
+  	const {IsFocus, valid, tips, userType} = this.props;
   	return (<div>
-      <span className="label">
+      <label className="label">
        {userType === 'investor' ? '姓名:' : '企业名称:'}
-      </span>
+      </label>
       <input type="text" 
-      className="reg-input"
-      name={userType === 'investor' ? "name" : 'companyName'}
-      onFocus={this.focus.bind(this)}
-      onBlur={this.blur.bind(this)}/>
+       className="reg-input"
+       name={userType === 'investor' ? "name" : 'companyName'}
+       onFocus={this.focus.bind(this)}
+       onBlur={this.blur.bind(this)}/>
       <span className={this.getTipsClassName(IsFocus, valid)}>
         {tips}
       </span>

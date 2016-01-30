@@ -1,7 +1,11 @@
 'use strict';
 
 import React, {Component, PropTypes} from 'react';
-import {isFocus, itemTips, itemInvalid} from '../actions/reg';
+import {
+  isFocus, 
+  itemTips, 
+  itemInvalid, 
+  initItemInvalid} from '../actions/reg';
 import {postCheckValid} from '../actions/regCheckValid';
 
 export default class FormUserName extends Component {
@@ -9,44 +13,51 @@ export default class FormUserName extends Component {
   	super(props);
   }
   
+  componentWillUnmount() {
+    const {dispatch} = this.props;
+    dispatch(itemTips({text: '', checkKind: 'username'}));
+    dispatch(initItemInvalid('username'));
+  }
+
   focus(e) {
     const {dispatch} = this.props;
     dispatch(isFocus(e.target.name));
-    dispatch(itemTips('请输入邮箱'));
+    dispatch(itemTips({text: '请输入邮箱',checkKind: 'username'}));
   }
 
   blur(e) {
-    const {dispatch} = this.props;
+    const {dispatch, userType} = this.props;
     let username = e.target.value;
     let rgExp = /[a-zA-Z0-9_]+@[a-zA-Z0-9_]+\.[a-zA-Z0-9_]+/g;
     
     if(username === '') {
-      dispatch(itemInvalid(true));
-      dispatch(itemTips('用户名不能为空'));
+      dispatch(itemInvalid({invalid: true, checkKind: 'username'}));
+      dispatch(itemTips({text:'用户名不能为空', checkKind:'username'}));
       dispatch(isFocus(''));
       return;
     }
     
     if(!rgExp.test(username)) {
-      dispatch(itemInvalid(true));
-      dispatch(itemTips('输入正确的邮箱'));
+      dispatch(itemInvalid({invalid: true, checkKind: 'username'}));
+      dispatch(itemTips({text:'输入正确的邮箱', checkKind:'username'}));
       dispatch(isFocus(''));
       return;
     }
     
     let formdata = new FormData();
     formdata.append('username', username);
+    formdata.append('userType', userType);
     dispatch(postCheckValid('username', formdata))
-     .then((json) => {
-       const {entities: {check}} = json;
+     .then(json => {
+       const {entities: {check, checkKind}} = json;
        if(check === 'valid') {
-       	 dispatch(itemTips(''));
-       } else {
-       	 dispatch(itemTips('此用户名已被占用'));
+       	 dispatch(itemTips({text: '', checkKind}));
+         dispatch(isFocus(''));
+         return;
        }
+       dispatch(itemTips({text: '此用户名已被占用', checkKind}));
        dispatch(isFocus(''));
     });
-    
   }
   
   getTipsClassName(IsFocus, valid) {
@@ -68,13 +79,13 @@ export default class FormUserName extends Component {
   render() {
   	const {IsFocus, valid} = this.props;
   	return (<div>
-  	    <span className="label">邮箱:</span>
+  	    <label className="label">邮箱:</label>
         <input type="text" className="reg-input" name="username" 
         onFocus={this.focus.bind(this)} onBlur={this.blur.bind(this)}/>
-        <span className=
+        <label className=
         {this.getTipsClassName(IsFocus, valid)}>
         {this.props.tips}
-        </span>
+        </label>
   	  </div>
   	)
   }
@@ -83,5 +94,6 @@ export default class FormUserName extends Component {
 FormUserName.propTypes = {
   IsFocus: PropTypes.string.isRequired,
   valid: PropTypes.string.isRequired,
-  tips: PropTypes.string.isRequired
+  tips: PropTypes.string.isRequired,
+  userType: PropTypes.string.isRequired
 }
