@@ -3,6 +3,7 @@
 import React, {Component, PropTypes} from 'react';
 import {connect} from 'react-redux';
 import {subAction} from '../actions/submit';
+import {isFocus, initRegItem} from '../actions/reg';
 import FormRadio from './FormRadio';
 import FormUsername from './FormUsername';
 import UserType from '../containers/userType';
@@ -39,6 +40,12 @@ class RegForm extends Component {
         this.context.history.pushState(null, '/customer/reg/companyNext');
       }
     }
+  }
+  
+  componentWillUnmount() {
+    const {dispatch} = this.props;
+    dispatch(isFocus(''));
+    dispatch(initRegItem());
   }
 
   render() {

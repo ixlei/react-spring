@@ -13,7 +13,7 @@ export default class FormCheckbox extends Component {
 
   render() {
   	return (<div>
-  	  <span className="label"></span>
+  	  <label className="label"></label>
       <input type="checkbox" name="iagree"
       value="agree"
       checked={this.props.iagree}
