@@ -33,3 +33,7 @@ export function constructInewsUrl(userType) {
 export function constructModelUrl(modelType) {
   return `/company/corporateModel/${modelType}`;
 }
+
+export function constructReservationUrl(query) {
+  return `/company/reservation?query=${query}`;
+}
