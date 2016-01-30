@@ -33,6 +33,8 @@ import CompanyNewsConatainer from '../containers/companyNewsContainer';
 import NewsReleaseContainer from '../containers/newsReleaseContainer';
 import ComInews from '../components/comInews';
 import AdminNewsContainer from '../containers/adminNewsContainer';
+import Reservation from '../components/reservation';
+import ToReservationContainer from '../containers/toReservationContainer';
 
 const history = useBasename(createHistory)({
   basename: '/'
@@ -86,6 +88,10 @@ export default class CustomerRoute extends Component {
           <Route path="inews" component={ComInews}>
             <IndexRoute component={AdminNewsContainer} />
             <Route path="admin" component={AdminNewsContainer} />
+          </Route>
+          <Route path="reservation" component={Reservation}>
+            <Route path="current" componnet={ToReservationContainer} />
+            <IndexRoute component={ToReservationContainer} />
           </Route>
 		</Route>
 	  </Router>
