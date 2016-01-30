@@ -2,6 +2,7 @@
 
 import React, {Component, PropTypes} from 'react';
 import {userType} from '../actions/user';
+import {initRegItem} from '../actions/reg';
 
 export default class FormRadio extends Component {
   constructor(props) {
@@ -11,6 +12,7 @@ export default class FormRadio extends Component {
   change(e) {
   	const {dispatch} = this.props;
     dispatch(userType(e.target.value));
+    dispatch(initRegItem());
   }
 
   render() {
