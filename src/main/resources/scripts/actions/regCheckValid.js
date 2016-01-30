@@ -19,12 +19,6 @@ export function postCheckValid(checkKind,body) {
   }
 }
 
-export function initRegItem() {
-  return {
-    type: types.INITREGITEM
-  }
-}
-
 function post(postCheck) {
    return {
      type: types.POST_CHECKVALID,
