@@ -23,15 +23,28 @@ export function itemTips(tips) {
   }
 }
 
-export function itemInvalid(invalid) {
+export function itemInvalid(entity) {
   return {
   	type: types.ITEM_INVALID,
-  	invalid
+  	entity
   }
 }
 
 export function iagree() {
   return {
   	type: types.AGREE
+  }
+}
+
+export function initRegItem() {
+  return {
+    type: types.INITREGITEM
+  }
+}
+
+export function initItemInvalid(checkKind) {
+  return {
+    type: types.INITITEMVALID,
+    checkKind
   }
 }
