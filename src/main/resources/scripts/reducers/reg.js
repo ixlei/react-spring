@@ -29,7 +29,7 @@ const initState = {
     valid: '',
     tips:''
   }, {
-    id: 'companyname',
+    id: 'companyName',
     valid: '',
     tips: ''
   }, {
