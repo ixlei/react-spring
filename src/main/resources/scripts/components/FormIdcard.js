@@ -22,25 +22,25 @@ export default class FormIdcard extends Component {
   }
 
   focus(e) {
-  	const {dispatch} = this.props;
+  	const {dispatch, checkKind = 'IdCard'} = this.props;
     dispatch(isFocus(e.target.name));
-    dispatch(itemTips({text:'你的身份证号码', checkKind: 'IdCard'}));
+    dispatch(itemTips({text:'你的身份证号码', checkKind}));
   }
 
   blur(e) {
-    const {dispatch, userType} = this.props;
+    const {dispatch, userType, checkKind = 'IdCard'} = this.props;
     let Idcard = e.target.value;
     if(Idcard === '') {
-      dispatch(itemInvalid({invalid:true, checkKind: 'IdCard'}));
-      dispatch(itemTips({text:'身份证号不能为空', checkKind: 'IdCard'}));
+      dispatch(itemInvalid({invalid:true, checkKind}));
+      dispatch(itemTips({text:'身份证号不能为空', checkKind}));
       dispatch(isFocus(''));
       return;
     }
 
     let rgExp = /\d+/g;
     if(!rgExp.test(Idcard) || Idcard.length < 18) {
-      dispatch(itemInvalid({invalid:true, checkKind: 'IdCard'}));
-      dispatch(itemTips({text:'身份证号不正确', checkKind: 'IdCard'}));
+      dispatch(itemInvalid({invalid:true, checkKind}));
+      dispatch(itemTips({text:'身份证号不正确', checkKind}));
       dispatch(isFocus(''));
       return;
     }
@@ -62,20 +62,18 @@ export default class FormIdcard extends Component {
   }
   
   componentWillUnmount() {
-    const {dispatch} = this.props;
-    dispatch(itemTips({text: '', checkKind: 'IdCard'}));
-    dispatch(initItemInvalid('IdCard'));
+    const {dispatch, checkKind = 'IdCard'} = this.props;
+    dispatch(itemTips({text: '', checkKind}));
+    dispatch(initItemInvalid(checkKind));
   }
 
   render() {
-  	const {IsFocus, valid, tips, userType} = this.props;
+  	const {IsFocus, valid, tips} = this.props;
   	return (<div>
-      <label className="label">
-        {userType === 'company' ? '组织机构代码:' : '身份证号:'}
-      </label>
+      <label className="label">身份证号:</label>
 	   <input type="text"
 	    className="reg-input"
-	    name={userType === 'investor' ? "IdCard" : 'code'}
+	    name="IdCard"
       onFocus={this.focus.bind(this)}
 	    onBlur={this.blur.bind(this)}/>
 	    <label className={this.getTipsClassName(IsFocus, valid)}>
