@@ -7,7 +7,7 @@ import CustomerApp from '../containers/customerApp';
 import CustomerIndex from '../containers/customerIndex';
 import InvestmentHall from '../components/investmentHall';
 import Reg from '../components/reg';
-import RegForm from '../components/regForm';
+import RegFormContainer from '../containers/regFormContainer';
 import InvestorNextstep from '../components/investorNextStep';
 import FinshInvestorReg from '../components/finshInvestorReg';
 import CompanyNextContainer from '../containers/companyNextContainer';
@@ -49,11 +49,11 @@ export default class CustomerRoute extends Component {
 		  <Route path="index/:index" component={CustomerIndex} />
           <Route path="invest/:index" component={InvestmentHall} />
           <Route path="login" component={LoginContainer} />
-          <Route path="reg" component={Reg}> 
+          <Route path="reg" component={Reg}>
             <Route path="investorNext" component={InvestorNextstep} />
             <Route path="finshInvestor" component={FinshInvestorReg} />
             <Route path="companyNext" component={CompanyNextContainer}/>
-            <IndexRoute component={RegForm} />
+            <IndexRoute component={RegFormContainer} />
           </Route>
 		</Route>
 		<Route path="/investor" component={InvestorApp}>
