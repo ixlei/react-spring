@@ -6,30 +6,30 @@ import {isFocus, itemTips, itemInvalid, initItemInvalid} from '../actions/reg';
 export default class FormName extends Component {
   
   focus(e) {
-    const {dispatch} = this.props;
+    const {dispatch, checkKind = 'name'} = this.props;
     dispatch(isFocus(e.target.name));
-    dispatch(itemTips({text:'你的姓名', checkKind: 'name'}));
+    dispatch(itemTips({text:'你的姓名', checkKind}));
   }
 
   blur(e) {
-    const {dispatch} = this.props;
+    const {dispatch, checkKind = 'name'} = this.props;
     let value = e.target.value;
     if(value === '') {
-      dispatch(itemInvalid({invalid: true, checkKind: 'name'}));
-      dispatch(itemTips({text:'姓名不能为空', checkKind: 'name'}));
+      dispatch(itemInvalid({invalid: true, checkKind}));
+      dispatch(itemTips({text:'姓名不能为空', checkKind}));
       dispatch(isFocus(''));
       return;
     }
 
-    dispatch(itemInvalid({invalid: false, checkKind: 'name'}));
-    dispatch(itemTips({text:'', checkKind: 'name'}));
+    dispatch(itemInvalid({invalid: false, checkKind}));
+    dispatch(itemTips({text:'', checkKind}));
     dispatch(isFocus(''));
   }
   
   componentWillUnmount() {
-    const {dispatch} = this.props;
-    dispatch(itemTips({text:'', checkKind: 'name'}));
-    dispatch(initItemInvalid('name'));
+    const {dispatch, checkKind = 'name'} = this.props;
+    dispatch(itemTips({text:'', checkKind}));
+    dispatch(initItemInvalid(checkKind));
   }
 
   getTipsClassName(IsFocus, valid) {
@@ -48,14 +48,12 @@ export default class FormName extends Component {
   }
 
   render() {
-  	const {IsFocus, valid, tips, userType} = this.props;
+  	const {IsFocus, valid, tips} = this.props;
   	return (<div>
-      <label className="label">
-       {userType === 'investor' ? '姓名:' : '企业名称:'}
-      </label>
+      <label className="label">姓名:</label>
       <input type="text" 
        className="reg-input"
-       name={userType === 'investor' ? "name" : 'companyName'}
+       name="name"
        onFocus={this.focus.bind(this)}
        onBlur={this.blur.bind(this)}/>
       <span className={this.getTipsClassName(IsFocus, valid)}>
@@ -69,6 +67,5 @@ export default class FormName extends Component {
 FormName.propTypes = {
   IsFocus: PropTypes.string.isRequired,
   valid: PropTypes.string.isRequired,
-  tips: PropTypes.string.isRequired,
-  userType: PropTypes.string.isRequired
+  tips: PropTypes.string.isRequired
 }
