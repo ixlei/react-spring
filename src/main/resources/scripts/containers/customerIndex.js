@@ -13,8 +13,8 @@ import {activeIndex} from '../actions/navHeader';
 class CustomerIndex extends Component {
 	
 	componentDidMount() {
-      const {dispatch, params: {index}} = this.props;
-      dispatch(activeIndex(parseInt(index)));
+      const {dispatch} = this.props;
+      dispatch(activeIndex(0));
 	}
     
     componentWillUnmount() {
