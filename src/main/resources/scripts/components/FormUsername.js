@@ -14,32 +14,32 @@ export default class FormUserName extends Component {
   }
   
   componentWillUnmount() {
-    const {dispatch} = this.props;
-    dispatch(itemTips({text: '', checkKind: 'username'}));
-    dispatch(initItemInvalid('username'));
+    const {dispatch, checkKind = 'username'} = this.props;
+    dispatch(itemTips({text: '', checkKind}));
+    dispatch(initItemInvalid(checkKind));
   }
 
   focus(e) {
-    const {dispatch} = this.props;
+    const {dispatch, checkKind = 'username'} = this.props;
     dispatch(isFocus(e.target.name));
-    dispatch(itemTips({text: '请输入邮箱',checkKind: 'username'}));
+    dispatch(itemTips({text: '请输入邮箱',checkKind}));
   }
 
   blur(e) {
-    const {dispatch, userType} = this.props;
+    const {dispatch, userType, checkKind = 'username'} = this.props;
     let username = e.target.value;
     let rgExp = /[a-zA-Z0-9_]+@[a-zA-Z0-9_]+\.[a-zA-Z0-9_]+/g;
     
     if(username === '') {
-      dispatch(itemInvalid({invalid: true, checkKind: 'username'}));
-      dispatch(itemTips({text:'用户名不能为空', checkKind:'username'}));
+      dispatch(itemInvalid({invalid: true, checkKind}));
+      dispatch(itemTips({text:'用户名不能为空', checkKind}));
       dispatch(isFocus(''));
       return;
     }
     
     if(!rgExp.test(username)) {
-      dispatch(itemInvalid({invalid: true, checkKind: 'username'}));
-      dispatch(itemTips({text:'输入正确的邮箱', checkKind:'username'}));
+      dispatch(itemInvalid({invalid: true, checkKind}));
+      dispatch(itemTips({text:'输入正确的邮箱', checkKind}));
       dispatch(isFocus(''));
       return;
     }

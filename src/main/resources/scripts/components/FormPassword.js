@@ -9,37 +9,37 @@ export default class FormPassword extends Component {
   }
 
   focus(e) {
-    const {dispatch} = this.props;
+    const {dispatch, checkKind = 'password'} = this.props;
     dispatch(isFocus(e.target.name));
     dispatch(itemTips({
       text: '密码要包含大小写字母和数字,长度6-12',
-      checkKind: 'password'
+      checkKind
     }));
   }
 
   blur(e) {
     const password = e.target.value;
-    const {dispatch} = this.props;
+    const {dispatch, checkKind = 'password'} = this.props;
     const rgExp = /(([a-zA-Z]+[0-9]+)?([0-9]+[a-zA-Z]+)?)+/g;
     if(password === '') {
-      dispatch(itemInvalid({invalid: true, checkKind: 'password'}));
-      dispatch(itemTips({text:'密码不能为空', checkKind: 'password'}));
+      dispatch(itemInvalid({invalid: true, checkKind}));
+      dispatch(itemTips({text:'密码不能为空', checkKind}));
       dispatch(isFocus(''));
       return;
     }
  
     if(!rgExp.test(password)) {
-      dispatch(itemInvalid({invalid: true, checkKind: 'password'}));
+      dispatch(itemInvalid({invalid: true, checkKind}));
       dispatch(itemTips({
         text: '密码要包含大小写字母和数字',
-         checkKind: 'password'
+         checkKind
        }));
       dispatch(isFocus(''));
       return;
     }
 
     if(password.length < 6) {
-      dispatch(itemInvalid({invalid: true, checkKind: 'password'}));
+      dispatch(itemInvalid({invalid: true, checkKind}));
       dispatch(itemTips({
         text: '密码要包含大小写字母和数字',
         checkKind: true
@@ -48,15 +48,15 @@ export default class FormPassword extends Component {
       return;
     }
     
-    dispatch(dispatch(itemInvalid({invalid: false, checkKind: 'password'})));
-    dispatch(itemTips({text:'', checkKind: 'password'}));
+    dispatch(dispatch(itemInvalid({invalid: false, checkKind})));
+    dispatch(itemTips({text:'', checkKind}));
     dispatch(isFocus(''));
   }
   
   componentWillUnmount() {
-    const {dispatch} = this.props;
-    dispatch(itemTips({text: '', checkKind: 'password'}));
-    dispatch(initItemInvalid('password'));
+    const {dispatch, checkKind = 'password'} = this.props;
+    dispatch(itemTips({text: '', checkKind}));
+    dispatch(initItemInvalid(checkKind));
   }
 
   getTipsClassName(IsFocus, valid) {
