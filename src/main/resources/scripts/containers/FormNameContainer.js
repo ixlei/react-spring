@@ -13,13 +13,12 @@ class FormNameContainer extends Component {
 }
 
 function mapStateToProps(state) {
-  const {reg:{IsFocus, itemState}, user: {userType}} = state;
+  const {reg:{IsFocus, itemState}} = state;
   const {valid, tips} = itemState[3];
   return {
   	IsFocus,
   	valid,
-  	tips,
-  	userType
+  	tips
   }
 }
 
