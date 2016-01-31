@@ -14,6 +14,9 @@ import FormNameContainer from '../containers/FormNameContainer';
 import FormIdcardContainer from '../containers/FormIdcardContainer';
 import FormCheckboxContainer from '../containers/FormCheckboxContainer';
 import FormSubmitContainer from '../containers/FormSubmitContainer';
+import FormComNameContainer from '../containers/FormComNameContainer';
+import FormComCodeContainer from '../containers/FormComCodeContainer';
+import {constructRegNextUrl} from '../utils/constructUrl';
 
 class RegForm extends Component {
   
@@ -35,9 +38,9 @@ class RegForm extends Component {
     const {subType, subSuccess, isFetching, userType} = nextProps;
     if(subType ==='reg1' && subSuccess && !isFetching) {
       if(userType === 'investor') {
-        this.context.history.pushState(null, '/customer/reg/investorNext');
+        this.context.history.pushState(null, constructRegNextUrl(userType));
       } else {
-        this.context.history.pushState(null, '/customer/reg/companyNext');
+        this.context.history.pushState(null, constructRegNextUrl(userType));
       }
     }
   }
@@ -49,6 +52,7 @@ class RegForm extends Component {
   }
 
   render() {
+    const {userType} = this.props;
   	return (
   	  <form name="reg" onSubmit={this.submit.bind(this)}>
   	    <ul>
@@ -56,8 +60,18 @@ class RegForm extends Component {
           <li><FormUsernameContainer /></li>
           <li><FormPasswordContainer /></li>
           <li><FormRepasswordContainer /></li>
-          <li><FormNameContainer /></li>
-          <li><FormIdcardContainer /></li>
+          <li>
+            {userType === 'investor' 
+             ? <FormNameContainer />
+             : <FormComNameContainer />
+            }
+          </li>
+          <li>
+            { userType === 'investor'
+              ? <FormIdcardContainer />
+              : <FormComCodeContainer />
+            }
+          </li>
           <li><FormCheckboxContainer /></li>
           <li><FormSubmitContainer /></li>
   	    </ul>
@@ -66,18 +80,15 @@ class RegForm extends Component {
   }
 }
 
-function mapStateToProps(state) {
-  const {subReducer: {subType, subSuccess,isFetching}, user:{userType}} = state;
-  return {
-    subType,
-    subSuccess,
-    isFetching,
-    userType
-  }
-}
-
 RegForm.contextTypes = {
   history: PropTypes.object.isRequired
 }
 
-export default connect(mapStateToProps)(RegForm);
+RegForm.propTypes = {
+  subType: PropTypes.string.isRequired,
+  subSuccess: PropTypes.bool.isRequired, 
+  isFetching: PropTypes.bool.isRequired, 
+  userType: PropTypes.string.isRequired
+}
+
+export default RegForm;
