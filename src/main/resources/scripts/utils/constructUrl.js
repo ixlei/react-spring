@@ -37,3 +37,7 @@ export function constructModelUrl(modelType) {
 export function constructReservationUrl(query) {
   return `/company/reservation?query=${query}`;
 }
+
+export function constructRegNextUrl(userType) {
+  return `/customer/reg/${userType}next`;
+}
