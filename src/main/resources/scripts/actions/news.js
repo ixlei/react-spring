@@ -7,7 +7,8 @@ import {
   constructNewsUrl, 
   constructIfollerUrl, 
   constructInewsUrl,
-  constructReservationUrl
+  constructReservationUrl,
+  constructFetchComNews
 } from '../utils/constructUrl';
 
 
@@ -65,6 +66,18 @@ export function fetchInews() {
   }
 }
 
+export function fetchCompNews(news) {
+  return dispatch => {
+    dispatch(reqNews(news));
+    return fetch(constructFetchComNews())
+      .then(checkStatus)
+      .then(response => response.json())
+      .then(json => dispatch(receiveCompNews(json)))
+      .catch(error => dispatch(failureNews(error)));
+  }
+    
+}
+
 function reqNews(newsType) {
   return {
   	type: types.FETCHNEWS,
@@ -83,5 +96,12 @@ function failureNews(error) {
   return {
   	type: types.FAILURENEWS,
   	error
+  }
+}
+
+function receiveCompNews(news) {
+  return {
+    type: types.RECEIVE_COMPNEWS,
+    news
   }
 }
