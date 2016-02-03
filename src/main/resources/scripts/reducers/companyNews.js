@@ -5,8 +5,10 @@ import * as types from '../constants/customerActionType';
 const initState = {
 	number: 0,
 	increaseRate: [],
+	companyModel: [],
 	isFetching: false,
-	invalidate: true
+	invalidate: true,
+	fetchType: ''
 }
 
 export function compNews(state = initState, action) {
@@ -14,10 +16,11 @@ export function compNews(state = initState, action) {
 	  case types.REQUEST_COMPANY:
 	    return Object.assign({}, state, {
 	      isFetching: true,
-	      invalidate: true
+	      invalidate: true,
+	      fetchType: action.fetchType
 	    })
 	  case types.RECEIVE_COMPANY:
-	    let {number, increaseRate} = action.entities;
+	    const {number, increaseRate} = action.entities;
 	    return Object.assign({}, state, {
 	    	number,
 	    	increaseRate,
@@ -29,6 +32,12 @@ export function compNews(state = initState, action) {
 	      isFetching: false,
 	      invalidate: true
 	    })
+      case types.FETCHFINANCE:
+        return Object.assign({}, state, {
+          isFetching: false,
+          invalidate: false,
+          companyModel: action.entity
+        })
 	  default:
 	    return state;
 	}
