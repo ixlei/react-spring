@@ -29,6 +29,13 @@ export function news(state = initState, action) {
   	  	isFetching: false,
         validate: false
   	  })
+    case types.RECEIVE_COMPNEWS:
+      const {news:{policy, market}} = action;
+      return Object.assign({}, state, {
+        isFetching: false,
+        validate: true,
+        news: [policy, market]
+      })
   	default:
   	  return state;
   }
