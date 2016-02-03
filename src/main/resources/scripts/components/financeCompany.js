@@ -3,18 +3,26 @@
 import React, {Component, PropTypes} from 'react';
 import {Link} from 'react-router';
 import FormSearch from './FormSearch';
+import {activeIndex} from '../actions/navHeader';
+import {fetchFinance} from '../actions/fetchCompany';
 
 class FinanceCompany extends Component {
+  componentWillMount() {
+  	const {dispatch, params: {index}} = this.props;
+    dispatch(activeIndex(parseInt(index)));
+    dispatch(fetchFinance());
+  }
 
   renderIndustry() {
-  	const {hotIndustry} = this.props;
+  	const hotIndustry = 
+  	[['金融投资', '房地产', '能源', '化学化工', '收藏品', '交通运输']
+  	, ['旅游酒店', '批发零售', '互联网', '交通运输', '旅游酒店']]
   	return (<div id="industry-list">
 	  <span className="hot-push">热门行业:</span>
 		<ul>
 		  {hotIndustry.map((data, index) => (
-            this.renderHotIndustryList(data,index);
-		   ))
-		  }
+            this.renderHotIndustryList(data,index)
+		   ))}
 		</ul>
 	</div>
     )
@@ -32,12 +40,12 @@ class FinanceCompany extends Component {
   }
 
   renderHotArea() {
-  	const {hotArea} = this.props;
+  	const hotArea = [['北京', '上海', '广州', '深圳', '杭州', '成都'], ['大连', '南京', '西安']];
   	return (<div id="area-list">
       <span className="hot-push">热门地区:</span>
       <ul>
         {hotArea.map((data, index) => (
-          this.renderHotAreaList(data,index);
+          this.renderHotAreaList(data,index)
          ))}
       </ul>
      </div>
@@ -61,9 +69,9 @@ class FinanceCompany extends Component {
       <div id="number">
         <form>
           <input type="text" placeholder="￥" name="min"/>
-          <span>-</span>
+          <label>-</label>
           <input type="text" placeholder="￥" name="max"/>
-          <span>单位:万</span>
+          <label>单位:万</label>
           <div>
             <input type="button" value="确定" />
           </div>
@@ -117,11 +125,11 @@ class FinanceCompany extends Component {
   	return (<table>
       <thead>
         <tr>
-          <td>公司logo/照片</td>
-          <td>公司名称</td>
-          <td>主营业务</td>
-          <td>融资需求</td>
-          <td>公司简介</td>
+          <th>公司logo/照片</th>
+          <th>公司名称</th>
+          <th>主营业务</th>
+          <th>融资需求</th>
+          <th>公司简介</th>
         </tr>
       </thead>
       <tbody>
@@ -140,23 +148,25 @@ class FinanceCompany extends Component {
   }
 
   render() {
-  	return (<div id="side-nav">
-  	   <div id="side-nav">
-  	     <FormSearch />
-  	     {this.renderSiteNav()}
-  	   <div>
-  	   <div id="finance-list">
-  	     {this.renderComInfo()}
-  	   </div>
-  	 </div>
+  	return (<div>
+  	  <div id="side-nav">
+  	    <FormSearch />
+  	    {this.renderSiteNav()}
+  	  </div>
+  	  <div id="finance-list">
+  	    {this.renderComInfo()}
+  	  </div>
+  	</div>
   	)
   }
+  	
 }
 
 FinanceCompany.propTypes = {
-  hotIndustry: PropTypes.array.isRequired,
-  hotArea: PropTypes.array.isRequired,
-  comInfo: PropTypes.array.isRequired
+  comInfo: PropTypes.array.isRequired,
+  isFetching: PropTypes.bool.isRequired,
+  invalidate: PropTypes.bool.isRequired,
+  fetchType: PropTypes.string.isRequired
 }
 
 export default FinanceCompany;
