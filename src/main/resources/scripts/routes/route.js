@@ -35,6 +35,7 @@ import ComInews from '../components/comInews';
 import AdminNewsContainer from '../containers/adminNewsContainer';
 import Reservation from '../components/reservation';
 import ToReservationContainer from '../containers/toReservationContainer';
+import FinanceCompanyContainer from '../containers/financeCompanyContainer';
 
 const history = useBasename(createHistory)({
   basename: '/'
@@ -44,17 +45,18 @@ export default class CustomerRoute extends Component {
   render() {
 	return (
 	  <Router history={history}>
-		<Route path="/customer" component={CustomerApp}>
+		 <Route path="/customer" component={CustomerApp}>
 		  <IndexRoute component={CustomerIndex} />
 		  <Route path="index/:index" component={CustomerIndex} />
-          <Route path="invest/:index" component={InvestmentHall} />
-          <Route path="login" component={LoginContainer} />
-          <Route path="reg" component={Reg}>
-            <Route path="investorNext" component={InvestorNextstep} />
-            <Route path="finshInvestor" component={FinshInvestorReg} />
-            <Route path="companyNext" component={CompanyNextContainer}/>
-            <IndexRoute component={RegFormContainer} />
-          </Route>
+      <Route path="invest/:index" component={InvestmentHall} />
+      <Route path="finance/:index" component={FinanceCompanyContainer} />
+      <Route path="login" component={LoginContainer} />
+      <Route path="reg" component={Reg}>
+        <Route path="investorNext" component={InvestorNextstep} />
+        <Route path="finshInvestor" component={FinshInvestorReg} />
+        <Route path="companyNext" component={CompanyNextContainer}/>
+        <IndexRoute component={RegFormContainer} />
+      </Route>
 		</Route>
 		<Route path="/investor" component={InvestorApp}>
 		  <IndexRoute component={InvestorIndexContainer} />
@@ -72,29 +74,29 @@ export default class CustomerRoute extends Component {
 		</Route>
 		<Route path="/company" component={CompanyApp}>
 		  <IndexRoute component={CompanyIndexContainer} />
-          <Route path="index/:index" component={CompanyIndexContainer} />
-          <Route path="corporateModel/:index" component={CorporateModelContainer} />
-          <Route path="pub" component={Compub}>
-            <Route path="finance/:index" component={FinancePubContainer} />
-            <Route path="raisedbonds:/index" component={RaisedbondsContainer} />
-          </Route>
-          <Route path="chat/:index" component={ChatContainer} />
-          <Route path="infoPublish/:index" component={CompanyNewsConatainer}>
-            <Route path="release" component={NewsReleaseContainer}/>
-            <IndexRoute component={NewsReleaseContainer}/>
-          </Route>
-          <Route path="manage/:index/:investType" component={ManageSocket} />
-          <Route path="ifollow" component={IfollowContainer} />
-          <Route path="inews" component={ComInews}>
-            <IndexRoute component={AdminNewsContainer} />
-            <Route path="admin" component={AdminNewsContainer} />
-          </Route>
-          <Route path="reservation" component={Reservation}>
-            <Route path="current" componnet={ToReservationContainer} />
-            <IndexRoute component={ToReservationContainer} />
-          </Route>
+      <Route path="index/:index" component={CompanyIndexContainer} />
+      <Route path="corporateModel/:index" component={CorporateModelContainer} />
+      <Route path="pub" component={Compub}>
+        <Route path="finance/:index" component={FinancePubContainer} />
+        <Route path="raisedbonds:/index" component={RaisedbondsContainer} />
+      </Route>
+      <Route path="chat/:index" component={ChatContainer} />
+      <Route path="infoPublish/:index" component={CompanyNewsConatainer}>
+        <Route path="release" component={NewsReleaseContainer}/>
+        <IndexRoute component={NewsReleaseContainer}/>
+      </Route>
+      <Route path="manage/:index/:investType" component={ManageSocket} />
+      <Route path="ifollow" component={IfollowContainer} />        
+      <Route path="inews" component={ComInews}>
+        <IndexRoute component={AdminNewsContainer} />
+        <Route path="admin" component={AdminNewsContainer} />
+      </Route>
+      <Route path="reservation" component={Reservation}>
+        <Route path="current" componnet={ToReservationContainer} />
+        <IndexRoute component={ToReservationContainer} />
+      </Route>
 		</Route>
-	  </Router>
-	)
+	 </Router>
+	 )
   }
 }
