@@ -3,14 +3,14 @@
 import React, {Component, PropTypes} from 'react';
 import {Link} from 'react-router';
 import {connect} from 'react-redux';
-import {fetchCompNews} from '../actions/fetchCompNews';
+import {fetchCompNews} from '../actions/news';
 import ListNews from '../components/listNews';
 
 class NewsConatiner extends Component {
 
 	componentDidMount() {
-       let {dispatch} = this.props;
-       dispatch(fetchCompNews('any'))
+       const {dispatch} = this.props;
+       dispatch(fetchCompNews('comNews'))
 	}
 
 	render() {
@@ -52,13 +52,15 @@ class NewsConatiner extends Component {
 }
 
 function mapStateToProps(state) {
-	let {getNews} = state;
-	let {invalidate, isFetching, news} = getNews;
-	
-	return {
-		policy: news.policy || [],
-		market: news.market || []
-	}
+  const {news: {validate, isFetching, news, newsType}} = state;
+  let cn = newsType === 'comNews' && validate;
+  const [policy, market] = cn ? news  : [[],[]];
+  return {
+	policy,
+	market,
+	validate,
+	isFetching
+  };
 }
 
 
