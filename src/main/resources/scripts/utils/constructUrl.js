@@ -41,3 +41,7 @@ export function constructReservationUrl(query) {
 export function constructRegNextUrl(userType) {
   return `/customer/reg/${userType}next`;
 }
+
+export function constructFinanceUrl() {
+  return `/customer/finance`;
+}
