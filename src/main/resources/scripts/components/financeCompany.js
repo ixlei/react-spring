@@ -7,7 +7,8 @@ import {activeIndex} from '../actions/navHeader';
 import {fetchFinance} from '../actions/fetchCompany';
 
 class FinanceCompany extends Component {
-  componentWillMount() {
+	
+  componentDidMount() {
   	const {dispatch, params: {index}} = this.props;
     dispatch(activeIndex(parseInt(index)));
     dispatch(fetchFinance());
