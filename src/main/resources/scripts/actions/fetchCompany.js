@@ -23,7 +23,7 @@ export function fetchFinance() {
   	return fetch(constructFinanceUrl())
   	  .then(checkStatus)
   	  .then(response => response.json())
-  	  .then(json => dispatch(fetchFinance(json)))
+  	  .then(json => dispatch(reqFinance(json)))
   	  .then(err => dispatch(failureRequestCompanyNews(err)))
   }
 }
@@ -49,7 +49,7 @@ function failureRequestCompanyNews(entities) {
   };
 }
 
-function fetchFinance(entity) {
+function reqFinance(entity) {
   return {
   	type: types.FETCHFINANCE,
   	entity
