@@ -20,7 +20,7 @@ export function compNews(state = initState, action) {
 	      fetchType: action.fetchType
 	    })
 	  case types.RECEIVE_COMPANY:
-	    const {number, increaseRate} = action.entities;
+	    const {entities: {number, increaseRate}} = action;
 	    return Object.assign({}, state, {
 	    	number,
 	    	increaseRate,
@@ -33,10 +33,11 @@ export function compNews(state = initState, action) {
 	      invalidate: true
 	    })
       case types.FETCHFINANCE:
+        const {entity: {comInfo}} = action;
         return Object.assign({}, state, {
           isFetching: false,
           invalidate: false,
-          companyModel: action.entity
+          companyModel: comInfo
         })
 	  default:
 	    return state;
