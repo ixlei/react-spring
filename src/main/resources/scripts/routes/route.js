@@ -36,6 +36,7 @@ import AdminNewsContainer from '../containers/adminNewsContainer';
 import Reservation from '../components/reservation';
 import ToReservationContainer from '../containers/toReservationContainer';
 import FinanceCompanyContainer from '../containers/financeCompanyContainer';
+import BusinessServiceContainer from '../containers/businessServiceContainer';
 
 const history = useBasename(createHistory)({
   basename: '/'
@@ -50,6 +51,7 @@ export default class CustomerRoute extends Component {
 		  <Route path="index/:index" component={CustomerIndex} />
       <Route path="invest/:index" component={InvestmentHall} />
       <Route path="finance/:index" component={FinanceCompanyContainer} />
+      <Route path="service/:index" component={BusinessServiceContainer} />
       <Route path="login" component={LoginContainer} />
       <Route path="reg" component={Reg}>
         <Route path="investorNext" component={InvestorNextstep} />
