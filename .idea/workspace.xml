@@ -2,14 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dde6da6f-7e4e-482b-99c6-eaeefb36cd36" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/scripts/reducers/companyNews.js" afterPath="$PROJECT_DIR$/src/main/resources/scripts/reducers/companyNews.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/scripts/utils/constructUrl.js" afterPath="$PROJECT_DIR$/src/main/resources/scripts/utils/constructUrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/scripts/constants/customerActionType.js" afterPath="$PROJECT_DIR$/src/main/resources/scripts/constants/customerActionType.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/scripts/actions/fetchCompany.js" afterPath="$PROJECT_DIR$/src/main/resources/scripts/actions/fetchCompany.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/controller/customerController.java" afterPath="$PROJECT_DIR$/src/main/java/controller/customerController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/scripts/components/financeCompany.js" afterPath="$PROJECT_DIR$/src/main/resources/scripts/components/financeCompany.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/scripts/reducers/index.js" afterPath="$PROJECT_DIR$/src/main/resources/scripts/reducers/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/scripts/containers/listNewsContainer.js" afterPath="$PROJECT_DIR$/src/main/resources/scripts/containers/listNewsContainer.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/scripts/routes/route.js" afterPath="$PROJECT_DIR$/src/main/resources/scripts/routes/route.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/scripts/containers/unsliderContainer.js" afterPath="$PROJECT_DIR$/src/main/resources/scripts/containers/unsliderContainer.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="react-spring.iws" />
@@ -34,11 +30,33 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="customerController.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="customerController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/controller/customerController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.53360486">
+              <caret line="102" column="51" selection-start-line="102" selection-start-column="51" selection-end-line="102" selection-end-column="51" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ResponseBody.class" pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/4.0.4.RELEASE/spring-web-4.0.4.RELEASE.jar!/org/springframework/web/bind/annotation/ResponseBody.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-9.24">
+              <caret line="14" column="35" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="35" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/customer/index.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-7.857143">
+              <caret line="10" column="25" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -70,6 +88,25 @@
             <state vertical-scroll-proportion="0.0">
               <caret line="169" column="5" selection-start-line="169" selection-start-column="5" selection-end-line="169" selection-end-column="5" />
               <folding>
+                <element signature="imports" expanded="false" />
+                <element signature="e#566#567#0" expanded="false" />
+                <element signature="e#605#606#0" expanded="false" />
+                <element signature="e#1418#1806#0" expanded="false" />
+                <element signature="e#1805#1806#0" expanded="false" />
+                <element signature="e#2141#2531#0" expanded="false" />
+                <element signature="e#2530#2531#0" expanded="false" />
+                <element signature="e#2877#3267#0" expanded="false" />
+                <element signature="e#3266#3267#0" expanded="false" />
+                <element signature="e#4471#4930#0" expanded="false" />
+                <element signature="e#4929#4930#0" expanded="false" />
+                <element signature="e#5120#5392#0" expanded="false" />
+                <element signature="e#5391#5392#0" expanded="false" />
+                <element signature="e#5940#6518#0" expanded="false" />
+                <element signature="e#6517#6518#0" expanded="false" />
+                <element signature="e#7013#7881#0" expanded="false" />
+                <element signature="e#7880#7881#0" expanded="false" />
+                <element signature="e#8329#9172#0" expanded="false" />
+                <element signature="e#9171#9172#0" expanded="false" />
                 <marker date="1453870881876" expanded="true" signature="651:738" placeholder="insert into ..." />
                 <marker date="1453870881876" expanded="true" signature="1041:1092" placeholder="update compa..." />
                 <marker date="1453870881876" expanded="true" signature="1244:1323" placeholder="select cid, ..companyuser..." />
@@ -89,12 +126,43 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="investorController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="investorController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/controller/investorController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.5667939">
+            <state vertical-scroll-proportion="0.0">
               <caret line="382" column="9" selection-start-line="382" selection-start-column="9" selection-end-line="382" selection-end-column="9" />
-              <folding />
+              <folding>
+                <element signature="imports" expanded="false" />
+                <element signature="e#2415#2431#0" expanded="false" />
+                <element signature="e#2858#2874#0" expanded="false" />
+                <element signature="e#3442#3458#0" expanded="false" />
+                <element signature="e#6830#6831#0" expanded="false" />
+                <element signature="e#6889#6890#0" expanded="false" />
+                <element signature="e#6961#6962#0" expanded="false" />
+                <element signature="e#7014#7015#0" expanded="false" />
+                <element signature="e#7074#7075#0" expanded="false" />
+                <element signature="e#7118#7119#0" expanded="false" />
+                <element signature="e#7462#7478#0" expanded="false" />
+                <element signature="e#9144#9145#0" expanded="false" />
+                <element signature="e#9179#9180#0" expanded="false" />
+                <element signature="e#10303#10319#0" expanded="false" />
+                <element signature="e#11597#11613#0" expanded="false" />
+                <element signature="e#12717#12718#0" expanded="false" />
+                <element signature="e#12754#12755#0" expanded="false" />
+                <element signature="e#13276#13292#0" expanded="false" />
+                <element signature="e#15718#15719#0" expanded="false" />
+                <element signature="e#15758#15759#0" expanded="false" />
+                <element signature="e#15865#15866#0" expanded="false" />
+                <element signature="e#15903#15904#0" expanded="false" />
+                <element signature="e#15978#15979#0" expanded="false" />
+                <element signature="e#16018#16019#0" expanded="false" />
+                <element signature="e#16093#16094#0" expanded="false" />
+                <element signature="e#16133#16134#0" expanded="false" />
+                <element signature="e#16188#16189#0" expanded="false" />
+                <element signature="e#16217#16218#0" expanded="false" />
+                <element signature="e#16363#16379#0" expanded="false" />
+                <element signature="e#16738#16754#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -121,7 +189,6 @@
         <option value="$PROJECT_DIR$/src/main/java/service/authority.java" />
         <option value="$PROJECT_DIR$/src/main/java/controller/indexController.java" />
         <option value="$PROJECT_DIR$/src/main/java/dao/investorDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/controller/customerController.java" />
         <option value="$PROJECT_DIR$/src/main/java/controller/investorController.java" />
         <option value="$PROJECT_DIR$/src/main/java/config/sessionConfig.java" />
         <option value="$PROJECT_DIR$/src/main/java/config/sessionInitializer.java" />
@@ -129,6 +196,7 @@
         <option value="$PROJECT_DIR$/src/main/java/dao/corporateModel.java" />
         <option value="$PROJECT_DIR$/src/main/java/dao/companyuserDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/controller/companyController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/controller/customerController.java" />
       </list>
     </option>
   </component>
@@ -271,6 +339,40 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="investor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="react-spring" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="react-spring" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WEB-INF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="customer" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -516,9 +618,9 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1068,11 +1170,14 @@
       <workItem from="1454481898002" duration="1046000" />
       <workItem from="1454523886853" duration="1638000" />
       <workItem from="1454542290707" duration="116000" />
+      <workItem from="1454543328788" duration="765000" />
+      <workItem from="1454544182845" duration="76000" />
+      <workItem from="1454544810412" duration="2477000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="135462000" />
+    <option name="totallyTimeSpent" value="138780000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1096,7 +1201,7 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32807216" sideWeight="0.49570817" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24759358" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32919955" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.38153505" sideWeight="0.8540773" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.38153505" sideWeight="0.8540773" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32919955" sideWeight="0.49785408" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21122995" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -1171,7 +1276,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1378,20 +1485,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/customer/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/4.0.4.RELEASE/spring-web-4.0.4.RELEASE.jar!/org/springframework/web/bind/annotation/ResponseBody.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/dao/userService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1469,19 +1562,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controller/customerController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/dao/companyuserDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="169" column="5" selection-start-line="169" selection-start-column="5" selection-end-line="169" selection-end-column="5" />
           <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#566#567#0" expanded="false" />
+            <element signature="e#605#606#0" expanded="false" />
+            <element signature="e#1418#1806#0" expanded="false" />
+            <element signature="e#1805#1806#0" expanded="false" />
+            <element signature="e#2141#2531#0" expanded="false" />
+            <element signature="e#2530#2531#0" expanded="false" />
+            <element signature="e#2877#3267#0" expanded="false" />
+            <element signature="e#3266#3267#0" expanded="false" />
+            <element signature="e#4471#4930#0" expanded="false" />
+            <element signature="e#4929#4930#0" expanded="false" />
+            <element signature="e#5120#5392#0" expanded="false" />
+            <element signature="e#5391#5392#0" expanded="false" />
+            <element signature="e#5940#6518#0" expanded="false" />
+            <element signature="e#6517#6518#0" expanded="false" />
+            <element signature="e#7013#7881#0" expanded="false" />
+            <element signature="e#7880#7881#0" expanded="false" />
+            <element signature="e#8329#9172#0" expanded="false" />
+            <element signature="e#9171#9172#0" expanded="false" />
             <marker date="1453870881876" expanded="true" signature="651:738" placeholder="insert into ..." />
             <marker date="1453870881876" expanded="true" signature="1041:1092" placeholder="update compa..." />
             <marker date="1453870881876" expanded="true" signature="1244:1323" placeholder="select cid, ..companyuser..." />
@@ -1500,14 +1604,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controller/companyController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="66" column="40" selection-start-line="66" selection-start-column="40" selection-end-line="66" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/investor/push.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1518,9 +1614,74 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/controller/investorController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.5667939">
+        <state vertical-scroll-proportion="0.0">
           <caret line="382" column="9" selection-start-line="382" selection-start-column="9" selection-end-line="382" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#2415#2431#0" expanded="false" />
+            <element signature="e#2858#2874#0" expanded="false" />
+            <element signature="e#3442#3458#0" expanded="false" />
+            <element signature="e#6830#6831#0" expanded="false" />
+            <element signature="e#6889#6890#0" expanded="false" />
+            <element signature="e#6961#6962#0" expanded="false" />
+            <element signature="e#7014#7015#0" expanded="false" />
+            <element signature="e#7074#7075#0" expanded="false" />
+            <element signature="e#7118#7119#0" expanded="false" />
+            <element signature="e#7462#7478#0" expanded="false" />
+            <element signature="e#9144#9145#0" expanded="false" />
+            <element signature="e#9179#9180#0" expanded="false" />
+            <element signature="e#10303#10319#0" expanded="false" />
+            <element signature="e#11597#11613#0" expanded="false" />
+            <element signature="e#12717#12718#0" expanded="false" />
+            <element signature="e#12754#12755#0" expanded="false" />
+            <element signature="e#13276#13292#0" expanded="false" />
+            <element signature="e#15718#15719#0" expanded="false" />
+            <element signature="e#15758#15759#0" expanded="false" />
+            <element signature="e#15865#15866#0" expanded="false" />
+            <element signature="e#15903#15904#0" expanded="false" />
+            <element signature="e#15978#15979#0" expanded="false" />
+            <element signature="e#16018#16019#0" expanded="false" />
+            <element signature="e#16093#16094#0" expanded="false" />
+            <element signature="e#16133#16134#0" expanded="false" />
+            <element signature="e#16188#16189#0" expanded="false" />
+            <element signature="e#16217#16218#0" expanded="false" />
+            <element signature="e#16363#16379#0" expanded="false" />
+            <element signature="e#16738#16754#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/4.0.4.RELEASE/spring-web-4.0.4.RELEASE.jar!/org/springframework/web/bind/annotation/ResponseBody.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.24">
+          <caret line="14" column="35" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="35" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/customer/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.857143">
+          <caret line="10" column="25" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controller/companyController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="66" column="40" selection-start-line="66" selection-start-column="40" selection-end-line="66" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controller/customerController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.53360486">
+          <caret line="102" column="51" selection-start-line="102" selection-start-column="51" selection-end-line="102" selection-end-column="51" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

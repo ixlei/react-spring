@@ -1,10 +1,7 @@
 package controller;
 
 import java.io.File;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 import javax.mail.Multipart;
 import javax.servlet.http.HttpServletRequest;
@@ -51,9 +48,12 @@ public class customerController {
 	}
 
 	@RequestMapping("/finance")
-	public String showCompany(Map<String, Integer> model) {
-		model.put("flag", 1);
-		return "customer/finacing-company";
+	@ResponseBody
+	public Object showCompany() {
+		Map<String, Object> map = new HashMap<String, Object>();
+		ArrayList<Object> list = new ArrayList<Object>();
+		map.put("comInfo", list);
+		return map;
 	}
 	
 	@ResponseBody

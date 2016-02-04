@@ -5,6 +5,7 @@ import {connect} from 'react-redux';
 import Unslider from '../components/unslider';
 
 class UnsliderContainer extends Component {
+
   render() {
     return (
 	  <Unslider {...this.props} />
@@ -14,8 +15,8 @@ class UnsliderContainer extends Component {
 
 function mapStateToProps(state) {
 	return {
-		list: ['banner1.jpg', 'banner2.png', 'banner3.png'],
-		arrowImgUrl: ['btn-pre.png', 'btn-next.png']
+	  list: ['banner1.jpg', 'banner2.png', 'banner3.png'],
+	  arrowImgUrl: ['btn-pre.png', 'btn-next.png']
 	}
 }
 
