@@ -1,8 +1,8 @@
 'use strict';
 
 import React, {Component,PropTypes} from 'react';
-import {connect} from 'react-redux';
 import CompanyNavContainer from '../containers/companyNavContainer';
+import Footer from '../components/footer';
 
 class CompanyApp extends Component {
   render() {
@@ -11,6 +11,7 @@ class CompanyApp extends Component {
   	  <div id="main">
         {this.props.children}
       </div>
+      <Footer />
   	 </div>
   	)
   }
