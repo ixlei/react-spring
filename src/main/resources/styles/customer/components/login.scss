@@ -168,33 +168,8 @@
     width: 70px;
 }
 
-html,
-body {
-    height: 100%;
-}
-
 #auth img {
     height: 35px;
-}
-
-#footer {
-    width: 100%;
-    background-color: #2A324B;
-}
-
-#main {
-    min-height: 100%;
-    margin-bottom: -80px;
-}
-
-#main:after {
-    content: "";
-    display: block;
-}
-
-#footer,
-#main:after {
-    height: 80px;
 }
 
 #feedback {

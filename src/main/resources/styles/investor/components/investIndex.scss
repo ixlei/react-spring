@@ -1,18 +1,7 @@
-@charset "utf-8";
-#main {
-    margin: 0;
-    padding: 0;
-}
 
-#content,
 #invest-center,
 #news {
-    width: 820px;
-    margin: 0 auto;
-}
-
-#content {
-    padding-bottom: 50px;
+   width: 100%;
 }
 
 #first-glance {
@@ -28,8 +17,7 @@
 }
 
 #first-glance ul,
-#first-glance ul li,
-#main {
+#first-glance ul li{
     width: 100%;
     height: 100%;
 }

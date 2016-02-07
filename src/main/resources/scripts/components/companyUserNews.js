@@ -27,7 +27,7 @@ class CompanyUserNews extends Component {
   }
   
   render() {
-  	return (<div className="main">
+  	return (<div id="content">
       {this.renderNewsNav()}
       <div className="main-cla fl">
       <div className="main_head">

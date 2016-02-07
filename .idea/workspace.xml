@@ -2,10 +2,35 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dde6da6f-7e4e-482b-99c6-eaeefb36cd36" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/controller/customerController.java" afterPath="$PROJECT_DIR$/src/main/java/controller/customerController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/styles/common/components/base.scss" afterPath="$PROJECT_DIR$/src/main/resources/styles/common/components/base.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/scripts/components/businessService.js" afterPath="$PROJECT_DIR$/src/main/resources/scripts/components/businessService.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/scripts/components/chat.js" afterPath="$PROJECT_DIR$/src/main/resources/scripts/components/chat.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/styles/common/components/chat.scss" afterPath="$PROJECT_DIR$/src/main/resources/styles/common/components/chat.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/styles/common/common.scss" afterPath="$PROJECT_DIR$/src/main/resources/styles/common/common.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/scripts/containers/compNews.js" afterPath="$PROJECT_DIR$/src/main/resources/scripts/containers/compNews.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/scripts/components/companyUserNews.js" afterPath="$PROJECT_DIR$/src/main/resources/scripts/components/companyUserNews.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/scripts/components/corporateModel.js" afterPath="$PROJECT_DIR$/src/main/resources/scripts/components/corporateModel.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/scripts/components/countScroll.js" afterPath="$PROJECT_DIR$/src/main/resources/scripts/components/countScroll.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/styles/customer/components/customerHeader.scss" afterPath="$PROJECT_DIR$/src/main/resources/styles/customer/components/customerHeader.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/scripts/containers/customerIndex.js" afterPath="$PROJECT_DIR$/src/main/resources/scripts/containers/customerIndex.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/styles/customer/components/customerIndex.scss" afterPath="$PROJECT_DIR$/src/main/resources/styles/customer/components/customerIndex.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/scripts/components/debtPub.js" afterPath="$PROJECT_DIR$/src/main/resources/scripts/components/debtPub.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/scripts/components/financeCompany.js" afterPath="$PROJECT_DIR$/src/main/resources/scripts/components/financeCompany.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/scripts/routes/route.js" afterPath="$PROJECT_DIR$/src/main/resources/scripts/routes/route.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/scripts/containers/unsliderContainer.js" afterPath="$PROJECT_DIR$/src/main/resources/scripts/containers/unsliderContainer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/styles/customer/components/financeCompany.scss" afterPath="$PROJECT_DIR$/src/main/resources/styles/customer/components/financeCompany.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/styles/customer/components/finshReg.scss" afterPath="$PROJECT_DIR$/src/main/resources/styles/customer/components/finshReg.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/scripts/components/inews.js" afterPath="$PROJECT_DIR$/src/main/resources/scripts/components/inews.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/styles/investor/components/inews.scss" afterPath="$PROJECT_DIR$/src/main/resources/styles/investor/components/inews.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/styles/investor/components/informationIssue.scss" afterPath="$PROJECT_DIR$/src/main/resources/styles/investor/components/informationIssue.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/styles/investor/components/investIndex.scss" afterPath="$PROJECT_DIR$/src/main/resources/styles/investor/components/investIndex.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/styles/investor/components/investmentHall.scss" afterPath="$PROJECT_DIR$/src/main/resources/styles/investor/components/investmentHall.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/scripts/components/investorTitle.js" afterPath="$PROJECT_DIR$/src/main/resources/scripts/components/investorTitle.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/styles/customer/components/login.scss" afterPath="$PROJECT_DIR$/src/main/resources/styles/customer/components/login.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/scripts/components/manageSiteNav.js" afterPath="$PROJECT_DIR$/src/main/resources/scripts/components/manageSiteNav.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/scripts/components/newsCenter.js" afterPath="$PROJECT_DIR$/src/main/resources/scripts/components/newsCenter.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/styles/customer/components/reg.scss" afterPath="$PROJECT_DIR$/src/main/resources/styles/customer/components/reg.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/scripts/components/regStep.js" afterPath="$PROJECT_DIR$/src/main/resources/scripts/components/regStep.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/styles/investor/components/socketManage.scss" afterPath="$PROJECT_DIR$/src/main/resources/styles/investor/components/socketManage.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/styles/investor/components/userInfo.scss" afterPath="$PROJECT_DIR$/src/main/resources/styles/investor/components/userInfo.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="react-spring.iws" />
@@ -33,8 +58,8 @@
       <file leaf-file-name="customerController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/controller/customerController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.53360486">
-              <caret line="102" column="51" selection-start-line="102" selection-start-column="51" selection-end-line="102" selection-end-column="51" />
+            <state vertical-scroll-proportion="-2.1240458">
+              <caret line="252" column="66" selection-start-line="252" selection-start-column="66" selection-end-line="252" selection-end-column="66" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -45,7 +70,7 @@
       <file leaf-file-name="ResponseBody.class" pinned="false" current-in-tab="false">
         <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/4.0.4.RELEASE/spring-web-4.0.4.RELEASE.jar!/org/springframework/web/bind/annotation/ResponseBody.class">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.24">
+            <state vertical-scroll-proportion="0.0">
               <caret line="14" column="35" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="35" />
               <folding />
             </state>
@@ -55,7 +80,7 @@
       <file leaf-file-name="index.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/customer/index.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.857143">
+            <state vertical-scroll-proportion="0.0">
               <caret line="10" column="25" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
               <folding />
             </state>
@@ -67,7 +92,41 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="66" column="40" selection-start-line="66" selection-start-column="40" selection-end-line="66" selection-end-column="40" />
-              <folding />
+              <folding>
+                <element signature="imports" expanded="false" />
+                <element signature="e#3049#3050#0" expanded="false" />
+                <element signature="e#3092#3093#0" expanded="false" />
+                <element signature="e#3148#3149#0" expanded="false" />
+                <element signature="e#3206#3207#0" expanded="false" />
+                <element signature="e#3278#3279#0" expanded="false" />
+                <element signature="e#3322#3323#0" expanded="false" />
+                <element signature="e#3598#3614#0" expanded="false" />
+                <element signature="e#4091#4107#0" expanded="false" />
+                <element signature="e#7128#7144#0" expanded="false" />
+                <element signature="e#7646#7647#0" expanded="false" />
+                <element signature="e#7669#7670#0" expanded="false" />
+                <element signature="e#7737#7738#0" expanded="false" />
+                <element signature="e#7781#7782#0" expanded="false" />
+                <element signature="e#7855#7856#0" expanded="false" />
+                <element signature="e#7894#7895#0" expanded="false" />
+                <element signature="e#8864#8880#0" expanded="false" />
+                <element signature="e#11774#11775#0" expanded="false" />
+                <element signature="e#11819#11820#0" expanded="false" />
+                <element signature="e#11901#11902#0" expanded="false" />
+                <element signature="e#11944#11945#0" expanded="false" />
+                <element signature="e#12028#12029#0" expanded="false" />
+                <element signature="e#12072#12073#0" expanded="false" />
+                <element signature="e#12120#12121#0" expanded="false" />
+                <element signature="e#12155#12156#0" expanded="false" />
+                <element signature="e#12356#12372#0" expanded="false" />
+                <element signature="e#13074#13075#0" expanded="false" />
+                <element signature="e#13105#13106#0" expanded="false" />
+                <element signature="e#13174#13175#0" expanded="false" />
+                <element signature="e#13208#13209#0" expanded="false" />
+                <element signature="e#13372#13388#0" expanded="false" />
+                <element signature="e#13795#13811#0" expanded="false" />
+                <element signature="e#14153#14169#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -264,6 +323,8 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -618,8 +679,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -1172,12 +1231,15 @@
       <workItem from="1454542290707" duration="116000" />
       <workItem from="1454543328788" duration="765000" />
       <workItem from="1454544182845" duration="76000" />
-      <workItem from="1454544810412" duration="2477000" />
+      <workItem from="1454544810412" duration="3709000" />
+      <workItem from="1454607006016" duration="1191000" />
+      <workItem from="1454650382140" duration="1176000" />
+      <workItem from="1454795891282" duration="926000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="138780000" />
+    <option name="totallyTimeSpent" value="143305000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1201,7 +1263,7 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32807216" sideWeight="0.49570817" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24759358" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32919955" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.38153505" sideWeight="0.8540773" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.38153505" sideWeight="0.8540773" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32919955" sideWeight="0.49785408" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21122995" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -1653,7 +1715,7 @@
     </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/4.0.4.RELEASE/spring-web-4.0.4.RELEASE.jar!/org/springframework/web/bind/annotation/ResponseBody.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.24">
+        <state vertical-scroll-proportion="0.0">
           <caret line="14" column="35" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="35" />
           <folding />
         </state>
@@ -1661,7 +1723,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/customer/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.857143">
+        <state vertical-scroll-proportion="0.0">
           <caret line="10" column="25" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
           <folding />
         </state>
@@ -1671,14 +1733,48 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="66" column="40" selection-start-line="66" selection-start-column="40" selection-end-line="66" selection-end-column="40" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#3049#3050#0" expanded="false" />
+            <element signature="e#3092#3093#0" expanded="false" />
+            <element signature="e#3148#3149#0" expanded="false" />
+            <element signature="e#3206#3207#0" expanded="false" />
+            <element signature="e#3278#3279#0" expanded="false" />
+            <element signature="e#3322#3323#0" expanded="false" />
+            <element signature="e#3598#3614#0" expanded="false" />
+            <element signature="e#4091#4107#0" expanded="false" />
+            <element signature="e#7128#7144#0" expanded="false" />
+            <element signature="e#7646#7647#0" expanded="false" />
+            <element signature="e#7669#7670#0" expanded="false" />
+            <element signature="e#7737#7738#0" expanded="false" />
+            <element signature="e#7781#7782#0" expanded="false" />
+            <element signature="e#7855#7856#0" expanded="false" />
+            <element signature="e#7894#7895#0" expanded="false" />
+            <element signature="e#8864#8880#0" expanded="false" />
+            <element signature="e#11774#11775#0" expanded="false" />
+            <element signature="e#11819#11820#0" expanded="false" />
+            <element signature="e#11901#11902#0" expanded="false" />
+            <element signature="e#11944#11945#0" expanded="false" />
+            <element signature="e#12028#12029#0" expanded="false" />
+            <element signature="e#12072#12073#0" expanded="false" />
+            <element signature="e#12120#12121#0" expanded="false" />
+            <element signature="e#12155#12156#0" expanded="false" />
+            <element signature="e#12356#12372#0" expanded="false" />
+            <element signature="e#13074#13075#0" expanded="false" />
+            <element signature="e#13105#13106#0" expanded="false" />
+            <element signature="e#13174#13175#0" expanded="false" />
+            <element signature="e#13208#13209#0" expanded="false" />
+            <element signature="e#13372#13388#0" expanded="false" />
+            <element signature="e#13795#13811#0" expanded="false" />
+            <element signature="e#14153#14169#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/controller/customerController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.53360486">
-          <caret line="102" column="51" selection-start-line="102" selection-start-column="51" selection-end-line="102" selection-end-column="51" />
+        <state vertical-scroll-proportion="-2.1240458">
+          <caret line="252" column="66" selection-start-line="252" selection-start-column="66" selection-end-line="252" selection-end-column="66" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

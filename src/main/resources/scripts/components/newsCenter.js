@@ -86,7 +86,7 @@ export default class NewsCenter extends Component {
   }
 
   render() {
-  	return (<div>
+  	return (<div id="content">
   	  <div className="swap">
   	    {this.renderLeftNav()}
   	  </div>

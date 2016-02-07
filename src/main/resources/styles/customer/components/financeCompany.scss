@@ -1,83 +1,25 @@
-#main,
+
 #side-nav {
+    position: relative;
+    margin-top: 25px;
+    height: 45px;
     width: 100%;
 }
 
-#main,
-#content {
-    margin: 0 auto;
-}
-
-#content {
-    width: 820px;
-    padding: 0;
-}
-
-#side-nav {
-    position: relative;
-    margin-top: 15px;
-    height: 45px;
-}
-
-#search-nav,
 #filter-nav {
     position: relative;
-    float: left;
+    float: right;
 }
 
-#search-nav {
-    margin-top: 10px;
-    height: 45px;
-    width: 50%;
+#side-nav #searchForm {
+  width: 280px;
+  float: left;
 }
 
-#search-area,
-#search-text {
-    display: inline-block;
-    overflow: hidden;
-}
-
-#search-nav form {
-    height: 30px;
-}
-
-#search-text {
-    width: 100px;
-    height: 25px;
-    line-height: 25px;
-    text-align: right;
-}
-
-#search-in {
-    position: relative;
-    margin: 0;
-    width: 220px;
-    height: 25px;
-}
-
-#search-area input {
-    float: left;
-    position: relative;
-}
-
-#search-btn {
-    margin: 0;
-    left: -1px;
-    height: 30px;
-}
-
-ul {
-    list-style: none;
-}
 
 #filter-nav ul {
     position: relative;
     height: 45px;
-    margin: 0;
-}
-
-.filter-item-list:nth-child(1) {
-    margin-left: -40px;
 }
 
 #filter-nav ul li {
@@ -89,18 +31,7 @@ ul {
 #number-in {
     position: absolute;
     display: none;
-}
-
-#filter-nav a {
-    color: #11192E;
-}
-
-#filter-nav {
-    width: 50%;
-}
-
-.filter-item-list {
-    width: 36%;
+    width: 300px;
 }
 
 .filter-item {
@@ -108,13 +39,20 @@ ul {
     display: inline-block;
     height: 25px;
     vertical-align: middle;
-    margin-top: 10px;
     line-height: 25px;
     text-align: center;
 }
 
 .filter-item img {
     width: 15px;
+}
+
+.filter-nav--item--list {
+    margin-right: 60px;
+}
+
+.filter-nav--item--list:nth-of-type(3) {
+  margin-right: 0;
 }
 
 .filter-item a {
@@ -125,17 +63,17 @@ ul {
     padding-left: 5px;
 }
 
-.filter-item-list:hover #industry-layer,
-.filter-item-list:hover #area-layer {
+
+.filter-nav--item--list:hover #industry-layer,
+.filter-nav--item--list:hover #area-layer {
     display: block;
     z-index: 1000;
-    width: 100%;
     left: 0;
     border: 1px solid #2A314B;
     background-color: #FFFFFF;
 }
 
-.filter-item-list:hover #number-in {
+.filter-nav--item--list:hover #number-in {
     display: block;
     z-index: 2;
     border: 1px solid #2A314B;
