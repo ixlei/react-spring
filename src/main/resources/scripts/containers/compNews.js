@@ -16,16 +16,14 @@ class CompNewsContainer extends Component {
 	  let {rate, count} = this.props;
 	  return (<div id="data-show">
 	    <div id="reg-num">
-		  <p className="title">当前注册企业总数</p>
-	    　<p id="num-show">
+		  <p className="data-show--title">当前注册企业总数</p>
+	    　<div id="num-show">
 		  　<CountScroll count={count} />
 		    <span>家</span>
-		　</p>
+		　</div>
 		</div>
 		<div id="rise-speed">
-		　<div className="title">
-		    <p>注册企业增长情况</p>
-		  </div>
+		  <p className="data-show--title">注册企业增长情况</p>
 		  <div id="show-area">
 			<IncreaseRate rate={rate}/>
 		  </div>

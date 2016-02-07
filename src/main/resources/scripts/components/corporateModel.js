@@ -73,6 +73,7 @@ export default class CorporateModel extends Component {
   	return (
   	  <div id="selectForm">
   	    <FormSelect 
+          name="type"
   	      options={options} 
   	      labelText="类型" />
   	  </div>
