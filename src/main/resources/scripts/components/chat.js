@@ -181,7 +181,7 @@ export default class Chat extends Component {
   }
 
   render() {
-  	return (<div id="chat-content">
+  	return (<div id="content">
   	  <div id="chat-first-galance">
   	    {this.renderTitle()}
   	    {this.renderToList()}
