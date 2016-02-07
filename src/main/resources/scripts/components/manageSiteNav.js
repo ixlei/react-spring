@@ -122,7 +122,7 @@ export default class ManageSiteNav extends Component {
   render() {
     const {sockets, userType, params:{investType}} = this.props;
     const socketProps = {sockets, userType, investType};
-    return (<div id="main">
+    return (<div id="content">
       <div id="nav-boder">
       {this.renderMangeNav()}
       <div id="selected1">
