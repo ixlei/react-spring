@@ -94,7 +94,7 @@ class FinanceCompany extends Component {
   renderSiteNav() {
   	return (<div id="filter-nav">
   	  <ul>
-  	    <li className="filter-item-list">
+  	    <li className="filter-nav--item--list">
   	      {this.renderDropUi('行业')}
   	      <div id="industry-layer">
             <div id="industry-search">
@@ -103,7 +103,7 @@ class FinanceCompany extends Component {
             {this.renderIndustry()}
   	      </div>
   	    </li>
-  	    <li className="filter-item-list">
+  	    <li className="filter-nav--item--list">
           {this.renderDropUi('地区')}
           <div id="area-layer">
             <div id="area-layer">
@@ -112,7 +112,7 @@ class FinanceCompany extends Component {
             {this.renderHotArea()}
           </div>
   	    </li>
-  	    <li className="filter-item-list">
+  	    <li className="filter-nav--item--list">
   	      {this.renderDropUi('融资额')}
   	      {this.renderNumIn()}
   	    </li>
@@ -149,7 +149,7 @@ class FinanceCompany extends Component {
   }
 
   render() {
-  	return (<div>
+  	return (<div id="content">
   	  <div id="side-nav">
   	    <FormSearch />
   	    {this.renderSiteNav()}

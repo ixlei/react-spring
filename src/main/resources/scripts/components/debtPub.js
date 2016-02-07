@@ -46,7 +46,7 @@ export default class DebtPub extends Component {
   }
 
   render() {
-  	return (<div id="main_body_m">
+  	return (<div id="content">
   	  {this.renderLeftNav()}
   	  <div id="swap">
   	    {this.rederUserInfo()}

@@ -25,11 +25,11 @@ export default class InvestotTitle extends Component {
 		let defaultProps = this.defaultProps();
 		return (
 			<ul id="invest-list">
-			  <li className="list">
+			  <li className="invest-list--list">
 			    <p>私募股权</p>
 			    <ListSpanItem list={defaultProps.ll} />
 			  </li>
-			  <li>
+			  <li className="invest-list--list">
 			    <p>私募债</p>
 			    <ListSpanItem list={defaultProps.lr} />
 			  </li>

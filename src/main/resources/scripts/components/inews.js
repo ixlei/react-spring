@@ -25,7 +25,7 @@ export default class Inews extends Component {
   render() {
     const {inews} = this.props;
   	return (
-  	  <div id="inews-main">
+  	  <div id="content">
   	  {this.renderLeftNav()}
   	  <FormSearch />
   	  <AdminNews inews={inews}/>
