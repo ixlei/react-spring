@@ -58,8 +58,8 @@ class BusinessService extends Component {
   }
 
   render() {
-    return (<div>
-      <unsliderContainer />
+    return (<div id="content">
+      <UnsliderContainer />
       <div id="service-item">
        {this.renderManagement()}
        {this.renderEsignature()}
