@@ -4,6 +4,7 @@ import React, {Component, PropTypes} from 'react';
 import {Link} from 'react-router';
 import {fetchFriends} from '../actions/user';
 import {activeIndex} from '../actions/navHeader';
+import {isArray} from '../utils/varType';
 
 export default class Chat extends Component {
   
@@ -90,7 +91,7 @@ export default class Chat extends Component {
       if(index > 0 && index % 6 === 0) {
         i++
       }
-      if(!(dyadicArr[i] instanceof Array)) {
+      if(!isArray(dyadicArr[i])) {
         dyadicArr[i] = [];
       }
       dyadicArr[i].push(data);
