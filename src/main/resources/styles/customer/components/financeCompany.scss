@@ -1,29 +1,45 @@
-
 #side-nav {
-    position: relative;
     margin-top: 25px;
-    height: 45px;
-    width: 100%;
 }
 
-#filter-nav {
-    position: relative;
+#side-nav > div,
+#filter-nav ul li {
+    float: left;
+}
+
+#side-nav #filter-nav {
     float: right;
 }
 
 #side-nav #searchForm {
-  width: 280px;
-  float: left;
+    width: 280px;
 }
 
+#industry-layer .hot-push + ul {
+    height: 100px;
+}
 
-#filter-nav ul {
+#filter-nav #searchForm {
+    left: 10px;
+}
+
+#filter-nav ul,
+#side-nav #filter-nav,
+#side-nav,
+#filter-nav #searchForm,
+.filter-item,
+.hot-push,
+#industry-list,
+#area-list,
+#number,
+#finance-list,
+#number input[type="button"] {
     position: relative;
-    height: 45px;
 }
 
-#filter-nav ul li {
-    float: left;
+#industry-layer,
+#area-layer {
+    left: 0
 }
 
 #industry-layer,
@@ -31,11 +47,10 @@
 #number-in {
     position: absolute;
     display: none;
-    width: 300px;
+    width: 350px;
 }
 
 .filter-item {
-    position: relative;
     display: inline-block;
     height: 25px;
     vertical-align: middle;
@@ -48,108 +63,92 @@
 }
 
 .filter-nav--item--list {
-    margin-right: 60px;
+    margin-right: 90px;
 }
 
 .filter-nav--item--list:nth-of-type(3) {
-  margin-right: 0;
-}
-
-.filter-item a {
-    padding-left: 20px;
+    margin-right: 0;
 }
 
 .filter-item img {
     padding-left: 5px;
 }
 
-
 .filter-nav--item--list:hover #industry-layer,
-.filter-nav--item--list:hover #area-layer {
-    display: block;
-    z-index: 1000;
-    left: 0;
-    border: 1px solid #2A314B;
-    background-color: #FFFFFF;
-}
-
+.filter-nav--item--list:hover #area-layer,
 .filter-nav--item--list:hover #number-in {
     display: block;
     z-index: 2;
-    border: 1px solid #2A314B;
+    border: 1px solid #E5E5E5;
     background-color: #FFFFFF;
+    border-radius: 5px;
 }
 
 #industry-search,
 #area-search {
-    margin-top: 10px;
-    width: 100%;
-}
-
-#industry-search form,
-#area-search form {
-    width: 360px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-#industry-search input[type="text"],
-#area-search input[type="text"] {
-    width: 200px;
-    height: 25px;
-}
-
-#industry-search input[type="button"],
-#area-search input[type="button"] {
-    height: 32px;
-    margin-left: -10px;
-}
-
-#industry-search input,
-#area-search input {
-    position: relative;
-    z-index: 3;
+    margin: 10px 0 0;
 }
 
 .hot-push {
-    display: inline-block;
-    margin-top: 10px;
-    padding-left: 20px;
+    width: 80px;
+    height: 25px;
+    line-height: 25px;
+    text-align: left;
 }
 
-#industry-list ul li,
-#area-list ul li {
-    height: 30px;
-    width: 100%;
+#industry-list,
+#area-list,
+#number-in .hot-push {
+    left: 10px;
+    top: 10px;
 }
 
 #industry-list ul li span,
 #area-list ul li span {
-    display: inline-block;
-    width: 60px;
     float: left;
-    text-align: center;
-    height: 30px;
-    line-height: 30px;
+    height: 22px;
+    line-height: 22px;
+    padding-right: 10px;
+    margin: 0 12px 0 0;
+    color: #767b91;
 }
 
 #number-in {
-    width: 310px;
-    left: 100px;
+    width: 300px;
+    right: 0;
 }
 
 #number-in input[type="text"] {
-    width: 60px;
+    width: 80px;
+    height: 23px;
+    padding: 2px 3px;
+    background-color: none
 }
 
 #number {
-    width: 300px;
-    margin-left: 80px;
+    left: 30px;
+    top: 10px;
+    height: 75px;
 }
 
+#number input {
+    border-color: #C9C9C9;
+    box-sizing: border-box;
+    color: #4B4B94;
+}
+
+#number input[type="button"],
 #number input[type="button"] {
-    margin-top: 10px;
-    margin-left: 160px;
+    float: right;
+    clear: both;
+    right: 80px;
+    height: 22px;
+    top: 15px;
+}
+
+#number form label {
+    padding: 0 10px;
+    vertical-align: middle;
 }
 
 #fanicing-list-title {
@@ -175,9 +174,8 @@
     left: 50px;
 }
 
-#fanicing-list ul li {
-    overflow: hidden;
-    margin-left: -40px;
+#area-list .hot-push + ul {
+    height: 80px;
 }
 
 .other,
@@ -206,4 +204,12 @@
 .introduction p {
     height: 120px;
     padding-top: 10px;
+}
+
+#finance-list {
+    top: 40px;
+}
+
+#finance-list table {
+    width: 100%;
 }
