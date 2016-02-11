@@ -15,11 +15,14 @@ class FinanceCompany extends Component {
   }
 
   renderIndustry() {
+
   	const hotIndustry = 
-  	[['金融投资', '房地产', '能源', '化学化工', '收藏品', '交通运输']
-  	, ['旅游酒店', '批发零售', '互联网', '交通运输', '旅游酒店']]
+  	[['金融投资', '房地产', '能源', '化学化工']
+  	, ['旅游酒店', '批发零售', '互联网', '交通运输']
+    , ['收藏品', '交通运输']];
+
   	return (<div id="industry-list">
-	  <span className="hot-push">热门行业:</span>
+	  <p className="hot-push">热门行业:</p>
 		<ul>
 		  {hotIndustry.map((data, index) => (
             this.renderHotIndustryList(data,index)
@@ -43,7 +46,7 @@ class FinanceCompany extends Component {
   renderHotArea() {
   	const hotArea = [['北京', '上海', '广州', '深圳', '杭州', '成都'], ['大连', '南京', '西安']];
   	return (<div id="area-list">
-      <span className="hot-push">热门地区:</span>
+      <p className="hot-push">热门地区:</p>
       <ul>
         {hotArea.map((data, index) => (
           this.renderHotAreaList(data,index)
@@ -66,7 +69,7 @@ class FinanceCompany extends Component {
 
   renderNumIn() {
   	return (<div id="number-in">
-      <span className="hot-push">融资额:</span>
+      <p className="hot-push">融资额:</p>
       <div id="number">
         <form>
           <input type="text" placeholder="￥" name="min"/>
@@ -106,7 +109,7 @@ class FinanceCompany extends Component {
   	    <li className="filter-nav--item--list">
           {this.renderDropUi('地区')}
           <div id="area-layer">
-            <div id="area-layer">
+            <div id="area-search">
               <FormSearch />
             </div>
             {this.renderHotArea()}
