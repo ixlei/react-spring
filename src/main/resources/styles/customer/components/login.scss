@@ -5,11 +5,9 @@
         float: left;
         width: 48%;
     }
-
     #first-glance ul {
         margin: 10px 0;
     }
-
     .banner a {
         z-index: 100;
         position: absolute;
@@ -34,45 +32,113 @@
 #login {
     border: 1px solid #DEDFE1;
     border-radius: 3px;
-    position:relative;
+    position: relative;
     float: right;
     width: 400px;
     height: 310px;
     top: 40px;
 }
 
-#login ul {
-    margin-top: 10px;
-}
-
-#login ul li {
-    position: relative;
-    height: 50px;
-}
-
-#login ul li span {
-    display: inline-block;
+#login {
+    form {
+        position: relative;
+        top: 20px;
+        left: 15px;
+    }
+    ul {
+        li {
+            position: relative;
+            margin-bottom: 20px;
+        }
+        li span {
+            display: inline-block;
+        }
+        li {
+            div {
+                position: relative;
+                width: auto
+            }
+        }
+    }
 }
 
 .loginPage .label {
-    position: absolute;
-    margin: 2px -3px;
-    height: 38px;
-    border-right: 1px solid #45578F;
+    height: 30px;
     position: relative;
     text-align: center;
-    line-height: 38px;
-    width: 60px;
+    line-height: 30px;
+    width: 80px;
     color: white;
     background: #45578F;
+    border-radius: 4px 0 0 4px;
 }
 
-.input-text {
-    position: absolute;
-    left: 60px;
-    height: 35px;
-    width: 260px;
-    vertical-align: middle;
+#login {
+    .FormInput,
+    input[type=password] {
+        box-sizing: border-box;
+        height: 30px;
+        width: 220px;
+        border-radius: 0 4px 4px 0;
+        vertical-align: top;
+        padding: 3px 2px;
+        outline: none;
+        background: none;
+    }
+    .FormInput:focus,
+    input[type=password]:focus {
+        box-shadow: 0 0 4px #88E4FF;
+        border: 1px solid #88E4FF;
+    }
+    input[type=radio] {
+        cursor: pointer;
+        position: relative;
+        z-index: 5;
+        box-sizing: border-box;
+        height: 16px;
+        width: 50px;
+        opacity: 0;
+    }
+    input[type=radio] + label {
+        cursor: pointer;
+        position: absolute;
+        top: 5px;
+        left: 35px;
+    }
+    input[type=radio]:nth-of-type(2) {
+        left: 90px;
+    }
+    input[type=radio]:nth-of-type(2) + label {
+        left: 198px;
+    }
+    input[type=radio]+label:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 16px;
+        height: 16px;
+        border: 1px solid lightgray;
+        border-radius: 5px;
+    }
+    input[type=radio]:checked +label:before {
+        background-color: #2A324B;
+        border-style: none;
+        width: 18px;
+        height: 18px;
+    }
+    input[type=radio]:checked + label:after {
+        content: "";
+        position: absolute;
+        width: 9px;
+        height: 5px;
+        border-width: 2px;
+        border-style: none none solid solid;
+        border-color: white;
+        top: 5px;
+        left: 3px;
+        transform: rotate(-45deg);
+    }
 }
 
 #auth-in {

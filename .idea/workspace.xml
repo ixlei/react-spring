@@ -2,6 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dde6da6f-7e4e-482b-99c6-eaeefb36cd36" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/styles/customer/components/financeCompany.scss" afterPath="$PROJECT_DIR$/src/main/resources/styles/customer/components/financeCompany.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/styles/investor/components/investIndex.scss" afterPath="$PROJECT_DIR$/src/main/resources/styles/investor/components/investIndex.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/styles/investor/components/socketManage.scss" afterPath="$PROJECT_DIR$/src/main/resources/styles/investor/components/socketManage.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="react-spring.iws" />
@@ -29,7 +32,7 @@
       <file leaf-file-name="customerController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/controller/customerController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.9446565">
+            <state vertical-scroll-proportion="16.437023">
               <caret line="292" column="48" selection-start-line="292" selection-start-column="48" selection-end-line="292" selection-end-column="48" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -210,6 +213,8 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -564,9 +569,7 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1126,12 +1129,14 @@
       <workItem from="1455082324064" duration="15000" />
       <workItem from="1455084029704" duration="440000" />
       <workItem from="1455162237817" duration="263000" />
-      <workItem from="1455163297619" duration="543000" />
+      <workItem from="1455163297619" duration="723000" />
+      <workItem from="1455251364169" duration="226000" />
+      <workItem from="1455252087116" duration="664000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="144617000" />
+    <option name="totallyTimeSpent" value="145687000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1581,7 +1586,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/controller/customerController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9446565">
+        <state vertical-scroll-proportion="16.437023">
           <caret line="292" column="48" selection-start-line="292" selection-start-column="48" selection-end-line="292" selection-end-column="48" />
           <folding>
             <element signature="imports" expanded="true" />

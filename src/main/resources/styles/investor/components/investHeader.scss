@@ -1,4 +1,3 @@
-
 #header-investor,
 #header-nav,
 #header-nav div {
@@ -148,7 +147,7 @@
         height: 45px;
         width: 120px;
         float: left;
-        padding:0;
+        padding: 0;
     }
     #user-photo {
         width: 55px;
@@ -173,7 +172,7 @@
         text-align: left;
         width: 120px;
         height: 45px;
-        color:white;
+        color: white;
         line-height: 40px;
         vertical-align: middle;
     }
@@ -201,29 +200,32 @@
         z-index: 1000;
         border-radius: 3px;
     }
-    #go:hover img {
-        animation: roate 2s;
-    }
     #text img {
         width: 12px;
         padding-left: 4px;
         vertical-align: middle;
     }
-    @keyframes roate {
-        0% {
-            transform: roate(0)
-        }
-        25% {
-            transform: roate (45deg);
-        }
-        50% {
-            transform: roate (90deg)
-        }
-        75% {
-            transform: roate (135deg);
-        }
-        90% {
-            transform: roate (180deg);
-        }
+}
+
+@keyframes rotateDrop {
+    0% {
+        transform: rotate(0);
     }
+    25% {
+        transform: rotate (45deg);
+    }
+    50% {
+        transform: rotate (90deg)
+    }
+    75% {
+        transform: rotate (135deg);
+    }
+    100% {
+        transform: rotate (180deg);
+    }
+}
+
+#header-investor #text:hover img {
+    animation: rotateDrop .2s;
+    transform: rotate(180deg);
 }
