@@ -6,8 +6,8 @@ export default class FormInput extends Component {
   render() {
   	const {text, name} = this.props;
     return (<div>
-      <span className="label">{text}</span>
-	    <input type="text" name={name} className="reg-input"/>
+      <label className="label">{text}</label>
+	    <input type="text" name={name} className="FormInput"/>
 	  </div>
     )
   }
