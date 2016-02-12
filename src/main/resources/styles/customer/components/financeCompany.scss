@@ -74,14 +74,20 @@
     padding-left: 5px;
 }
 
-.filter-nav--item--list:hover #industry-layer,
-.filter-nav--item--list:hover #area-layer,
-.filter-nav--item--list:hover #number-in {
-    display: block;
-    z-index: 2;
-    border: 1px solid #E5E5E5;
-    background-color: #FFFFFF;
-    border-radius: 5px;
+.filter-nav--item--list:hover {
+    #industry-layer,
+    #area-layer,
+    #number-in {
+        display: block;
+        z-index: 2;
+        border: 1px solid #E5E5E5;
+        background-color: #FFFFFF;
+        border-radius: 5px;
+    }
+    .filter-item img {
+        animation: rotateImg 0.2s;
+        transform: rotate(180deg)
+    }
 }
 
 #industry-search,
@@ -131,24 +137,23 @@
     height: 75px;
 }
 
-#number input {
-    border-color: #C9C9C9;
-    box-sizing: border-box;
-    color: #4B4B94;
-}
-
-#number input[type="button"],
-#number input[type="button"] {
-    float: right;
-    clear: both;
-    right: 80px;
-    height: 22px;
-    top: 15px;
-}
-
-#number form label {
-    padding: 0 10px;
-    vertical-align: middle;
+#number {
+    input {
+        border-color: #C9C9C9;
+        box-sizing: border-box;
+        color: #4B4B94;
+    }
+    input[type="button"] {
+        float: right;
+        clear: both;
+        right: 80px;
+        height: 22px;
+        top: 15px;
+    }
+    form label {
+        padding: 0 10px;
+        vertical-align: middle;
+    }
 }
 
 #fanicing-list-title {
@@ -213,3 +218,16 @@
 #finance-list table {
     width: 100%;
 }
+
+@keyframes rotateImg {
+    0% {
+        transform: rotate(0)
+    }
+    50% {
+        transform: rotate(90deg)
+    }
+    100% {
+        transform: rotate(180deg)
+    }
+}
+
