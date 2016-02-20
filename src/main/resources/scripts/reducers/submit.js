@@ -7,7 +7,7 @@ const initState = {
   subSuccess: false,
   isFetching: false,
   text: ''
-}
+};
 
 export function subReducer(state = initState, action) {
   switch(action.type) {
@@ -27,6 +27,13 @@ export function subReducer(state = initState, action) {
   	  	subSuccess: false,
   	  	isFetching: false
   	  })
+    case types.INITSUBMIT:
+      return Object.assign({}, state, {
+        subType: '',
+        subSuccess: false,
+        isFetching: false,
+        text: ''
+      })
   	default:
   	  return state;
   }
