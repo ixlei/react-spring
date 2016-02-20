@@ -3,7 +3,7 @@
 import React, {Component, PropTypes} from 'react';
 import FormInput from './FormInput';
 import FormSubmit from './FormSubmit';
-import {subAction} from '../actions/submit';
+import {subAction, initSub} from '../actions/submit';
 import {Link} from 'react-router';
 import {userType} from '../actions/user';
 
@@ -22,7 +22,7 @@ export default class LoginForm extends Component {
       action: '/customer/login',
       body,
       subType: 'login'
-    }
+    };
     const {dispatch} = this.props;
     dispatch(subAction(arg));
   }
@@ -36,6 +36,11 @@ export default class LoginForm extends Component {
        }
        this.context.history.pushState(null, '/company/');
     }
+  }
+
+  componentWillUnmount() {
+    const {dispatch} = this.props;
+    dispatch(initSub());
   }
 
   renderPassword() {
@@ -95,7 +100,7 @@ export default class LoginForm extends Component {
 
 LoginForm.contextTypes = {
   history: PropTypes.object.isRequired
-}
+};
 
 LoginForm.propTypes = {
   subType: PropTypes.string.isRequired,
@@ -103,4 +108,4 @@ LoginForm.propTypes = {
   isFetching: PropTypes.bool.isRequired,
   text: PropTypes.string.isRequired,
   uType: PropTypes.string.isRequired
-}
+};
