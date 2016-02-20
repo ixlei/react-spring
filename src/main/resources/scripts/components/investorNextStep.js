@@ -11,7 +11,7 @@ import Upload from '../components/upload';
 class InvestorNextstep extends Component {
   componentDidMount() {
     const {dispatch} = this.props;
-    dispatch(regStep(1))
+    dispatch(regStep(1));
   }
 
   submit(e) {
