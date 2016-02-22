@@ -9,7 +9,7 @@
         margin: 10px 0;
     }
     .banner a {
-        z-index: 100;
+        z-index: 2;
         position: absolute;
         top: 40%;
     }
@@ -43,12 +43,13 @@
     form {
         position: relative;
         top: 20px;
-        left: 15px;
+        width: 300px;
+        margin: 0 auto;
     }
     ul {
         li {
             position: relative;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
         }
         li span {
             display: inline-block;
@@ -62,6 +63,31 @@
     }
 }
 
+#login ul li:nth-child(4) {
+    height: 30px;
+}
+
+#login ul li:nth-child(5) p {
+  width: 150px;
+  margin:0 auto;
+  color:red;
+}
+
+#login ul li:nth-child(4) {
+    .label {
+        display: none;
+    }
+    div div {
+        float: left;
+        width: 120px;
+    }
+    input[type=submit] {
+        box-sizing: border-box;
+        height: 30px;
+        width: 100%;
+    }
+}
+
 .loginPage .label {
     height: 30px;
     position: relative;
@@ -71,6 +97,7 @@
     color: white;
     background: #45578F;
     border-radius: 4px 0 0 4px;
+    font-size: 0.9em;
 }
 
 #login {
@@ -109,7 +136,7 @@
         left: 90px;
     }
     input[type=radio]:nth-of-type(2) + label {
-        left: 198px;
+        left: 180px;
     }
     input[type=radio]+label:before {
         content: "";
@@ -144,7 +171,6 @@
 #auth-in {
     width: 100px;
     display: inline-block;
-    padding: 0;
     margin-left: -10px;
     height: 35px;
     vertical-align: middle;
@@ -187,30 +213,22 @@
     color: #B2B1B1;
 }
 
-#btn-login,
 #btn-reg {
     width: 120px;
-    margin-left: 30px;
-    height: 35px;
+    height: 30px;
     color: white;
     border: 1px solid #45578F;
-    border-radius: 3px;
-    background-color: #45578F;
+    border-radius: 6px;
+    float: right;
+    background-color: #2A324B;
     display: inline-block;
     text-align: center;
-    line-height: 35px;
-}
-
-#btn-login {
-    height: 36px;
+    line-height: 30px;
 }
 
 #btn-reg a {
     color: white;
-}
-
-#btn-reg {
-    margin-top: -20px;
+    font-size: 0.9em;
 }
 
 #auth {
@@ -220,13 +238,6 @@
 
 #auth img {
     height: 35px;
-}
-
-#feedback {
-    color: red;
-    width: 100%;
-    margin: 0 auto;
-    text-align: center;
 }
 
 input[type="radio"] {
