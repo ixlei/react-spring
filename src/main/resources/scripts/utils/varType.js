@@ -6,6 +6,10 @@ export function isArray(value) {
     : Object.prototype.toString.call(value) === '[object Array]';
 }
 
+export function isUndefined(value) {
+  return typeof value === 'undefined';
+}
+
 export function isString(value) {
   return typeof value === 'string';
 }
