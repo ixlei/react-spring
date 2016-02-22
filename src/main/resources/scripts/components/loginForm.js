@@ -91,7 +91,7 @@ export default class LoginForm extends Component {
   	      <li>{this.renderPassword()}</li>
   	      <li>{this.renderUserType()}</li>
   	      <li>{this.renderLoginBtn()}</li>
-  	      <li><span>{text}</span></li>
+  	      <li><p>{text}</p></li>
   	    </ul>
   	  </form>
   	)
