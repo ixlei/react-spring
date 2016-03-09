@@ -16,7 +16,7 @@ function mapStateToProps(state) {
   let {reg: {regStep}} = state;
   return {
   	regStep
-  }
+  };
 }
 
 export default connect(mapStateToProps)(RegContainer);

@@ -1,9 +1,3 @@
-#header-investor,
-#header-nav,
-#header-nav div {
-    padding: 0;
-}
-
 #header-investor {
     margin: 0;
     font-size: 1em;
@@ -213,19 +207,23 @@
     }
     25% {
         transform: rotate (45deg);
+        padding-left: 2px;
     }
     50% {
-        transform: rotate (90deg)
+        transform: rotate (90deg);
+        padding-left: 3px;
     }
     75% {
         transform: rotate (135deg);
+        padding-left: 4px;
     }
     100% {
         transform: rotate (180deg);
+        padding-left: 5px;
     }
 }
 
-#header-investor #text:hover img {
+#header-investor #go:hover img {
     animation: rotateDrop .2s;
     transform: rotate(180deg);
 }

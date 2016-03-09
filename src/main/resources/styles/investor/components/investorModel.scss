@@ -1,9 +1,20 @@
 #content-iModel {
-  margin: 0 auto;
-  width: 820px;
-  
+    margin: 0 auto;
+    width: 840px;
 }
+
 #content-iModel {
+    #site-nav {
+        margin:20px auto 0 0;
+        overflow: hidden;
+        width: auto;
+    }
+
+    #site-nav {
+        #searchForm {
+            float: left;
+        }
+    }
     #mainContainer {
         margin: auto;
         margin-top: 30px;
@@ -11,11 +22,9 @@
         width: 820px;
         height: 931px;
     }
-    
     #mainContainer a {
         color: #393D46;
     }
-
     #main {
         width: 820px;
         height: 931px;
@@ -36,11 +45,6 @@
         font-size: 1.5em;
         padding-top: 35px;
         margin-left: 10px;
-    }
-    #searchForm {
-        padding-top: 30px;
-        padding-left: 60px;
-        display: inline-block;
     }
     #searchButton {
         text-align: center;
@@ -70,33 +74,25 @@
         color: white;
         font-size: 1em;
     }
-    #textClear {
-        width: 13px;
-        height: 14px;
-        position: absolute;
-        left: 205px;
-        top: 35px;
-    }
-    #searchInput {
-        display: inline;
-        margin: 0px;
-    }
-    #selectForm p {
-        font-size: 1em;
-        display: inline;
-    }
     #selectForm {
-        padding-top: 30px;
-        padding-left: 20px;
         display: inline-block;
+        position: relative;
+        left: 50px;
+    }
+
+    #selectForm .label {
+        padding-right: 5px;
     }
     select {
         height: 20px;
-        width: 150px;
         display: inline-block;
         border: 1px solid #A4B3E4;
         border-radius: 5px;
         outline: none;
+        width: 120px;
+        box-sizing: border-box;
+        padding-left: 10px;
+        text-align: center;
     }
     #patchPanel {
         border: 1px solid #A4B3E4;

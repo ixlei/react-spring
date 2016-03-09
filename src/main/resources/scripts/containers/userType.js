@@ -8,13 +8,10 @@ class UserType extends Component {
   
   render() {
   	const {dispatch, ut} = this.props;
-    const regChoose = {
-      dispatch,
-      ut
-    };
+    const regChoose = {dispatch, ut};
     
   	return (<div>
-  		<span className="label">用户类型:</span>
+  		<label className="label">用户类型:</label>
         <FormRadio {...Object.assign({value:'company'}, regChoose)} />
         <label>企业</label>
         <FormRadio {...Object.assign({value:'investor'}, regChoose)}/>
@@ -26,9 +23,7 @@ class UserType extends Component {
 
 function mapStateToProps(state) {
   const {user:{userType: ut}} = state;
-  return {
-  	ut
-  }
+  return {ut};
 }
 
 export default connect(mapStateToProps)(UserType);

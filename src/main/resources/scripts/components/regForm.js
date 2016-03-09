@@ -2,7 +2,7 @@
 
 import React, {Component, PropTypes} from 'react';
 import {connect} from 'react-redux';
-import {subAction} from '../actions/submit';
+import {subAction, initSub} from '../actions/submit';
 import {isFocus, initRegItem} from '../actions/reg';
 import FormRadio from './FormRadio';
 import FormUsername from './FormUsername';
@@ -30,7 +30,7 @@ class RegForm extends Component {
       body: formdata,
       subType: 'reg1',
       credentials: 'include'
-    }
+    };
     dispatch(subAction(arg));
   }
   
@@ -49,6 +49,7 @@ class RegForm extends Component {
     const {dispatch} = this.props;
     dispatch(isFocus(''));
     dispatch(initRegItem());
+    dispatch(initSub());
   }
 
   render() {
@@ -56,24 +57,24 @@ class RegForm extends Component {
   	return (
   	  <form name="reg" onSubmit={this.submit.bind(this)}>
   	    <ul>
-  	      <li><UserType /></li>
-          <li><FormUsernameContainer /></li>
-          <li><FormPasswordContainer /></li>
-          <li><FormRepasswordContainer /></li>
-          <li>
+  	      <li className="reg__list"><UserType /></li>
+          <li className="reg__list"><FormUsernameContainer /></li>
+          <li className="reg__list"><FormPasswordContainer /></li>
+          <li className="reg__list"><FormRepasswordContainer /></li>
+          <li className="reg__list">
             {userType === 'investor' 
              ? <FormNameContainer />
              : <FormComNameContainer />
             }
           </li>
-          <li>
+          <li className="reg__list">
             { userType === 'investor'
               ? <FormIdcardContainer />
               : <FormComCodeContainer />
             }
           </li>
-          <li><FormCheckboxContainer /></li>
-          <li><FormSubmitContainer /></li>
+          <li className="reg__list"><FormCheckboxContainer /></li>
+          <li className="reg__list"><FormSubmitContainer /></li>
   	    </ul>
   	  </form>
   	)
@@ -82,13 +83,13 @@ class RegForm extends Component {
 
 RegForm.contextTypes = {
   history: PropTypes.object.isRequired
-}
+};
 
 RegForm.propTypes = {
   subType: PropTypes.string.isRequired,
   subSuccess: PropTypes.bool.isRequired, 
   isFetching: PropTypes.bool.isRequired, 
   userType: PropTypes.string.isRequired
-}
+};
 
 export default RegForm;

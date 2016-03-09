@@ -30,7 +30,7 @@ function mapStateToProps(state) {
   	isFetching,
   	text,
   	uType
-  }
+  };
 }
 
 export default connect(mapStateToProps)(LoginFormContainer);

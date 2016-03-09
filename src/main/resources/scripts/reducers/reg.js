@@ -37,8 +37,7 @@ const initState = {
     valid: '',
     tips: ''
   }]
- 
-}
+};
 
 export function reg(state = initState, action) {
   let newItemState, {itemState, postCheck, IsFocus} = state;

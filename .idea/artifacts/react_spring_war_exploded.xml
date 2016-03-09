@@ -1,6 +1,6 @@
 <component name="ArtifactManager">
   <artifact type="exploded-war" name="react-spring:war exploded">
-    <output-path>$PROJECT_DIR$/target/test</output-path>
+    <output-path>$PROJECT_DIR$/target/react-spring</output-path>
     <root id="root">
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">

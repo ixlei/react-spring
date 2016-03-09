@@ -2,6 +2,7 @@
 
 import React, {Component, PropTypes} from 'react';
 import FormSelect from './FormSelect';
+import FormSearch from './FormSearch';
 import {Link} from 'react-router';
 import {activeIndex} from '../actions/navHeader';
 import {getInvestorModel} from '../actions/investorModel';
@@ -28,24 +29,6 @@ export default class InvestorModel extends Component {
   componentWillUnmount() {
     const {dispatch} = this.props;
     dispatch(activeIndex(-1));
-  }
-
-  renderSearch() {
-    return (
-      <div id="searchForm">
-		  <div id="searchInput">
-		  <div id="textClear">
-		    <a href="javascript:;">
-		      <img src="/images/cancel.png"/>
-		    </a>
-		  </div>
-		  <form name="search">
-		    <input type="search" placeholder="请输入"/>
-		    <input type="submit" value="搜索" />
-		  </form>
-		</div>
-	  </div>
-    )
   }
   
   renderTypeSelect() {
@@ -162,7 +145,7 @@ export default class InvestorModel extends Component {
   	return (
   	  <div id="content-iModel">
   	   <div id="site-nav">
-          {this.renderSearch()}
+          <FormSearch />
           {this.renderTypeSelect()}
         </div>
          {this.renderPush()}
