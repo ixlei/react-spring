@@ -10,6 +10,14 @@ export function isUndefined(value) {
   return typeof value === 'undefined';
 }
 
+export function isNull(value) {
+  return typeof value === null;
+}
+
+export function isSymbol(value) {
+  return typeof value === 'symbol';
+}
+
 export function isString(value) {
   return typeof value === 'string';
 }
