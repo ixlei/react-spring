@@ -20,7 +20,7 @@ export default class InvestIntroduce extends Component {
 			<span className="content_more">
 			  <Link to={'/investStock'} style={{color: '#4F4F4F'}}>了解更多</Link>
 			</span>
-			<span className="content_more_text">
+			<span className="content_more_text_1">
 			  <Link to={'/investStock'} title="" style={{color: '#4F4F4F', fontSize: '14px'}}>去投资 去融资 </Link>
 			</span>
 	       </div>
