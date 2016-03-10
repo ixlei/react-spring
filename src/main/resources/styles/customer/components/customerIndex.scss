@@ -294,3 +294,17 @@
 .zixun-item p {
     font-size: 0.8em;
 }
+
+#circle-image .svg-circle {
+    transform: translate(20px, 2px);
+}
+
+.svg-circle-g {
+  transform: translate(70px, 70px);
+}
+
+.svg-text {
+    transform: translate(60px, 150px);
+    color: #767576;
+   font-size : 0.7em
+}
