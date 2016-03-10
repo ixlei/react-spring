@@ -22,9 +22,7 @@ class InvestmentHall extends Component {
     return (
      <div id="content">
        <UnsliderContainer />
-       <div id="service-item">
-          <InvestIntroduce />
-      </div>
+       <InvestIntroduce />
     </div>
 	) 
   }

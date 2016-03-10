@@ -2,14 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dde6da6f-7e4e-482b-99c6-eaeefb36cd36" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/scripts/containers/compNews.js" afterPath="$PROJECT_DIR$/src/main/resources/scripts/containers/compNews.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/scripts/reducers/companyNews.js" afterPath="$PROJECT_DIR$/src/main/resources/scripts/reducers/companyNews.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/scripts/constants/customerActionType.js" afterPath="$PROJECT_DIR$/src/main/resources/scripts/constants/customerActionType.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/controller/customerController.java" afterPath="$PROJECT_DIR$/src/main/java/controller/customerController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/styles/customer/components/customerIndex.scss" afterPath="$PROJECT_DIR$/src/main/resources/styles/customer/components/customerIndex.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/scripts/actions/fetchCompany.js" afterPath="$PROJECT_DIR$/src/main/resources/scripts/actions/fetchCompany.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/package.json" afterPath="$PROJECT_DIR$/src/main/resources/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/scripts/components/investIntroduce.js" afterPath="$PROJECT_DIR$/src/main/resources/scripts/components/investIntroduce.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/scripts/components/investmentHall.js" afterPath="$PROJECT_DIR$/src/main/resources/scripts/components/investmentHall.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/styles/investor/components/investmentHall.scss" afterPath="$PROJECT_DIR$/src/main/resources/styles/investor/components/investmentHall.scss" />
     </list>
     <ignored path="react-spring.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -36,7 +31,7 @@
       <file leaf-file-name="customerController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/controller/customerController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.23473282">
+            <state vertical-scroll-proportion="0.33206108">
               <caret line="70" column="36" selection-start-line="70" selection-start-column="36" selection-end-line="70" selection-end-column="36" />
               <folding>
                 <element signature="e#4237#4238#0" expanded="true" />
@@ -1131,12 +1126,12 @@
       <workItem from="1456969274263" duration="1153000" />
       <workItem from="1457031940362" duration="1587000" />
       <workItem from="1457044608256" duration="7187000" />
-      <workItem from="1457562695545" duration="3618000" />
+      <workItem from="1457562695545" duration="5426000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="162497000" />
+    <option name="totallyTimeSpent" value="164305000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1156,11 +1151,11 @@
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.38375974" sideWeight="0.49570817" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32919955" sideWeight="0.49785408" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.38153505" sideWeight="0.15240642" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.38153505" sideWeight="0.15240642" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32807216" sideWeight="0.49570817" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24759358" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32919955" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.38153505" sideWeight="0.8475936" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.38153505" sideWeight="0.8475936" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32919955" sideWeight="0.49785408" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21122995" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -1678,7 +1673,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/controller/customerController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.23473282">
+        <state vertical-scroll-proportion="0.33206108">
           <caret line="70" column="36" selection-start-line="70" selection-start-column="36" selection-end-line="70" selection-end-column="36" />
           <folding>
             <element signature="e#4237#4238#0" expanded="true" />

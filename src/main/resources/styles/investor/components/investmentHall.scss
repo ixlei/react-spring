@@ -90,10 +90,11 @@
     color: #767B91;
 }
 
-.other {
-    left: 30%;
-    width: 200px;
-    padding-left: 100px;
+#service-item .other {
+    position:relative;
+    width: 120px;
+    left: 50%;
+    margin: 10px 0 0 -45px;
 }
 
 .other>.content_more {
@@ -104,20 +105,24 @@
     height: auto;
     border: 2px solid rgba(21, 19, 19, 0.6);
     border-radius: 6px;
+    line-height: 22px;
 }
 
 .other>.content_more_text {
     line-height: 35px;
     font-size: smaller;
     width: 120px;
-    left: 630px;
+    left: 650px;
     height: 35px;
+    line-height: 22px;
 }
 
 .other>.content_more_text_1 {
-    line-height: 35px;
+    line-height: 25px;
     font-size: smaller;
+    position:relative;
     width: 120px;
-    left: 1030px;
-    height: 35px;
+    left: 50%;
+    height: 25px;
+    margin: 5px 0 0 -70px;
 }
