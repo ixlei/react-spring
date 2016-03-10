@@ -55,3 +55,10 @@ function reqFinance(entity) {
   	entity
   };
 }
+
+export function disDataSetColors(tipsColor) {
+  return {
+    type: types.DATASETTIPSCOLORS,
+    tipsColor
+  };
+}
