@@ -62,12 +62,13 @@ public class customerController {
 		Map<String, Object> map = new HashMap<String, Object>();
 		
 		ArrayList<Double> rate = new ArrayList<Double>();
+		int [] dataSet = {10, 50, 25, 20, 80 };
 		rate.add(Double.parseDouble("12"));
 		rate.add(Double.parseDouble("18"));
 		rate.add(Double.parseDouble("15"));
 		map.put("increaseRate", rate);
 		map.put("number", 6276);
-		
+		map.put("dataSet", dataSet);
 		return map;
 	}
 	
