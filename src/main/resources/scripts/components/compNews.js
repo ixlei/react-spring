@@ -1,13 +1,12 @@
 'use strict';
 
 import React, {Component, PropTypes} from 'react';
-import {connect} from 'react-redux';
 import {fetchCompanyNews} from '../actions/fetchCompany';
 import CountScroll from '../components/countScroll';
 import IncreaseRate from '../components/increaseRate';
 import PieData from '../components/pie';
 
-class CompNewsContainer extends Component {
+class CompNews extends Component {
     componentDidMount() {
       const { dispatch} = this.props;
       dispatch(fetchCompanyNews());
@@ -76,28 +75,9 @@ class CompNewsContainer extends Component {
 	}
 }
 
-
-function mapStateToProps(state) {
-  let {compNews} = state;
-  let {number, increaseRate: rate, capital: {dataSet, tipsColor}} = compNews;
-  return {
-     rate: [{
-			time: '近一周',
-			iconUrl: 'arrow1.png',
-			rate: rate[0]
-		}, {
-			time: '近一月',
-			iconUrl: 'arrow2.png',
-			rate: rate[1]
-		}, {
-			time: '近一季',
-			iconUrl: 'arrow3.png',
-			rate: rate[2]
-		}],
-	count: number,
-	dataSet,
-	tipsColor
-  };
-}
-
-export default connect(mapStateToProps)(CompNewsContainer);
+CompNews.propTypes = {
+  rate: PropTypes.array.isRequired,
+  count: PropTypes.number.isRequired,
+  dataSet: PropTypes.array.isRequired,
+  tipsColor: PropTypes.array.isrequired
+};
