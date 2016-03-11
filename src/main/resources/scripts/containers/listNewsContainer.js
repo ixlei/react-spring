@@ -12,7 +12,34 @@ class NewsConatiner extends Component {
        const {dispatch} = this.props;
        dispatch(fetchCompNews('comNews'))
 	}
+    
+    scrollCallback() {
+      let flag = 0,
+          distance = 0,
+          arrDistance = Array.of(0, 0);
+      return (scrollHeight, speedUp) => {
+        let {firstScroll, secondScroll} = this.refs;
+        distance -= 4;
+        arrDistance[0] = distance;
+        arrDistance[1] = scrollHeight + distance;
+        if ((scrollHeight + distance) === 0) {
+            distance = 0;
+            flag += 1;
+            setTimeout(function() {
+              firstScroll.style.top = arrDistance[flag % 2] + 'px';
+              secondScroll.style.top = arrDistance[(flag + 1) % 2] + 'px';
+            }, speedUp);
+            flag = flag % 2 === 0 ? 0 : 1;
+        }
+        firstScroll.style.top = arrDistance[flag % 2] + 'px';
+        secondScroll.style.top = arrDistance[(flag + 1) % 2] + 'px';
+      }
+    }
 
+    scrollEle() {
+      
+    }
+    
 	render() {
 	  return (
 	  	<div id="news-area">
