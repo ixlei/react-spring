@@ -50,7 +50,6 @@ class PieData extends Component {
         .style('stroke', 'white')
         .style('stroke-width', 1)
         .style('display', 'none');
-    console.log(pie(dataSet), dataSet);
     arcs.append('path')
         .transition()
         .duration(2000)
@@ -78,6 +77,7 @@ class PieData extends Component {
       }
       
       this.gAnimation();
+      console.log('dis', disDataSetColors(colors));
       dispatch(disDataSetColors(colors));
   }
 
@@ -102,8 +102,7 @@ PieData.propTypes = {
   dataSet: PropTypes.array.isRequired,
   svg: PropTypes.object.isRequired,
   g: PropTypes.object.isRequired,
-  arc: PropTypes.object.isRequired,
-  tipsColor: PropTypes.array.isRequired
+  arc: PropTypes.object.isRequired
 };
 
 export default PieData;
