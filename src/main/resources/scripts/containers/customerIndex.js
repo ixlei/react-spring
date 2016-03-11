@@ -4,7 +4,7 @@ import React, {Component, PropTypes} from 'react';
 import {connect} from 'react-redux';
 import UnsliderContainer from './unsliderContainer';
 import InvestorTitle from '../components/investorTitle';
-import CompNewsContainer from './compNews';
+import CompNewsContainer from './compNewsContainer';
 import CountScrollContainer from './countScrollContainer';
 import IncreateRateContainer from './increaseRateContainer';
 import NewsConatiner from './listNewsContainer';
