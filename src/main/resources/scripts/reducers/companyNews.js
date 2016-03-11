@@ -25,12 +25,12 @@ export function compNews(state = initState, action) {
 	      fetchType: action.fetchType
 	    })
 	  case types.RECEIVE_COMPANY:
-	    const {entities: {number, increaseRate, dataSet}} = action;
-	    console.log(dataSet);
+	    let {entities: {number, increaseRate, dataSet}} = action;
+	    let {capital: {tipsColor}} = state;
 	    return Object.assign({}, state, {
 	    	number,
 	    	increaseRate,
-	    	capital:{dataSet},  
+	    	capital:{dataSet, tipsColor},  
 	    	invalidate: false,
 	    	isFetching:false
 	    })
@@ -47,8 +47,9 @@ export function compNews(state = initState, action) {
           companyModel: comInfo
         })
       case types.DATASETTIPSCOLORS:
+        ({capital: {dataSet}} = state);
         return Object.assign({}, state, {
-          capital: {tipsColor: action.tipsColor}
+          capital: {dataSet, tipsColor: action.tipsColor}
         })
 	  default:
 	    return state;
