@@ -28,7 +28,6 @@ class CompNews extends Component {
 		   dataSet={dataSet} 
 		   arc={arc} 
 		   svg={svg} 
-		   tipsColor={tipsColor} 
 		   dispatch={dispatch} />
 		)
     }
@@ -39,8 +38,8 @@ class CompNews extends Component {
       return (<ul>
         {tipsColor.map((color, index) => {
           return (<li key={`color${index}`}>
-      	    <span className="data-tips" style={{color: color}}></span>
-      	    <span className="data">{tips[index]}</span>
+      	    <span className="circle--data--tips" style={{background: color}}></span>
+      	    <span className="circlie--data-tips--tilte">{tips[index]}</span>
 		  </li>)
       	  })
         }
@@ -67,8 +66,8 @@ class CompNews extends Component {
 		<div id="circle">
 		  <div id="circle-data">
 		   {this.drawTips()}
-		   {this.renderDataSet()}
 		  </div>
+		   {this.renderDataSet()}
 		</div>
 	  </div>
 	  )
@@ -78,6 +77,7 @@ class CompNews extends Component {
 CompNews.propTypes = {
   rate: PropTypes.array.isRequired,
   count: PropTypes.number.isRequired,
-  dataSet: PropTypes.array.isRequired,
-  tipsColor: PropTypes.array.isrequired
+  dataSet: PropTypes.array.isRequired
 };
+
+export default CompNews;
