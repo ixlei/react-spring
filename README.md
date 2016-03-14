@@ -6,6 +6,3 @@
 ### 技术
 &emsp;前端利用react + react-router + redux + webpack + sass + es6 + babel构建，后端spring + mysql + redis。
 
-###在线地址
-
-&emsp;[嘉投易融](http://139.129.29.21/customer/)
