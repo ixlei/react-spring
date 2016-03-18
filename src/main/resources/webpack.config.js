@@ -6,6 +6,9 @@ var commonsPlugin =
 new webpack.HotModuleReplacementPlugin('common.js');
 
 module.exports = {
+    cache: true,
+    debug: true,
+    devtool: 'source-map',
 	entry: {
 		main: [
             'webpack-dev-server/client?http://127.0.0.1:3000',
