@@ -1,7 +1,8 @@
 var webpack = require('webpack');
 var webpackDevServer = require('webpack-dev-server');
-var config = require('./webpack.config.js');
-new webpackDevServer(webpack(config), {
+var config = require('./webpack.config');
+
+new webpackDevServer(webpack(config()), {
     publicPath: config.output.publicPath,
     hot: true,
     headers: { 'Access-Control-Request-Headers': '*' },

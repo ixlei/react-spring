@@ -1,8 +1,39 @@
 "use strict";
 
-var webpack = require('webpack');
+var webpack = require('atool-build/lib/webpack');
 var path = require('path');
-var commonsPlugin = 
+
+module.exports = function(webpackConfig) {
+  webpackConfig.output.path = path.join(__dirname, './server/public/javascript');
+
+  webpackConfig.module.loaders.unshift({
+      test: /\.jsx?$/,
+      exclude: /node_modules/,
+      loader: 'babel?presets[]=react,presets[]=es2015'
+    },{
+      test: /\.scss$/,
+      exclude: /node_modules/,
+      loaders: ["style", "css", "sass"]
+    }
+  );
+  
+  webpackConfig.module.sassLoader = {
+    includePaths: path.join(__dirname, 'styles')
+  };
+
+  return webpackConfig;
+};
+
+
+
+
+
+
+
+
+
+
+/*var commonsPlugin = 
 new webpack.HotModuleReplacementPlugin('common.js');
 
 module.exports = {
@@ -13,7 +44,7 @@ module.exports = {
 		main: [
             'webpack-dev-server/client?http://127.0.0.1:3000',
             'webpack/hot/dev-server',
-            './scripts/entry/entry.js',
+            './scripts/entry/entry.js'
         ]
 	},
 	output: {
@@ -40,3 +71,4 @@ module.exports = {
     },
     plugins: [commonsPlugin]
 };
+*/
