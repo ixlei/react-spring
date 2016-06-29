@@ -9,6 +9,7 @@
 </head>
 <body>
 <div id="mainPage"></div>
-<script type="text/javascript" src="http://127.0.0.1:3000/server/public/js/main.js"></script>
+<script type="text/javascript" src="/server/public/javascript/common.js"></script>
+<script type="text/javascript" src="/server/public/javascript/main.js"></script>
 </body>
 </html>
